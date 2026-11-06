@@ -154,84 +154,84 @@ export function QuickBookingClient({
   // Success view
   if (bookingSuccess) {
     return (
-      <div className="max-w-2xl mx-auto p-8 rounded-3xl bg-white border border-emerald-200 shadow-xl text-center space-y-6">
-        <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto shadow-md">
-          <CheckCircle2 className="w-10 h-10" />
+      <div className="max-w-2xl mx-auto p-6 sm:p-8 rounded-xl bg-white border border-[#E5EBEF] shadow-sm text-center space-y-6">
+        <div className="w-14 h-14 rounded-full bg-[#F4F8F5] text-[#15965C] flex items-center justify-center mx-auto border border-[#15965C]/20 shadow-sm">
+          <CheckCircle2 className="w-8 h-8" />
         </div>
 
-        <div className="space-y-2">
-          <span className="text-xs font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+        <div className="space-y-1.5">
+          <span className="text-[11px] font-bold uppercase tracking-wider text-[#15965C] bg-[#F4F8F5] px-2.5 py-1 rounded-full border border-[#15965C]/20">
             Confirmed Outpatient Appointment
           </span>
-          <h2 className="text-2xl font-black text-slate-900">
+          <h2 className="text-xl sm:text-2xl font-bold text-[#103653]">
             Booking Reserved Successfully
           </h2>
-          <p className="text-xs text-slate-500">
+          <p className="text-xs text-[#526273]">
             Your appointment has been registered in the hospital OPD master ledger.
           </p>
         </div>
 
         {/* Appointment Card */}
-        <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 text-left space-y-3 text-xs sm:text-sm">
-          <div className="flex items-center justify-between border-b border-slate-200 pb-2">
-            <span className="text-slate-500">Booking Reference:</span>
-            <span className="font-mono font-black text-[#0e4a7b] text-base">
+        <div className="p-5 sm:p-6 rounded-xl bg-[#F7FAF9] border border-[#E5EBEF] text-left space-y-3 text-xs sm:text-sm">
+          <div className="flex items-center justify-between border-b border-[#E5EBEF] pb-2.5">
+            <span className="text-[#526273] text-xs">Booking Reference:</span>
+            <span className="font-mono font-bold text-[#103653] text-base">
               {bookingSuccess.booking_reference}
             </span>
           </div>
 
           <div className="flex items-center justify-between">
-            <span className="text-slate-500">Patient Name:</span>
-            <span className="font-bold text-slate-900">{bookingSuccess.patient_name}</span>
+            <span className="text-[#526273] text-xs">Patient Name:</span>
+            <span className="font-bold text-[#182B3D]">{bookingSuccess.patient_name}</span>
           </div>
 
           <div className="flex items-center justify-between">
-            <span className="text-slate-500">Doctor / Specialist:</span>
-            <span className="font-bold text-slate-900">{bookingSuccess.doctor_name}</span>
+            <span className="text-[#526273] text-xs">Doctor / Specialist:</span>
+            <span className="font-bold text-[#182B3D]">{bookingSuccess.doctor_name}</span>
           </div>
 
           <div className="flex items-center justify-between">
-            <span className="text-slate-500">Department:</span>
-            <span className="font-medium text-slate-800">{bookingSuccess.department_name}</span>
+            <span className="text-[#526273] text-xs">Department:</span>
+            <span className="font-medium text-[#182B3D]">{bookingSuccess.department_name}</span>
           </div>
 
           <div className="flex items-center justify-between">
-            <span className="text-slate-500">Appointment Date:</span>
-            <span className="font-bold text-slate-900">{bookingSuccess.appointment_date}</span>
+            <span className="text-[#526273] text-xs">Appointment Date:</span>
+            <span className="font-bold text-[#182B3D]">{bookingSuccess.appointment_date}</span>
           </div>
 
           <div className="flex items-center justify-between">
-            <span className="text-slate-500">Consultation Slot:</span>
-            <span className="font-black text-hospital-green">{bookingSuccess.start_time} hrs</span>
+            <span className="text-[#526273] text-xs">Consultation Slot:</span>
+            <span className="font-bold text-[#15965C]">{bookingSuccess.start_time} hrs</span>
           </div>
 
-          <div className="flex items-center justify-between border-t border-slate-200 pt-2">
-            <span className="text-slate-500">OPD Consultation Fee:</span>
-            <span className="font-black text-slate-900">₹{bookingSuccess.consultation_fee} (Pay at hospital counter)</span>
+          <div className="flex items-center justify-between border-t border-[#E5EBEF] pt-2.5">
+            <span className="text-[#526273] text-xs">OPD Consultation Fee:</span>
+            <span className="font-bold text-[#103653]">₹{bookingSuccess.consultation_fee} (Pay at hospital counter)</span>
           </div>
         </div>
 
-        <div className="p-4 rounded-2xl bg-hospital-greenSoft border border-hospital-green/20 text-xs text-slate-700 text-left space-y-1">
-          <div className="font-bold text-slate-900">Next Steps for Consultation:</div>
+        <div className="p-4 rounded-xl bg-[#F4F8F5] border border-[#15965C]/20 text-xs text-[#526273] text-left space-y-1">
+          <div className="font-bold text-[#103653]">Next Steps for Consultation:</div>
           <div>• Please arrive at Hiramani Memorial Hospital OPD Chamber 15 minutes before your scheduled slot.</div>
           <div>• Present booking reference <strong>{bookingSuccess.booking_reference}</strong> at the reception counter.</div>
           <div>• For rescheduling or queries, contact +91 78729 57300.</div>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+        <div className="flex flex-wrap items-center justify-center gap-3 pt-1">
           <button
             onClick={() => {
               setBookingSuccess(null);
               setPatientName('');
               setPatientPhone('');
             }}
-            className="px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-xs font-bold text-slate-700 transition"
+            className="px-4 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-xs font-bold text-[#182B3D] transition"
           >
             Book Another Appointment
           </button>
           <Link
             href="/"
-            className="px-5 py-2.5 rounded-xl bg-hospital-green hover:bg-[#0f7a49] text-xs font-bold text-white transition shadow-sm"
+            className="px-4 py-2 rounded-lg bg-[#15965C] hover:bg-[#117A4A] text-xs font-bold text-white transition shadow-sm"
           >
             Return to Homepage
           </Link>
