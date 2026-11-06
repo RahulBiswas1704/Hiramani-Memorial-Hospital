@@ -4,9 +4,9 @@ import { HospitalRepo } from '@/lib/db/repo';
 import { DiagnosticsClient } from '@/components/diagnostics/DiagnosticsClient';
 
 export const metadata: Metadata = {
-  title: 'Diagnostic Tests, Pathology & Scans | Hiramani Memorial Hospital Kolkata',
+  title: 'Diagnostic Tests, Pathology & Scans | Hiramani Memorial Hospital Krishnanagar',
   description:
-    'Comprehensive diagnostic laboratory tests, pathology, digital X-Ray, 2D Echo, and ultrasound pricing and instructions at Hiramani Memorial Hospital Kolkata.',
+    'Comprehensive diagnostic laboratory tests, automated pathology, digital X-Ray, 2D Echo, and ultrasound pricing and instructions at Hiramani Memorial Hospital in Krishnanagar, Nadia.',
 };
 
 export const revalidate = 60;

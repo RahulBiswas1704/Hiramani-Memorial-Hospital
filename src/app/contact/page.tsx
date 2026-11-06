@@ -9,31 +9,31 @@ import {
   ArrowRight,
   Building2,
   Navigation,
+  Compass,
 } from 'lucide-react';
 import { ContactForm } from '@/components/contact/ContactForm';
 
 export const metadata: Metadata = {
-  title: 'Contact Us, Emergency & Location | Hiramani Memorial Hospital Kolkata',
+  title: 'Contact Us, Emergency & Location | Hiramani Memorial Hospital Krishnanagar',
   description:
-    'Contact Hiramani Memorial Hospital Kolkata. Verified 24x7 Emergency Desk, Reception phone, exact B.B.T. Road location, Google Maps directions, and online patient enquiry form.',
+    'Contact Hiramani Memorial Hospital in Krishnanagar, Nadia. Verified 24x7 Emergency Desk (+91 75010 74392), Reception desk (+91 78729 57300), Google Maps directions, and online enquiry form.',
 };
 
 export default function ContactPage() {
   return (
-    <div className="space-y-12 pb-16">
+    <div className="space-y-12 pb-20">
       {/* 1. Header Banner */}
-      <section className="bg-gradient-to-b from-sky-50 via-white to-slate-50 border-b border-slate-200 py-12 lg:py-16">
+      <section className="bg-gradient-to-b from-hospital-greenSoft via-white to-slate-50 border-b border-slate-200 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-800 text-xs font-semibold">
-            <MapPin className="w-3.5 h-3.5 text-teal-600" />
-            <span>Kolkata • B.B.T. Road</span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-hospital-green/10 border border-hospital-green/20 text-hospital-green text-xs font-bold">
+            <MapPin className="w-3.5 h-3.5 text-hospital-green" />
+            <span>Krishnanagar • Nadia • West Bengal (PIN: 741101)</span>
           </div>
-          <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
+          <h1 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight">
             Contact & Hospital Location
           </h1>
           <p className="text-base sm:text-lg text-slate-600 max-w-3xl leading-relaxed">
-            Reach our reception helpdesk, 24x7 emergency casualty, or admission office in Nediarpara, Krishnanagar.
-            Easily accessible from Krishnanagar City Junction and NH-12.
+            Reach our patient reception helpdesk, 24x7 emergency casualty, or admission office in Nediarpara, Krishnanagar. Easily accessible from Krishnanagar City Junction railway station and NH-12.
           </p>
         </div>
       </section>
@@ -41,72 +41,72 @@ export default function ContactPage() {
       {/* 2. Key Hotlines Strip */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {/* Emergency */}
+          {/* Emergency Hotline */}
           <a
             href="tel:+917501074392"
-            className="p-5 rounded-2xl bg-red-50 border border-red-200 text-red-900 shadow-sm hover:border-red-400 transition space-y-2 block"
+            className="p-5 rounded-3xl bg-red-50 border border-red-200 text-red-900 shadow-sm hover:border-red-400 transition space-y-2 block"
           >
             <div className="w-8 h-8 rounded-lg bg-red-100 text-red-700 flex items-center justify-center">
               <PhoneCall className="w-4 h-4" />
             </div>
-            <div className="text-xs font-bold text-red-800 uppercase tracking-wider">
+            <div className="text-[11px] font-bold text-red-800 uppercase tracking-wider">
               24x7 Emergency Desk
             </div>
-            <div className="text-base font-extrabold text-red-950">
+            <div className="text-base font-black text-red-950">
               +91 75010 74392
             </div>
-            <div className="text-[11px] text-red-700">Immediate trauma & casualty response</div>
+            <div className="text-[11px] text-red-700">Immediate trauma & casualty triage</div>
           </a>
 
-          {/* General Reception */}
+          {/* Reception Helpdesk */}
           <a
             href="tel:+917872957300"
-            className="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-[#0e4a7b] transition space-y-2 block"
+            className="p-5 rounded-3xl bg-white border border-slate-200 shadow-sm hover:border-hospital-green transition space-y-2 block"
           >
-            <div className="w-8 h-8 rounded-lg bg-sky-50 text-[#0e4a7b] flex items-center justify-center">
+            <div className="w-8 h-8 rounded-lg bg-hospital-green/10 text-hospital-green flex items-center justify-center">
               <PhoneCall className="w-4 h-4" />
             </div>
-            <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">
-              Reception Helpdesk
+            <div className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
+              Reception / OPD Helpdesk
             </div>
-            <div className="text-base font-extrabold text-slate-900">
+            <div className="text-base font-black text-slate-900">
               +91 78729 57300
             </div>
-            <div className="text-[11px] text-slate-500">OPD booking & patient enquiries</div>
+            <div className="text-[11px] text-slate-500">Doctor chamber bookings & general enquiries</div>
           </a>
 
-          {/* Ambulance & Helpline */}
+          {/* Ambulance Hotline */}
           <a
             href="tel:+916294545225"
-            className="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-teal-600 transition space-y-2 block"
+            className="p-5 rounded-3xl bg-white border border-slate-200 shadow-sm hover:border-hospital-blue transition space-y-2 block"
           >
-            <div className="w-8 h-8 rounded-lg bg-teal-50 text-teal-700 flex items-center justify-center">
+            <div className="w-8 h-8 rounded-lg bg-hospital-blue/10 text-hospital-blue flex items-center justify-center">
               <Building2 className="w-4 h-4" />
             </div>
-            <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <div className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
               Ambulance & Helpline
             </div>
-            <div className="text-base font-extrabold text-slate-900">
+            <div className="text-base font-black text-slate-900">
               +91 62945 45225
             </div>
-            <div className="text-[11px] text-slate-500">Oxygen-equipped rapid dispatch</div>
+            <div className="text-[11px] text-slate-500">Oxygen-equipped critical dispatch</div>
           </a>
 
           {/* Email */}
           <a
             href="mailto:info@hiramani.co.in"
-            className="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-indigo-600 transition space-y-2 block"
+            className="p-5 rounded-3xl bg-white border border-slate-200 shadow-sm hover:border-slate-400 transition space-y-2 block"
           >
-            <div className="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-700 flex items-center justify-center">
+            <div className="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center">
               <Mail className="w-4 h-4" />
             </div>
-            <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <div className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
               Official Email
             </div>
             <div className="text-sm font-extrabold text-slate-900 truncate">
               info@hiramani.co.in
             </div>
-            <div className="text-[11px] text-slate-500">Monitored administrative inbox</div>
+            <div className="text-[11px] text-slate-500">Administrative & grievance desk</div>
           </a>
         </div>
       </section>
@@ -121,10 +121,10 @@ export default function ContactPage() {
 
           {/* Location & Directions Card */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 space-y-6 border border-slate-800">
+            <div className="bg-hospital-slate text-white rounded-3xl p-6 sm:p-8 space-y-6 border border-slate-800 shadow-md">
               <div className="space-y-2">
-                <span className="text-xs font-bold uppercase tracking-wider text-teal-400">
-                  Hospital Address
+                <span className="text-xs font-bold uppercase tracking-wider text-hospital-green">
+                  Official Campus Address
                 </span>
                 <h3 className="text-xl font-bold">Hiramani Memorial Hospital</h3>
                 <p className="text-xs text-slate-300 leading-relaxed">
@@ -133,30 +133,35 @@ export default function ContactPage() {
               </div>
 
               {/* Map Box */}
-              <div className="h-52 rounded-2xl bg-slate-950 border border-slate-800 flex flex-col items-center justify-center p-4 text-center space-y-2">
-                <MapPin className="w-8 h-8 text-teal-400 animate-bounce" />
-                <div className="text-xs font-bold text-white">40, Ananta Hari Mitra Road</div>
-                <div className="text-[11px] text-slate-400">Near Income Tax Office, Nediarpara, Krishnanagar - 741101</div>
+              <div className="rounded-2xl bg-slate-950 border border-slate-800 p-6 text-center space-y-3">
+                <div className="w-12 h-12 rounded-full bg-hospital-green/20 text-hospital-green flex items-center justify-center mx-auto">
+                  <MapPin className="w-6 h-6 animate-pulse" />
+                </div>
+                <div className="text-sm font-bold text-white">Nediarpara, Krishnanagar</div>
+                <div className="text-[11px] text-slate-400">Near Income Tax Office • Landmark Location</div>
                 <a
                   href="https://maps.google.com/?q=Hiramani+Memorial+Hospital+40+Ananta+Hari+Mitra+Road+Krishnanagar+741101"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-teal-500 hover:bg-teal-400 text-slate-950 text-xs font-bold transition mt-1"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-hospital-green hover:bg-[#0f7a49] text-white text-xs font-bold transition shadow-sm mt-2"
                 >
                   <Navigation className="w-3.5 h-3.5" />
-                  <span>Open Driving Directions</span>
+                  <span>Open in Google Maps</span>
                 </a>
               </div>
 
-              {/* How to Reach Guidance */}
+              {/* Transit & How to Reach */}
               <div className="space-y-3 text-xs text-slate-300 border-t border-slate-800 pt-4">
-                <div className="font-bold text-white">How to Reach:</div>
-                <ul className="space-y-1.5 list-disc list-inside text-slate-400">
-                  <li>Located on Ananta Hari Mitra Road in Nediarpara, right near the Income Tax Office.</li>
-                  <li>Approx. 2.5 km from Krishnanagar City Junction Railway Station (10 mins by toto / e-rickshaw).</li>
-                  <li>Easily connected to Krishnanagar High Road, Nediarpara arterial roads, and NH-12.</li>
-                  <li>24x7 emergency and ambulance bay directly accessible from the main road.</li>
-                  <li>Dedicated patient and visitor vehicle parking available inside the hospital premises.</li>
+                <div className="font-bold text-white flex items-center gap-1.5">
+                  <Compass className="w-4 h-4 text-hospital-blue" />
+                  <span>How to Reach the Hospital:</span>
+                </div>
+                <ul className="space-y-2 list-disc list-inside text-slate-400">
+                  <li>Located centrally on Ananta Hari Mitra Road in Nediarpara, right adjacent to the Krishnanagar Income Tax Office.</li>
+                  <li>Approx. 2.5 km from Krishnanagar City Junction Railway Station (10 mins by e-rickshaw / toto).</li>
+                  <li>Connected conveniently to Krishnanagar High Road, Nediarpara arterial roads, and the NH-12 Krishnanagar Bypass.</li>
+                  <li>24x7 emergency and ambulance bay directly accessible from the main road entrance.</li>
+                  <li>Designated patient and visitor vehicle parking area available inside the hospital premises.</li>
                 </ul>
               </div>
             </div>
@@ -166,4 +171,3 @@ export default function ContactPage() {
     </div>
   );
 }
-

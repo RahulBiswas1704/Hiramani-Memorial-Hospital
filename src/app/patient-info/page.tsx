@@ -12,30 +12,31 @@ import {
   CalendarCheck,
   CreditCard,
   Users,
+  Bed,
+  HeartHandshake,
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Patient Guide, Admission & Hospital Facilities | Hiramani Memorial Hospital Kolkata',
+  title: 'Patient Guide, Admission & Hospital Facilities | Hiramani Memorial Hospital Krishnanagar',
   description:
-    'Comprehensive patient guide for admissions, visiting hours, ward categories, discharge procedures, and inpatient amenities at Hiramani Memorial Hospital Kolkata.',
+    'Comprehensive patient guide for inpatient admissions, visiting hours, ward options, discharge procedures, and amenities at Hiramani Memorial Hospital in Krishnanagar, Nadia.',
 };
 
 export default function PatientInfoPage() {
   return (
-    <div className="space-y-12 pb-16">
+    <div className="space-y-12 pb-20">
       {/* 1. Header Banner */}
-      <section className="bg-gradient-to-b from-sky-50 via-white to-slate-50 border-b border-slate-200 py-12 lg:py-16">
+      <section className="bg-gradient-to-b from-hospital-greenSoft via-white to-slate-50 border-b border-slate-200 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-800 text-xs font-semibold">
-            <Building2 className="w-3.5 h-3.5 text-teal-600" />
-            <span>Patient & Visitor Guidance</span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-hospital-green/10 border border-hospital-green/20 text-hospital-green text-xs font-bold">
+            <Building2 className="w-3.5 h-3.5 text-hospital-green" />
+            <span>Patient & Family Hospital Guide • Krishnanagar Campus</span>
           </div>
-          <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
+          <h1 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight">
             Patient Information & Facilities
           </h1>
           <p className="text-base sm:text-lg text-slate-600 max-w-3xl leading-relaxed">
-            Everything you and your family need to know about inpatient admission, visiting policies, room types,
-            discharge protocols, and hospital amenities.
+            Everything you and your family need to know regarding inpatient admission, visiting hours, ward categories, transparent billing, and discharge procedures.
           </p>
         </div>
       </section>
@@ -43,39 +44,43 @@ export default function PatientInfoPage() {
       {/* 2. Visiting Hours & Inpatient Policy Highlights */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-3">
-            <div className="w-10 h-10 rounded-xl bg-sky-100 text-[#0e4a7b] flex items-center justify-center">
+          <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-3">
+            <div className="w-10 h-10 rounded-xl bg-hospital-green/10 text-hospital-green flex items-center justify-center">
               <Clock className="w-5 h-5" />
             </div>
             <h3 className="text-base font-bold text-slate-900">Visiting Hours</h3>
-            <div className="text-xs text-slate-600 space-y-1">
-              <div><strong>Morning:</strong> 11:00 AM – 01:00 PM</div>
-              <div><strong>Evening:</strong> 05:00 PM – 07:00 PM</div>
-              <p className="text-slate-400 pt-1">
+            <div className="text-xs text-slate-600 space-y-1.5">
+              <div className="flex items-center justify-between border-b border-slate-100 pb-1">
+                <span className="font-semibold text-slate-700">Morning Session:</span>
+                <span className="font-bold text-hospital-green">11:00 AM – 01:00 PM</span>
+              </div>
+              <div className="flex items-center justify-between border-b border-slate-100 pb-1">
+                <span className="font-semibold text-slate-700">Evening Session:</span>
+                <span className="font-bold text-hospital-green">05:00 PM – 07:00 PM</span>
+              </div>
+              <p className="text-[11px] text-slate-400 pt-1">
                 Restricted to 1 visitor at a time to minimize infection risks and maintain patient tranquility.
               </p>
             </div>
           </div>
 
-          <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-3">
-            <div className="w-10 h-10 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center">
+          <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-3">
+            <div className="w-10 h-10 rounded-xl bg-hospital-blue/10 text-hospital-blue flex items-center justify-center">
               <Users className="w-5 h-5" />
             </div>
             <h3 className="text-base font-bold text-slate-900">Attendant Passes</h3>
             <p className="text-xs text-slate-600 leading-relaxed">
-              One 24-hour attendant pass is issued per inpatient room during admission. Attendants must carry the pass
-              at all times within hospital premises.
+              One 24-hour attendant pass is issued per inpatient room during admission. Attendants must wear or display the pass within hospital wards at all times.
             </p>
           </div>
 
-          <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-3">
-            <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center">
+          <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-3">
+            <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center">
               <CreditCard className="w-5 h-5" />
             </div>
             <h3 className="text-base font-bold text-slate-900">Cashless & TPA Desk</h3>
             <p className="text-xs text-slate-600 leading-relaxed">
-              Our dedicated insurance desk assists with pre-authorization and document filing for recognized private
-              mediclaim policies and government healthcare schemes.
+              Our dedicated ground floor helpdesk assists with pre-authorization and claim submission for recognized mediclaim policies and government health cards.
             </p>
           </div>
         </div>
@@ -83,37 +88,43 @@ export default function PatientInfoPage() {
 
       {/* 3. Inpatient Admission Process */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-        <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900">
-          Admission Procedure
-        </h2>
+        <div className="space-y-1">
+          <span className="text-xs font-bold uppercase tracking-wider text-hospital-green">
+            Hospital Admission Pathways
+          </span>
+          <h2 className="text-xl sm:text-2xl font-black text-slate-900">
+            Standard Admission Procedures
+          </h2>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Planned Admission */}
-          <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-4">
+          <div className="p-6 sm:p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-4">
             <h3 className="text-base font-bold text-slate-900 flex items-center gap-2">
-              <CheckCircle2 className="w-5 h-5 text-teal-600" />
-              Planned Surgical / Medical Admission
+              <CheckCircle2 className="w-5 h-5 text-hospital-green" />
+              <span>Planned Medical / Surgical Admission</span>
             </h3>
-            <ol className="text-xs text-slate-600 space-y-2 list-decimal list-inside leading-relaxed">
-              <li>Consult your specialist during OPD hours and obtain an Admission Recommendation Slip.</li>
-              <li>Visit the Admission Helpdesk in the main lobby with your Government ID proof (Aadhaar/Voter ID).</li>
-              <li>Select your preferred room/ward category based on availability.</li>
-              <li>For insurance patients, submit your TPA e-card and policy documents to the Cashless Desk at least 24 hours prior.</li>
-              <li>Complete admission paperwork and proceed to the designated nursing station.</li>
+            <ol className="text-xs text-slate-600 space-y-2.5 list-decimal list-inside leading-relaxed">
+              <li>Consult your specialist during OPD hours and obtain an official Admission Recommendation Slip.</li>
+              <li>Visit the Admission Helpdesk in the central reception lobby with photo ID (Aadhaar or Voter ID).</li>
+              <li>Select your preferred accommodation category (ICU, Deluxe Cabin, Semi-Private, or General Ward).</li>
+              <li>For cashless mediclaim patients, submit policy e-card and doctor recommendation to the TPA Desk.</li>
+              <li>Complete the admission deposit (if applicable) and proceed to the designated nursing station.</li>
             </ol>
           </div>
 
           {/* Emergency Admission */}
-          <div className="p-6 rounded-2xl bg-red-50/50 border border-red-200 space-y-4">
+          <div className="p-6 sm:p-8 rounded-3xl bg-red-50/50 border border-red-200 space-y-4">
             <h3 className="text-base font-bold text-red-950 flex items-center gap-2">
               <AlertCircle className="w-5 h-5 text-red-600" />
-              Emergency & Casualty Admission
+              <span>24x7 Emergency & Casualty Admission</span>
             </h3>
-            <ol className="text-xs text-slate-700 space-y-2 list-decimal list-inside leading-relaxed">
-              <li>Patients arriving in emergency casualty receive immediate medical triage and stabilization by the Resident Medical Officer.</li>
-              <li>Clinical care commences immediately—paperwork never delays emergency treatment.</li>
-              <li>The patient’s family or attendant completes registration at the emergency admission counter once the patient is stabilized.</li>
-              <li>Direct transfer to the ICU, HDU, or Emergency Observation Ward as indicated by the attending specialist.</li>
+            <ol className="text-xs text-slate-700 space-y-2.5 list-decimal list-inside leading-relaxed">
+              <li>Patients arriving in emergency casualty receive immediate medical triage and vital stabilization by the Resident Medical Officer.</li>
+              <li>Clinical care commences immediately—paperwork never delays urgent life-saving resuscitation.</li>
+              <li>The accompanying family member registers at the casualty counter once the patient is medically stabilized.</li>
+              <li>Immediate bed allocation to ICU, High Dependency Unit (HDU), or observation as directed by the treating specialist.</li>
+              <li>Direct telephone updates provided to next of kin regarding condition and ongoing interventions.</li>
             </ol>
           </div>
         </div>
@@ -121,36 +132,53 @@ export default function PatientInfoPage() {
 
       {/* 4. Room & Ward Categories */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-        <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900">
-          Accommodation & Ward Options
-        </h2>
+        <div className="space-y-1">
+          <span className="text-xs font-bold uppercase tracking-wider text-hospital-green">
+            Inpatient Accommodation
+          </span>
+          <h2 className="text-xl sm:text-2xl font-black text-slate-900">
+            Ward & Room Categories
+          </h2>
+        </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-3">
+          <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-3">
+            <div className="w-10 h-10 rounded-xl bg-hospital-blue/10 text-hospital-blue flex items-center justify-center">
+              <ShieldCheck className="w-5 h-5" />
+            </div>
             <h4 className="text-base font-bold text-slate-900">Intensive Care Unit (ICU)</h4>
             <p className="text-xs text-slate-500 leading-relaxed">
-              Continuous multi-para invasive monitoring, motorized beds, dedicated critical care nurse-to-patient ratio of 1:1, and central oxygen.
+              Continuous multi-para invasive monitoring, motorized beds, 1:1 nurse-to-patient critical care ratio, central oxygen and ventilators.
             </p>
           </div>
 
-          <div className="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-3">
+          <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-3">
+            <div className="w-10 h-10 rounded-xl bg-hospital-green/10 text-hospital-green flex items-center justify-center">
+              <Bed className="w-5 h-5" />
+            </div>
             <h4 className="text-base font-bold text-slate-900">Deluxe AC Cabin</h4>
             <p className="text-xs text-slate-500 leading-relaxed">
-              Private air-conditioned room with television, attached private bathroom, sofa-cum-bed for attendant, and personalized nursing care.
+              Private air-conditioned cabin with LED TV, en-suite sanitized bathroom, attendant sofa-cum-bed, and dedicated nurse call bell.
             </p>
           </div>
 
-          <div className="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-3">
+          <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-3">
+            <div className="w-10 h-10 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center">
+              <Building2 className="w-5 h-5" />
+            </div>
             <h4 className="text-base font-bold text-slate-900">Semi-Private Room</h4>
             <p className="text-xs text-slate-500 leading-relaxed">
-              Dual-sharing air-conditioned room with privacy curtains, bedside attendant chair, and shared clean bathroom.
+              Twin-sharing air-conditioned room with individual privacy curtains, attendant bedside chair, and shared sanitized bathroom.
             </p>
           </div>
 
-          <div className="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-3">
+          <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-3">
+            <div className="w-10 h-10 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center">
+              <HeartHandshake className="w-5 h-5" />
+            </div>
             <h4 className="text-base font-bold text-slate-900">General Medical Ward</h4>
             <p className="text-xs text-slate-500 leading-relaxed">
-              Separate male and female general wards equipped with clean bedding, ceiling fans, central nursing station, and hygienic sanitation.
+              Separate male and female general wards equipped with clean bedding, central nursing supervision, and hygienic sanitation.
             </p>
           </div>
         </div>
@@ -158,20 +186,28 @@ export default function PatientInfoPage() {
 
       {/* 5. Discharge Process & Pharmacy */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="p-8 rounded-3xl bg-slate-900 text-white space-y-4">
-          <h3 className="text-lg font-bold">Discharge Procedure & Medication Guidelines</h3>
+        <div className="p-8 sm:p-10 rounded-3xl bg-hospital-slate text-white space-y-4">
+          <div className="flex items-center gap-2 text-hospital-green text-xs font-bold uppercase tracking-wider">
+            <Clock className="w-4 h-4" />
+            <span>Smooth Inpatient Discharge</span>
+          </div>
+          <h3 className="text-xl sm:text-2xl font-bold">Discharge Procedure & Medication Guidelines</h3>
           <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-3xl">
-            Discharge is authorized by your attending consultant during morning rounds. The hospital billing department
-            prepares an itemized summary within 2 to 3 hours. Your nurse will provide the Discharge Summary, explain
-            prescriptions, schedule your follow-up OPD appointment, and deliver take-home medications from our 24x7 in-house pharmacy.
+            Discharges are authorized by your attending consultant during morning rounds. The hospital billing department prepares an itemized summary within 2 to 3 hours. Your nurse will provide the signed Discharge Summary, explain follow-up dates, and deliver take-home medications from our 24x7 in-house pharmacy counter.
           </p>
-          <div className="pt-2">
+          <div className="pt-2 flex flex-wrap items-center gap-4">
+            <a
+              href="tel:+917872957300"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold text-slate-900 bg-white hover:bg-slate-100 transition"
+            >
+              <PhoneCall className="w-4 h-4 text-hospital-green" />
+              <span>Reception Helpdesk: +91 78729 57300</span>
+            </a>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 text-xs font-bold text-teal-400 hover:underline"
+              className="inline-flex items-center gap-2 text-xs font-bold text-hospital-green hover:underline"
             >
-              <span>Have questions about admission? Contact our Reception Desk</span>
-              <PhoneCall className="w-3.5 h-3.5" />
+              <span>View Krishnanagar Campus Location</span>
             </Link>
           </div>
         </div>
@@ -179,4 +215,3 @@ export default function PatientInfoPage() {
     </div>
   );
 }
-

@@ -310,7 +310,7 @@ export default function SettingsPage() {
                 type="text"
                 value={city}
                 onChange={e => setCity(e.target.value)}
-                placeholder="Kolkata"
+                placeholder="Krishnanagar"
                 className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#0e4a7b]"
               />
             </div>

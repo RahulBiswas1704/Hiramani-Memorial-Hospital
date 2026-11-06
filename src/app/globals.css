@@ -12,24 +12,24 @@
   --popover: 0 0% 100%;
   --popover-foreground: 222 47% 11%;
 
-  --primary: 207 80% 27%; /* Deep Medical Blue #0e4a7b */
-  --primary-foreground: 210 40% 98%;
+  --primary: 153 75% 34%; /* Brand Hospital Green #15965C */
+  --primary-foreground: 0 0% 100%;
 
-  --secondary: 174 85% 32%; /* Hospital Teal #0d9488 */
-  --secondary-foreground: 210 40% 98%;
+  --secondary: 199 83% 47%; /* Medical Blue #159FDB */
+  --secondary-foreground: 0 0% 100%;
 
   --muted: 210 40% 96.1%;
   --muted-foreground: 215.4 16.3% 46.9%;
 
-  --accent: 174 85% 32%;
-  --accent-foreground: 210 40% 98%;
+  --accent: 153 75% 34%;
+  --accent-foreground: 0 0% 100%;
 
   --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 210 40% 98%;
+  --destructive-foreground: 0 0% 100%;
 
   --border: 214.3 31.8% 91.4%;
   --input: 214.3 31.8% 91.4%;
-  --ring: 207 80% 27%;
+  --ring: 153 75% 34%;
 
   --radius: 0.75rem;
 }

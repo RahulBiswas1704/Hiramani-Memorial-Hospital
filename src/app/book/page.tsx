@@ -4,9 +4,9 @@ import { HospitalRepo } from '@/lib/db/repo';
 import { QuickBookingClient } from '@/components/booking/QuickBookingClient';
 
 export const metadata: Metadata = {
-  title: 'Book Doctor Appointment Online | Hiramani Memorial Hospital Kolkata',
+  title: 'Book Doctor Appointment Online | Hiramani Memorial Hospital Krishnanagar',
   description:
-    'Book outpatient doctor appointments online at Hiramani Memorial Hospital Kolkata. Select department, doctor, and confirmed time slot with instant reference.',
+    'Book outpatient doctor appointments online at Hiramani Memorial Hospital in Krishnanagar, Nadia. Select department, doctor, and confirmed time slot with instant reference.',
 };
 
 export const revalidate = 60;
