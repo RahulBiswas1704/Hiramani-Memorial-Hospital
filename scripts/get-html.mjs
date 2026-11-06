@@ -15,3 +15,4 @@ ws.onmessage = (e) => {
   console.log(JSON.parse(e.data).result.result.value);
   process.exit(0);
 };
+

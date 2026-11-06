@@ -92,3 +92,4 @@ To permanently eliminate horizontal overflow, clipping, and touch collisions:
 - Floating WhatsApp button is repositioned to `bottom-4 right-4` with unobtrusive `w-12 h-12` dimensions on mobile, and the bouncing desktop tooltip is suppressed on screens $< 640\text{ px}$.
 - All touch targets satisfy the $\ge 44 \times 44\text{ px}$ accessibility requirement.
 - Navigation header collapses cleanly without text squishing on viewports down to $320\text{ px}$.
+

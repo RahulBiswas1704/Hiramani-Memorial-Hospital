@@ -120,3 +120,4 @@ Every key route has been verified and captured at both mobile (390px) and deskto
 ## 6. Final Sign-Off
 
 The Hiramani Memorial Hospital public platform satisfies all institutional healthcare mobile responsiveness requirements. It delivers zero horizontal overflow across 100% of tested devices, responsive typography, accessible touch targets, and high-fidelity rendering of the official hospital identity.
+
