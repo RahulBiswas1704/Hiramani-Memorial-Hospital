@@ -159,3 +159,4 @@ Detailed architectural and regulatory documentation is maintained in the root an
 
 Copyright © 2026 **Hiramani Memorial Hospital**. All rights reserved.  
 Unauthorized copying, modification, distribution, or reproduction of this software via any medium is strictly prohibited.
+
