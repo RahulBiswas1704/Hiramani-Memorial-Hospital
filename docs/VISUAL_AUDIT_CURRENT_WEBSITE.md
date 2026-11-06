@@ -97,3 +97,4 @@ The redesign will immediately execute the following transformations across all r
 3. **Typography Modernization:** Implement an authoritative healthcare typographic scale with refined line heights, crisp tracking, and editorial heading hierarchy.
 4. **Destruction of Card Monotony:** Replace repetitive card grids with diverse, purpose-built layouts: data tables, split editorial columns, media-and-text features, and organized directories.
 5. **Mobile-First Ergonomics:** Re-engineer the navigation drawer, compact header, search filters, and doctor listings for smooth 360px–420px mobile usability.
+

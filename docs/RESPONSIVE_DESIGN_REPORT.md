@@ -74,3 +74,4 @@ The following verified screenshots demonstrate responsive parity across all test
 - **Touch Target Standard:** Every interactive button, navigation link, tab, and form control meets or exceeds the WCAG $44 \times 44\text{ pt}$ recommended touch area.
 - **Color Contrast:** Deep forest green (`#0B3D2A`) and deep slate (`#1E293B`) text on white backgrounds achieve contrast ratios $> 10:1$, comfortably surpassing WCAG AAA requirements ($7:1$).
 - **Font Scaling:** Clean rem-based font sizes (`0.875rem` to `3rem`) allow users to zoom up to $200\%$ without horizontal overlap or text clipping.
+
