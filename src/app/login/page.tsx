@@ -49,15 +49,15 @@ export default function LoginPage() {
     <div className="min-h-screen bg-slate-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md text-center">
         <Link href="/" className="inline-flex flex-col items-center gap-2 group">
-          <div className="w-16 h-16 rounded-full bg-white p-1 border-2 border-teal-500 shadow-md group-hover:scale-105 transition">
+          <div className="w-16 h-16 rounded-full bg-white p-1 border-2 border-[#159FDB] shadow-md group-hover:scale-105 transition">
             <img
               src="/logo.png"
               alt="Hiramani Memorial Hospital Logo"
               className="w-full h-full object-contain rounded-full"
             />
           </div>
-          <span className="text-xl font-extrabold text-[#0e4a7b] tracking-tight">Hiramani Memorial Hospital</span>
-          <span className="text-[11px] text-teal-700 font-semibold">Krishnanagar, Nadia • PIN-741101</span>
+          <span className="text-xl font-bold text-[#103653] tracking-tight">Hiramani Memorial Hospital</span>
+          <span className="text-[11px] text-[#15965C] font-semibold">Krishnanagar, Nadia • PIN-741101</span>
         </Link>
         <h2 className="mt-4 text-xl font-bold text-slate-900 tracking-tight">
           Hospital Staff & Admin Sign In
@@ -88,7 +88,7 @@ export default function LoginPage() {
                   value={email}
                   onChange={e => setEmail(e.target.value)}
                   placeholder="admin@hiramanihospital.demo"
-                  className="w-full bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#0e4a7b] pl-10"
+                  className="w-full bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#15965C] pl-10"
                 />
                 <Mail className="w-4 h-4 text-slate-400 absolute left-3.5 top-3" />
               </div>
@@ -101,7 +101,7 @@ export default function LoginPage() {
                 </label>
                 <Link
                   href="/forgot-password"
-                  className="text-[11px] font-medium text-[#0e4a7b] hover:underline"
+                  className="text-[11px] font-medium text-[#15965C] hover:underline"
                 >
                   Forgot Password?
                 </Link>
@@ -113,7 +113,7 @@ export default function LoginPage() {
                   value={password}
                   onChange={e => setPassword(e.target.value)}
                   placeholder="••••••••••••"
-                  className="w-full bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#0e4a7b] pl-10"
+                  className="w-full bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#15965C] pl-10"
                 />
                 <Lock className="w-4 h-4 text-slate-400 absolute left-3.5 top-3" />
               </div>
@@ -122,7 +122,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-[#0e4a7b] hover:bg-[#0b3459] text-white font-semibold py-2.5 px-4 rounded-xl text-xs shadow transition flex items-center justify-center gap-2 disabled:opacity-50"
+              className="w-full bg-[#15965C] hover:bg-[#117A4A] text-white font-bold py-2.5 px-4 rounded-xl text-xs shadow-sm transition flex items-center justify-center gap-2 disabled:opacity-50"
             >
               <span>{isLoading ? 'Verifying Credentials...' : 'Sign In to Dashboard'}</span>
               <ArrowRight className="w-4 h-4" />

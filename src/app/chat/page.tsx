@@ -20,12 +20,16 @@ export default function ChatPage() {
             </Link>
             <div className="h-5 w-[1px] bg-slate-300"></div>
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-[#0e4a7b] flex items-center justify-center text-white font-bold">
-                <Stethoscope className="w-5 h-5 text-white" />
+              <div className="w-8 h-8 rounded-full overflow-hidden bg-white border border-[#159FDB] shadow-sm shrink-0 p-0.5">
+                <img
+                  src="/logo.png"
+                  alt="Hiramani Memorial Hospital Logo"
+                  className="w-full h-full object-contain rounded-full"
+                />
               </div>
-              <span className="font-bold text-slate-900 tracking-tight">MediConnect</span>
-              <span className="text-xs bg-emerald-100 text-emerald-800 font-semibold px-2 py-0.5 rounded-full">
-                Interactive Bot Sandbox
+              <span className="font-bold text-[#103653] tracking-tight">Hiramani Memorial Hospital</span>
+              <span className="text-xs bg-[#F4F8F5] text-[#15965C] font-semibold px-2 py-0.5 rounded-full border border-[#15965C]/20">
+                WhatsApp OPD Sandbox
               </span>
             </div>
           </div>
@@ -33,7 +37,7 @@ export default function ChatPage() {
           <div className="flex items-center gap-3">
             <Link
               href="/dashboard"
-              className="text-xs font-semibold bg-[#0e4a7b] text-white hover:bg-[#0b3459] px-4 py-2 rounded-lg transition shadow-sm"
+              className="text-xs font-semibold bg-[#15965C] text-white hover:bg-[#117A4A] px-4 py-2 rounded-lg transition shadow-sm"
             >
               Access Admin Dashboard →
             </Link>

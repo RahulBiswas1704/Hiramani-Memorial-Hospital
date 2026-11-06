@@ -16,11 +16,16 @@ export default function ForgotPasswordPage() {
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md text-center">
-        <Link href="/" className="inline-flex items-center gap-2.5">
-          <div className="w-10 h-10 rounded-xl bg-[#0e4a7b] flex items-center justify-center text-white shadow-sm">
-            <Stethoscope className="w-6 h-6 text-white" />
+        <Link href="/" className="inline-flex flex-col items-center gap-2 group">
+          <div className="w-14 h-14 rounded-full bg-white p-1 border-2 border-[#159FDB] shadow-md group-hover:scale-105 transition">
+            <img
+              src="/logo.png"
+              alt="Hiramani Memorial Hospital Logo"
+              className="w-full h-full object-contain rounded-full"
+            />
           </div>
-          <span className="text-2xl font-extrabold text-slate-900 tracking-tight">MediConnect</span>
+          <span className="text-xl font-bold text-[#103653] tracking-tight">Hiramani Memorial Hospital</span>
+          <span className="text-[11px] text-[#15965C] font-semibold">Krishnanagar, Nadia • PIN-741101</span>
         </Link>
         <h2 className="mt-4 text-xl font-bold text-slate-900 tracking-tight">
           Reset Password
@@ -43,7 +48,7 @@ export default function ForgotPasswordPage() {
               </p>
               <Link
                 href="/login"
-                className="inline-block mt-4 text-xs font-semibold text-[#0e4a7b] hover:underline"
+                className="inline-block mt-4 text-xs font-semibold text-[#15965C] hover:underline"
               >
                 Back to Sign In
               </Link>
@@ -61,7 +66,7 @@ export default function ForgotPasswordPage() {
                     value={email}
                     onChange={e => setEmail(e.target.value)}
                     placeholder="doctor@hiramanihospital.demo"
-                    className="w-full bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#0e4a7b] pl-10"
+                    className="w-full bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#15965C] pl-10"
                   />
                   <Mail className="w-4 h-4 text-slate-400 absolute left-3.5 top-3" />
                 </div>
@@ -69,7 +74,7 @@ export default function ForgotPasswordPage() {
 
               <button
                 type="submit"
-                className="w-full bg-[#0e4a7b] hover:bg-[#0b3459] text-white font-semibold py-2.5 px-4 rounded-xl text-xs shadow transition"
+                className="w-full bg-[#15965C] hover:bg-[#117A4A] text-white font-bold py-2.5 px-4 rounded-xl text-xs shadow-sm transition"
               >
                 Send Password Reset Email
               </button>
