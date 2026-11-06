@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: "420px",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -35,17 +38,21 @@ module.exports = {
         },
         hospital: {
           green: "#15965C",
-          greenDark: "#0E7444",
+          greenHover: "#117A4A",
           greenSoft: "#F4F8F5",
           greenLight: "#E8F5EE",
           blue: "#159FDB",
-          blueDark: "#0B72A2",
+          blueHover: "#0E87BC",
           blueSoft: "#F0F7FB",
           blueLight: "#E0F2FE",
+          navy: "#103653",
+          dark: "#182B3D",
+          body: "#526273",
+          light: "#F7FAF9",
           slate: "#1E293B",
           charcoal: "#334155",
           muted: "#64748B",
-          border: "#E2E8F0",
+          border: "#E5EBEF",
           emergency: "#DC2626",
           emergencySoft: "#FEF2F2",
         },

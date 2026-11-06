@@ -160,25 +160,20 @@ export default async function DepartmentDetailPage({ params }: DepartmentDetailP
       </Link>
 
       {/* Main Department Header */}
-      <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-6 sm:p-10 space-y-8">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pb-6 border-b border-slate-100">
-          <div className="flex items-center gap-4">
-            <div className="w-16 h-16 rounded-2xl bg-hospital-green/10 border border-hospital-green/20 flex items-center justify-center shrink-0">
-              {icon}
-            </div>
-            <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-hospital-green">
-                Clinical Speciality • Krishnanagar Campus
-              </span>
-              <h1 className="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight">
-                {dept.name}
-              </h1>
-            </div>
+      <div className="bg-white rounded-xl border border-[#E5EBEF] p-6 sm:p-8 space-y-6">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-6 border-b border-[#E5EBEF]">
+          <div>
+            <span className="text-xs font-bold uppercase tracking-wider text-[#15965C]">
+              Clinical Speciality • Krishnanagar Campus
+            </span>
+            <h1 className="text-2xl sm:text-3xl font-bold text-[#103653] tracking-tight mt-1">
+              Department of {dept.name}
+            </h1>
           </div>
 
           <Link
-            href={`/book?departmentId=${dept.id}`}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs sm:text-sm font-bold text-white bg-hospital-green hover:bg-[#0f7a49] shadow-md shadow-hospital-green/20 transition shrink-0"
+            href={`/book?department_id=${dept.id}`}
+            className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg text-xs font-bold text-white bg-[#15965C] hover:bg-[#117A4A] transition shadow-sm shrink-0"
           >
             <CalendarCheck className="w-4 h-4" />
             <span>Book Department Doctor</span>
@@ -186,28 +181,27 @@ export default async function DepartmentDetailPage({ params }: DepartmentDetailP
         </div>
 
         {/* Overview Narrative */}
-        <div className="space-y-3">
-          <h2 className="text-xs font-bold uppercase tracking-wider text-slate-400">
+        <div className="space-y-2">
+          <h2 className="text-xs font-bold uppercase tracking-wider text-[#526273]">
             Clinical Overview
           </h2>
-          <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+          <p className="text-sm text-[#526273] leading-relaxed">
             {dept.description ||
               `The Department of ${dept.name} at Hiramani Memorial Hospital provides comprehensive clinical evaluations, advanced diagnostic workups, and compassionate therapies for patients across Krishnanagar, Nadia, and surrounding regions.`}
           </p>
         </div>
 
         {/* 3-Column Structured Breakdown */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
           {/* Conditions */}
-          <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100 space-y-3">
-            <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-hospital-green" />
-              <span>Conditions Treated</span>
+          <div className="p-4 rounded-lg bg-[#F7FAF9] border border-[#E5EBEF] space-y-2.5">
+            <h3 className="text-xs font-bold text-[#103653] uppercase tracking-wider">
+              Conditions Treated
             </h3>
-            <ul className="text-xs text-slate-600 space-y-2">
+            <ul className="text-xs text-[#526273] space-y-1.5">
               {details.conditions.map((c, i) => (
-                <li key={i} className="flex items-start gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-hospital-green shrink-0 mt-1" />
+                <li key={i} className="flex items-start gap-1.5">
+                  <span className="text-[#15965C] font-bold">›</span>
                   <span>{c}</span>
                 </li>
               ))}
@@ -215,15 +209,14 @@ export default async function DepartmentDetailPage({ params }: DepartmentDetailP
           </div>
 
           {/* Procedures */}
-          <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100 space-y-3">
-            <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-hospital-blue" />
-              <span>Clinical Procedures</span>
+          <div className="p-4 rounded-lg bg-[#F7FAF9] border border-[#E5EBEF] space-y-2.5">
+            <h3 className="text-xs font-bold text-[#103653] uppercase tracking-wider">
+              Clinical Procedures
             </h3>
-            <ul className="text-xs text-slate-600 space-y-2">
+            <ul className="text-xs text-[#526273] space-y-1.5">
               {details.treatments.map((t, i) => (
-                <li key={i} className="flex items-start gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-hospital-blue shrink-0 mt-1" />
+                <li key={i} className="flex items-start gap-1.5">
+                  <span className="text-[#159FDB] font-bold">›</span>
                   <span>{t}</span>
                 </li>
               ))}
@@ -231,15 +224,14 @@ export default async function DepartmentDetailPage({ params }: DepartmentDetailP
           </div>
 
           {/* Diagnostic Support */}
-          <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100 space-y-3">
-            <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-              <span>Diagnostic Support</span>
+          <div className="p-4 rounded-lg bg-[#F7FAF9] border border-[#E5EBEF] space-y-2.5">
+            <h3 className="text-xs font-bold text-[#103653] uppercase tracking-wider">
+              Diagnostic Support
             </h3>
-            <ul className="text-xs text-slate-600 space-y-2">
+            <ul className="text-xs text-[#526273] space-y-1.5">
               {details.diagnosticCapabilities.map((d, i) => (
-                <li key={i} className="flex items-start gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 shrink-0 mt-1" />
+                <li key={i} className="flex items-start gap-1.5">
+                  <span className="text-[#15965C] font-bold">›</span>
                   <span>{d}</span>
                 </li>
               ))}
@@ -248,61 +240,54 @@ export default async function DepartmentDetailPage({ params }: DepartmentDetailP
         </div>
 
         {/* Attending Doctors with Authentic Portrait Photography */}
-        <div className="space-y-4 pt-6 border-t border-slate-100">
+        <div className="space-y-3 pt-6 border-t border-[#E5EBEF]">
           <div className="flex items-center justify-between">
-            <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <Stethoscope className="w-5 h-5 text-hospital-green" />
-              <span>Attending Consultants in this Department</span>
+            <h3 className="text-base font-bold text-[#103653]">
+              Attending Consultants in this Department
             </h3>
-            <span className="text-xs text-slate-500">
+            <span className="text-xs text-[#526273]">
               {doctors.length} Specialist{doctors.length !== 1 ? 's' : ''} Listed
             </span>
           </div>
 
           {doctors.length === 0 ? (
-            <p className="text-xs text-slate-500 p-6 bg-slate-50 rounded-2xl text-center">
+            <p className="text-xs text-[#526273] p-4 bg-[#F7FAF9] rounded-lg text-center border border-[#E5EBEF]">
               Consultant schedule being updated. Please contact reception at +91 78729 57300.
             </p>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {doctors.map(doc => (
                 <div
                   key={doc.id}
-                  className="p-5 rounded-2xl border border-slate-200 bg-white hover:border-hospital-green shadow-sm transition flex gap-4 items-center"
+                  className="p-4 rounded-lg border border-[#E5EBEF] bg-white hover:border-[#15965C] transition flex gap-3.5 items-center"
                 >
-                  <div className="relative w-20 h-24 rounded-xl overflow-hidden bg-slate-100 shrink-0 border border-slate-200">
-                    <Image
+                  <div className="w-16 h-20 rounded-md overflow-hidden bg-slate-100 shrink-0 border border-[#E5EBEF]">
+                    <img
                       src={doc.profile_image_url || '/images/hero-consultation.jpg'}
                       alt={doc.full_name}
-                      fill
-                      className="object-cover"
+                      className="w-full h-full object-cover object-top"
                     />
                   </div>
 
-                  <div className="space-y-1 flex-1 min-w-0">
-                    <h4 className="text-base font-bold text-slate-900 truncate">{doc.full_name}</h4>
-                    <p className="text-xs text-hospital-green font-semibold truncate">{doc.qualification}</p>
-                    <p className="text-[11px] text-slate-500">
-                      Chamber: {doc.room_number || 'OPD Chamber'} • {doc.experience_years}+ Yrs Exp
+                  <div className="space-y-0.5 flex-1 min-w-0">
+                    <h4 className="text-sm font-bold text-[#182B3D] truncate">{doc.full_name}</h4>
+                    <p className="text-xs text-[#15965C] font-medium truncate">{doc.qualification}</p>
+                    <p className="text-[11px] text-[#526273]">
+                      Chamber: {doc.room_number || 'OPD Chamber'} • Fee: <strong className="text-[#103653]">₹{doc.consultation_fee}</strong>
                     </p>
-                    <div className="flex items-center justify-between pt-2">
-                      <span className="text-xs font-bold text-slate-900">
-                        OPD Fee: <span className="text-hospital-green">₹{doc.consultation_fee}</span>
-                      </span>
-                      <div className="flex items-center gap-2">
-                        <Link
-                          href={`/doctors/${doc.id}`}
-                          className="px-2.5 py-1 text-xs font-semibold text-slate-600 bg-slate-100 hover:bg-slate-200 rounded-lg transition"
-                        >
-                          Profile
-                        </Link>
-                        <Link
-                          href={`/book?doctorId=${doc.id}`}
-                          className="px-3 py-1 text-xs font-bold text-white bg-hospital-green hover:bg-[#0f7a49] rounded-lg transition shadow-sm"
-                        >
-                          Book Slot
-                        </Link>
-                      </div>
+                    <div className="flex items-center gap-2 pt-1.5">
+                      <Link
+                        href={`/doctors/${doc.id}`}
+                        className="text-[11px] font-semibold text-[#526273] hover:text-[#15965C]"
+                      >
+                        Profile
+                      </Link>
+                      <Link
+                        href={`/book?doctor_id=${doc.id}`}
+                        className="text-[11px] font-bold text-white bg-[#15965C] hover:bg-[#117A4A] px-2.5 py-1 rounded transition"
+                      >
+                        Book Slot
+                      </Link>
                     </div>
                   </div>
                 </div>

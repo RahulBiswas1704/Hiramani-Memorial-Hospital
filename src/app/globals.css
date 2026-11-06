@@ -34,11 +34,20 @@
   --radius: 0.75rem;
 }
 
+html {
+  overflow-x: hidden;
+  max-width: 100vw;
+  scroll-behavior: smooth;
+}
+
 body {
-  color: hsl(var(--foreground));
-  background: hsl(var(--background));
-  font-family: -apple-system, BlinkMacSystemFont, "Noto Sans Bengali", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+  max-width: 100vw;
+  color: #182B3D;
+  background: #FFFFFF;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans Bengali", "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Custom scrollbars for chat and dashboard */

@@ -90,12 +90,12 @@ export default async function DoctorProfilePage({ params }: DoctorProfilePagePro
         <span>Back to Specialist Directory</span>
       </Link>
 
-      {/* Main Profile Card */}
-      <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-6 sm:p-10 space-y-8">
+      {/* Main Profile Container */}
+      <div className="bg-white rounded-xl border border-[#E5EBEF] p-6 sm:p-10 space-y-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
           {/* Doctor Portrait Column */}
-          <div className="md:col-span-4 flex flex-col items-center text-center p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-4">
-            <div className="w-36 h-36 rounded-2xl overflow-hidden bg-slate-100 border-2 border-white shadow-lg shrink-0">
+          <div className="md:col-span-4 flex flex-col items-center text-center p-6 bg-[#F7FAF9] rounded-xl border border-[#E5EBEF] space-y-4">
+            <div className="w-32 h-36 rounded-lg overflow-hidden bg-slate-100 border border-[#E5EBEF] shadow-sm shrink-0">
               <img
                 src={portraitUrl}
                 alt={doctor.full_name}
@@ -103,20 +103,20 @@ export default async function DoctorProfilePage({ params }: DoctorProfilePagePro
               />
             </div>
 
-            <div className="space-y-1.5">
-              <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[#15965C] bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full">
+            <div className="space-y-1">
+              <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#15965C] bg-[#F4F8F5] border border-[#15965C]/30 px-3 py-1 rounded-full">
                 <CheckCircle2 className="w-3.5 h-3.5" />
                 <span>Verified Attending Consultant</span>
               </span>
-              <div className="text-xs text-slate-500 pt-1">
-                Clinical Experience: {doctor.experience_years ? `${doctor.experience_years}+ Years` : 'Senior Consultant'}
+              <div className="text-xs text-[#526273] pt-1">
+                Experience: {doctor.experience_years ? `${doctor.experience_years}+ Years` : 'Senior Consultant'}
               </div>
             </div>
 
             <div className="w-full pt-2">
               <Link
-                href={`/book?doctor=${doctor.id}`}
-                className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-bold text-white bg-[#15965C] hover:bg-[#0E7444] shadow-md transition"
+                href={`/book?doctor_id=${doctor.id}`}
+                className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg text-xs font-bold text-white bg-[#15965C] hover:bg-[#117A4A] transition shadow-sm"
               >
                 <CalendarCheck className="w-4 h-4" />
                 <span>Book OPD Slot</span>
@@ -126,27 +126,27 @@ export default async function DoctorProfilePage({ params }: DoctorProfilePagePro
 
           {/* Doctor Detailed Info Column */}
           <div className="md:col-span-8 space-y-6">
-            <div className="space-y-2 border-b border-slate-100 pb-5">
-              <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#15965C]">
+            <div className="space-y-1.5 border-b border-[#E5EBEF] pb-4">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#15965C]">
                 {department?.name || doctor.department_name || 'Clinical Speciality'}
-              </div>
-              <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+              </span>
+              <h1 className="text-2xl sm:text-3xl font-bold text-[#103653] tracking-tight">
                 {doctor.full_name}
               </h1>
-              <p className="text-sm font-semibold text-[#0B72A2]">
+              <p className="text-sm font-semibold text-[#159FDB]">
                 {doctor.speciality}
               </p>
-              <p className="text-xs text-slate-500 font-medium">
+              <p className="text-xs text-[#526273]">
                 {doctor.qualification}
               </p>
             </div>
 
             {/* Biography */}
-            <div className="space-y-2">
-              <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400">
+            <div className="space-y-1.5">
+              <h3 className="text-xs font-bold uppercase tracking-wider text-[#526273]">
                 Clinical Overview
               </h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#526273] leading-relaxed">
                 {doctor.bio ||
                   `${doctor.full_name} is a senior attending specialist in the Department of ${
                     department?.name || doctor.speciality
@@ -155,24 +155,24 @@ export default async function DoctorProfilePage({ params }: DoctorProfilePagePro
             </div>
 
             {/* Chamber & Fee Schedule Matrix */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
-                <div className="text-xs text-slate-500 font-medium">OPD Chamber</div>
-                <div className="text-base font-bold text-slate-900 mt-0.5">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div className="p-3.5 rounded-lg bg-[#F7FAF9] border border-[#E5EBEF]">
+                <div className="text-xs text-[#526273]">OPD Chamber</div>
+                <div className="text-sm font-bold text-[#182B3D] mt-0.5">
                   {doctor.room_number || 'OPD-101'}
                 </div>
               </div>
 
-              <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
-                <div className="text-xs text-slate-500 font-medium">Consultation Fee</div>
-                <div className="text-base font-black text-[#15965C] mt-0.5">
+              <div className="p-3.5 rounded-lg bg-[#F7FAF9] border border-[#E5EBEF]">
+                <div className="text-xs text-[#526273]">Consultation Fee</div>
+                <div className="text-sm font-bold text-[#15965C] mt-0.5">
                   ₹{doctor.consultation_fee}
                 </div>
               </div>
 
-              <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
-                <div className="text-xs text-slate-500 font-medium">Follow-up Fee (7 Days)</div>
-                <div className="text-base font-bold text-slate-900 mt-0.5">
+              <div className="p-3.5 rounded-lg bg-[#F7FAF9] border border-[#E5EBEF]">
+                <div className="text-xs text-[#526273]">Follow-up Fee (7 Days)</div>
+                <div className="text-sm font-bold text-[#182B3D] mt-0.5">
                   ₹{doctor.follow_up_fee || 400}
                 </div>
               </div>
@@ -181,17 +181,17 @@ export default async function DoctorProfilePage({ params }: DoctorProfilePagePro
         </div>
 
         {/* Weekly OPD Schedule Roster */}
-        <div className="space-y-4 pt-6 border-t border-slate-100">
+        <div className="space-y-3 pt-6 border-t border-[#E5EBEF]">
           <div className="flex items-center justify-between">
-            <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <Clock className="w-5 h-5 text-[#15965C]" />
+            <h3 className="text-base font-bold text-[#103653] flex items-center gap-2">
+              <Clock className="w-4 h-4 text-[#15965C]" />
               <span>Weekly OPD Consultation Roster</span>
             </h3>
-            <span className="text-xs text-slate-500">Slot duration: 20 mins</span>
+            <span className="text-xs text-[#526273]">Slot duration: 20 mins</span>
           </div>
 
           {schedules.length === 0 ? (
-            <p className="text-xs text-slate-500 p-4 bg-slate-50 rounded-xl border border-slate-200">
+            <p className="text-xs text-[#526273] p-4 bg-[#F7FAF9] rounded-lg border border-[#E5EBEF]">
               No fixed OPD schedules published. Please contact reception at +91 78729 57300 for today&apos;s OPD timings.
             </p>
           ) : (
@@ -199,10 +199,10 @@ export default async function DoctorProfilePage({ params }: DoctorProfilePagePro
               {schedules.map(sch => (
                 <div
                   key={sch.id}
-                  className="p-3.5 rounded-xl border border-slate-200 bg-slate-50 flex items-center justify-between text-xs"
+                  className="p-3 rounded-lg border border-[#E5EBEF] bg-[#F7FAF9] flex items-center justify-between text-xs"
                 >
-                  <span className="font-bold text-slate-800">{DAYS[sch.day_of_week]}</span>
-                  <span className="font-semibold text-[#15965C] bg-emerald-50 px-2.5 py-1 rounded border border-emerald-200">
+                  <span className="font-semibold text-[#182B3D]">{DAYS[sch.day_of_week]}</span>
+                  <span className="font-bold text-[#15965C] bg-[#F4F8F5] px-2 py-0.5 rounded border border-[#15965C]/20">
                     {sch.start_time.slice(0, 5)} - {sch.end_time.slice(0, 5)}
                   </span>
                 </div>

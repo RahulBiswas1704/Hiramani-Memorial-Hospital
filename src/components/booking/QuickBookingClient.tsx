@@ -243,39 +243,39 @@ export function QuickBookingClient({
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
       {/* Left Booking Form */}
-      <div className="lg:col-span-8 bg-white p-6 sm:p-10 rounded-3xl border border-slate-200 shadow-sm space-y-6">
-        <div className="space-y-1 border-b border-slate-100 pb-4">
-          <span className="text-xs font-bold uppercase tracking-wider text-hospital-green">
+      <div className="lg:col-span-8 bg-white p-6 sm:p-8 rounded-xl border border-[#E5EBEF] shadow-sm space-y-6">
+        <div className="space-y-1 border-b border-[#E5EBEF] pb-4">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#15965C]">
             Direct OPD Booking • Krishnanagar Campus
           </span>
-          <h2 className="text-xl sm:text-2xl font-black text-slate-900">
+          <h2 className="text-xl sm:text-2xl font-bold text-[#103653]">
             Schedule an Outpatient Consultation
           </h2>
-          <p className="text-xs text-slate-500">
-            Real-time doctor calendar reservation with zero booking fee. Pay fee directly at the hospital reception.
+          <p className="text-xs text-[#526273]">
+            Real-time doctor calendar reservation with zero booking fee. Pay consultation fee directly at hospital reception.
           </p>
         </div>
 
         {errorMessage && (
-          <div className="p-3.5 rounded-xl bg-red-50 border border-red-200 text-xs text-red-700 flex items-center gap-2">
+          <div className="p-3 rounded-lg bg-[#FEF2F2] border border-[#DC2626]/20 text-xs text-[#DC2626] flex items-center gap-2">
             <AlertCircle className="w-4 h-4 shrink-0" />
             <span>{errorMessage}</span>
           </div>
         )}
 
-        <form onSubmit={handleBooking} className="space-y-5 text-xs">
+        <form onSubmit={handleBooking} className="space-y-4 text-xs">
           {/* 1. Department Selection */}
           <div>
-            <label className="block font-bold text-slate-700 mb-1">Select Department (Optional)</label>
+            <label className="block font-semibold text-[#182B3D] mb-1">Select Speciality Department (Optional)</label>
             <select
               value={selectedDeptId}
               onChange={e => {
                 setSelectedDeptId(e.target.value);
                 setSelectedDoctorId('');
               }}
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-hospital-green bg-white"
+              className="w-full px-3.5 py-2.5 rounded-lg border border-[#E5EBEF] text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#15965C] bg-white text-[#182B3D]"
             >
-              <option value="">All Departments</option>
+              <option value="">All Clinical Departments</option>
               {initialDepartments.map(d => (
                 <option key={d.id} value={d.id}>
                   {d.name}
@@ -286,14 +286,14 @@ export function QuickBookingClient({
 
           {/* 2. Doctor Selection */}
           <div>
-            <label className="block font-bold text-slate-700 mb-1">Select Specialist Doctor *</label>
+            <label className="block font-semibold text-[#182B3D] mb-1">Select Attending Doctor *</label>
             <select
               required
               value={selectedDoctorId}
               onChange={e => setSelectedDoctorId(e.target.value)}
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-hospital-green bg-white"
+              className="w-full px-3.5 py-2.5 rounded-lg border border-[#E5EBEF] text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#15965C] bg-white text-[#182B3D]"
             >
-              <option value="">-- Choose Doctor --</option>
+              <option value="">-- Choose Specialist Doctor --</option>
               {filteredDoctors.map(doc => (
                 <option key={doc.id} value={doc.id}>
                   {doc.full_name} — {doc.speciality} (Fee: ₹{doc.consultation_fee})
@@ -304,15 +304,15 @@ export function QuickBookingClient({
 
           {/* Doctor Details Preview */}
           {selectedDoctor && (
-            <div className="p-4 rounded-2xl bg-hospital-greenSoft border border-hospital-green/20 flex items-start justify-between gap-4">
+            <div className="p-3.5 rounded-lg bg-[#F7FAF9] border border-[#E5EBEF] flex items-start justify-between gap-4">
               <div className="space-y-0.5">
-                <div className="font-bold text-slate-900 text-sm">{selectedDoctor.full_name}</div>
-                <div className="text-hospital-green font-semibold">{selectedDoctor.speciality} • {selectedDoctor.qualification}</div>
-                <div className="text-slate-500">Chamber: {selectedDoctor.room_number || 'OPD-1'}</div>
+                <div className="font-bold text-[#103653] text-sm">{selectedDoctor.full_name}</div>
+                <div className="text-[#15965C] text-xs font-semibold">{selectedDoctor.speciality} • {selectedDoctor.qualification}</div>
+                <div className="text-[#526273] text-[11px]">Chamber: {selectedDoctor.room_number || 'OPD-1'}</div>
               </div>
               <div className="text-right">
-                <span className="text-[11px] text-slate-500 block">Consultation Fee</span>
-                <span className="text-base font-black text-hospital-green">₹{selectedDoctor.consultation_fee}</span>
+                <span className="text-[10px] text-[#526273] uppercase tracking-wider block">OPD Fee</span>
+                <span className="text-sm font-bold text-[#15965C]">₹{selectedDoctor.consultation_fee}</span>
               </div>
             </div>
           )}
@@ -320,35 +320,35 @@ export function QuickBookingClient({
           {/* 3. Date Selection */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label className="block font-bold text-slate-700 mb-1">Appointment Date *</label>
+              <label className="block font-semibold text-[#182B3D] mb-1">Appointment Date *</label>
               <input
                 type="date"
                 required
                 min={todayStr}
                 value={appointmentDate}
                 onChange={e => setAppointmentDate(e.target.value)}
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-hospital-green"
+                className="w-full px-3.5 py-2.5 rounded-lg border border-[#E5EBEF] text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#15965C] bg-white text-[#182B3D]"
               />
             </div>
 
             {/* 4. Slot Selection */}
             <div>
-              <label className="block font-bold text-slate-700 mb-1">Available Time Slot *</label>
+              <label className="block font-semibold text-[#182B3D] mb-1">Available Time Slot *</label>
               {slotsLoading ? (
-                <div className="py-2.5 text-xs text-slate-500 flex items-center gap-2">
-                  <Loader2 className="w-4 h-4 animate-spin text-hospital-green" />
+                <div className="py-2.5 text-xs text-[#526273] flex items-center gap-2">
+                  <Loader2 className="w-4 h-4 animate-spin text-[#15965C]" />
                   <span>Checking doctor roster...</span>
                 </div>
               ) : availableSlots.length === 0 ? (
                 <div className="py-2.5 text-xs text-amber-700">
-                  {selectedDoctorId ? 'No free slots for this date. Try another day.' : 'Select doctor first.'}
+                  {selectedDoctorId ? 'No free slots for this date. Select another day.' : 'Select doctor first.'}
                 </div>
               ) : (
                 <select
                   required
                   value={selectedSlot}
                   onChange={e => setSelectedSlot(e.target.value)}
-                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-hospital-green bg-white font-mono"
+                  className="w-full px-3.5 py-2.5 rounded-lg border border-[#E5EBEF] text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#15965C] bg-white font-mono text-[#182B3D]"
                 >
                   {availableSlots.map(s => (
                     <option key={s} value={s}>
@@ -361,43 +361,43 @@ export function QuickBookingClient({
           </div>
 
           {/* 5. Patient Information */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
             <div>
-              <label className="block font-bold text-slate-700 mb-1">Patient Full Name *</label>
+              <label className="block font-semibold text-[#182B3D] mb-1">Patient Full Name *</label>
               <input
                 type="text"
                 required
                 placeholder="e.g. Anjali Mukherjee"
                 value={patientName}
                 onChange={e => setPatientName(e.target.value)}
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-hospital-green"
+                className="w-full px-3.5 py-2.5 rounded-lg border border-[#E5EBEF] text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#15965C] bg-white"
               />
             </div>
 
             <div>
-              <label className="block font-bold text-slate-700 mb-1">Patient Mobile Phone *</label>
+              <label className="block font-semibold text-[#182B3D] mb-1">Patient Mobile Phone (10 Digits) *</label>
               <input
                 type="tel"
                 required
                 placeholder="10-digit mobile number"
                 value={patientPhone}
                 onChange={e => setPatientPhone(e.target.value)}
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-hospital-green"
+                className="w-full px-3.5 py-2.5 rounded-lg border border-[#E5EBEF] text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#15965C] bg-white"
               />
             </div>
           </div>
 
           {/* Submit CTA */}
-          <div className="pt-4 border-t border-slate-100">
+          <div className="pt-3 border-t border-[#E5EBEF]">
             <button
               type="submit"
               disabled={submitting || slotsLoading || !selectedDoctorId || availableSlots.length === 0}
-              className="w-full py-3.5 px-6 rounded-xl text-sm font-bold text-white bg-hospital-green hover:bg-[#0f7a49] shadow-md shadow-hospital-green/20 transition flex items-center justify-center gap-2 disabled:opacity-50"
+              className="w-full py-3 px-4 rounded-lg text-xs sm:text-sm font-bold text-white bg-[#15965C] hover:bg-[#117A4A] transition shadow-sm flex items-center justify-center gap-2 disabled:opacity-50"
             >
               {submitting ? (
                 <>
                   <Loader2 className="w-4 h-4 animate-spin" />
-                  <span>Reserving OPD Consultation...</span>
+                  <span>Reserving Consultation Slot...</span>
                 </>
               ) : (
                 <>
@@ -411,49 +411,49 @@ export function QuickBookingClient({
       </div>
 
       {/* Right Column: Guidance & WhatsApp Alternative */}
-      <div className="lg:col-span-4 space-y-6">
+      <div className="lg:col-span-4 space-y-5">
         {/* WhatsApp Alternative Card */}
-        <div className="p-6 rounded-3xl bg-hospital-slate text-white space-y-4 shadow-lg border border-slate-800">
+        <div className="p-5 sm:p-6 rounded-xl bg-[#103653] text-white space-y-3.5 border border-[#103653]">
           <div className="flex items-center justify-between">
-            <span className="text-xs font-bold uppercase tracking-wider text-hospital-green">
-              Instant Booking
+            <span className="text-xs font-bold uppercase tracking-wider text-[#15965C]">
+              WhatsApp Booking
             </span>
-            <MessageCircle className="w-5 h-5 text-hospital-green" />
+            <MessageCircle className="w-4 h-4 text-[#15965C]" />
           </div>
 
-          <h3 className="text-lg font-bold leading-snug">
-            Book on WhatsApp in Bengali, Hindi or English
+          <h3 className="text-base font-bold leading-snug">
+            Prefer Booking on WhatsApp?
           </h3>
 
           <p className="text-xs text-slate-300 leading-relaxed">
-            Our automated WhatsApp assistant checks doctor rosters, confirms slots, and sends an appointment token directly to your chat.
+            Our automated WhatsApp system checks doctor rosters, reserves confirmed slots, and delivers appointment passes directly to your phone.
           </p>
 
           <Link
             href="/chat"
-            className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs font-bold text-slate-900 bg-white hover:bg-slate-100 transition shadow-sm"
+            className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-3 rounded-lg text-xs font-bold text-[#103653] bg-white hover:bg-slate-100 transition shadow-sm"
           >
             <span>Launch WhatsApp Assistant</span>
-            <ArrowRight className="w-4 h-4 text-hospital-green" />
+            <ArrowRight className="w-3.5 h-3.5 text-[#15965C]" />
           </Link>
         </div>
 
         {/* Booking Rules & Assistance */}
-        <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-4 text-xs text-slate-600">
-          <div className="font-bold text-slate-900 flex items-center gap-2">
-            <ShieldCheck className="w-4 h-4 text-hospital-green" />
+        <div className="p-5 rounded-xl bg-white border border-[#E5EBEF] space-y-3 text-xs text-[#526273]">
+          <div className="font-bold text-[#103653] flex items-center gap-1.5">
+            <ShieldCheck className="w-4 h-4 text-[#15965C]" />
             <span>Booking Guidelines:</span>
           </div>
 
-          <ul className="space-y-2 list-disc list-inside">
+          <ul className="space-y-1.5 list-disc list-inside">
             <li>Bookings can be scheduled up to 14 days in advance.</li>
-            <li>No online payment required; pay consultation fee at hospital reception.</li>
-            <li>Same-day cancellations allowed up to 2 hours prior to slot.</li>
-            <li>For emergency medical needs, do not wait for OPD slots—visit Casualty immediately.</li>
+            <li>No advance payment required; pay consultation fee at hospital reception.</li>
+            <li>Cancellations permitted up to 2 hours prior to scheduled slot.</li>
+            <li>For emergency trauma, do not wait for OPD slots—visit Casualty immediately.</li>
           </ul>
 
-          <div className="pt-2 border-t border-slate-100 text-[11px] text-slate-500">
-            For phone-assisted booking, call: <strong className="text-slate-800">+91 78729 57300</strong>
+          <div className="pt-2 border-t border-[#E5EBEF] text-[11px] text-[#526273]">
+            Phone assistance: <a href="tel:+917872957300" className="font-bold text-[#103653] hover:underline">+91 78729 57300</a>
           </div>
         </div>
       </div>

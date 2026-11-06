@@ -10,20 +10,21 @@ export function FloatingChatButton() {
   return (
     <>
       {/* Floating Action Button */}
-      <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex flex-col items-end">
         {!isOpen && (
-          <div className="mb-2 bg-slate-900 text-white text-xs font-medium py-1 px-3 rounded-full shadow-lg animate-bounce flex items-center gap-1.5 border border-slate-700">
-            <span className="w-2 h-2 bg-emerald-400 rounded-full animate-ping"></span>
-            Test Live Patient WhatsApp Bot
+          <div className="hidden sm:flex mb-2 bg-[#103653] text-white text-xs font-medium py-1 px-3 rounded-full shadow-md items-center gap-1.5 border border-[#103653]/40">
+            <span className="w-2 h-2 bg-[#15965C] rounded-full animate-pulse"></span>
+            <span>WhatsApp OPD Assistant</span>
           </div>
         )}
 
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="w-14 h-14 rounded-full bg-[#25d366] hover:bg-[#20ba5c] text-white shadow-2xl flex items-center justify-center transition-all transform hover:scale-105 active:scale-95 border-2 border-white focus:outline-none"
-          title="Open WhatsApp Demo Simulator"
+          className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#15965C] hover:bg-[#117A4A] text-white shadow-xl flex items-center justify-center transition-all transform hover:scale-105 active:scale-95 border-2 border-white focus:outline-none"
+          title="Open WhatsApp Consultation Simulator"
+          aria-label="Open WhatsApp Assistant"
         >
-          {isOpen ? <X className="w-7 h-7" /> : <MessageSquare className="w-7 h-7" />}
+          {isOpen ? <X className="w-6 h-6" /> : <MessageSquare className="w-6 h-6" />}
         </button>
       </div>
 

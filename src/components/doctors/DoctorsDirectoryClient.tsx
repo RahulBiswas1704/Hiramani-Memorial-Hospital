@@ -12,6 +12,7 @@ import {
   ArrowRight,
   CheckCircle2,
   ShieldCheck,
+  Award,
 } from 'lucide-react';
 import { Doctor, Department } from '@/types';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
@@ -52,98 +53,92 @@ export function DoctorsDirectoryClient({
   }, [initialDoctors, search, selectedDept]);
 
   return (
-    <div className="space-y-12 pb-16">
+    <div className="space-y-10 pb-20 bg-white text-[#182B3D]">
       {/* 1. Page Header */}
-      <section className="bg-gradient-to-b from-[#F4F8F5] via-white to-slate-50 border-b border-slate-200 py-12 lg:py-16">
+      <section className="pt-8 sm:pt-12 pb-10 sm:pb-12 bg-[#F7FAF9] border-b border-[#E5EBEF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-[#15965C] text-xs font-bold">
-            <Stethoscope className="w-3.5 h-3.5 text-[#15965C]" />
-            <span>Consultant Specialists & Medical Faculty</span>
+          <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#15965C] uppercase tracking-wider">
+            <span>Specialist Faculty • Krishnanagar, Nadia</span>
           </div>
-          <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
-            Our Specialist Doctors
+          <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-[#103653] tracking-tight break-words">
+            Consultant Specialist Directory
           </h1>
-          <p className="text-base sm:text-lg text-slate-600 max-w-3xl leading-relaxed">
-            Browse our attending medical consultants across 15+ clinical departments in Krishnanagar, Nadia. Inspect verified degrees,
-            OPD chamber timings, consultation fees, and reserve your appointment slot online with zero advance payment.
+          <p className="text-sm sm:text-base text-[#526273] max-w-3xl leading-relaxed">
+            Consult experienced resident and visiting physicians across 8+ clinical specialities. Inspect verified medical degrees, OPD chamber schedules, and standardized consultation fees.
           </p>
         </div>
       </section>
 
       {/* 2. Filter & Search Controls */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="p-4 sm:p-6 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-4">
-          <div className="grid grid-cols-1 sm:grid-cols-12 gap-4">
-            {/* Search Input */}
-            <div className="sm:col-span-7 relative">
-              <Search className="w-5 h-5 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
-              <input
-                type="text"
-                placeholder="Search by doctor name (e.g. 'Dr. Sourav'), specialty, or degree..."
-                value={search}
-                onChange={e => setSearch(e.target.value)}
-                className="w-full pl-11 pr-4 py-2.5 rounded-xl border border-slate-200 text-sm font-medium text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#15965C]"
-              />
-            </div>
-
-            {/* Department Filter Dropdown */}
-            <div className="sm:col-span-5 relative">
-              <select
-                value={selectedDept}
-                onChange={e => setSelectedDept(e.target.value)}
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#15965C] bg-white"
-              >
-                <option value="">All Clinical Departments ({initialDoctors.length})</option>
-                {initialDepartments.map(d => (
-                  <option key={d.id} value={d.id}>
-                    {d.name}
-                  </option>
-                ))}
-              </select>
-            </div>
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pb-6 border-b border-[#E5EBEF]">
+          {/* Search Input */}
+          <div className="relative flex-1 min-w-0">
+            <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+            <input
+              type="text"
+              placeholder="Search doctor by name (e.g. 'Dr. Sourav'), specialty, or degree..."
+              value={search}
+              onChange={e => setSearch(e.target.value)}
+              className="w-full pl-9 pr-4 py-2.5 rounded-lg border border-[#E5EBEF] text-xs sm:text-sm font-medium text-[#182B3D] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#15965C] bg-white"
+            />
           </div>
 
-          <div className="flex items-center justify-between text-xs text-slate-500 pt-2 border-t border-slate-100">
-            <span>
-              Showing <strong className="text-slate-800">{filteredDoctors.length}</strong> of{' '}
-              {initialDoctors.length} registered specialists
-            </span>
-            {(search || selectedDept) && (
-              <button
-                onClick={() => {
-                  setSearch('');
-                  setSelectedDept('');
-                }}
-                className="text-xs font-bold text-[#15965C] hover:underline"
-              >
-                Clear Filters
-              </button>
-            )}
+          {/* Department Filter Dropdown */}
+          <div className="sm:w-72 shrink-0">
+            <select
+              value={selectedDept}
+              onChange={e => setSelectedDept(e.target.value)}
+              className="w-full px-3 py-2.5 rounded-lg border border-[#E5EBEF] text-xs sm:text-sm font-medium text-[#182B3D] focus:outline-none focus:ring-2 focus:ring-[#15965C] bg-white"
+            >
+              <option value="">All Clinical Specialities ({initialDoctors.length})</option>
+              {initialDepartments.map(d => (
+                <option key={d.id} value={d.id}>
+                  {d.name}
+                </option>
+              ))}
+            </select>
           </div>
+
+          {(search || selectedDept) && (
+            <button
+              onClick={() => {
+                setSearch('');
+                setSelectedDept('');
+              }}
+              className="px-3 py-2 text-xs font-bold text-[#15965C] hover:underline shrink-0"
+            >
+              Reset
+            </button>
+          )}
+        </div>
+
+        <div className="text-xs text-[#526273] pt-3">
+          Showing <strong>{filteredDoctors.length}</strong> of {initialDoctors.length} consultant specialists
         </div>
       </section>
 
-      {/* 3. Doctors List Grid with Authentic Portrait Imagery */}
+      {/* 3. Refined Medical Directory Layout */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {filteredDoctors.length === 0 ? (
-          <div className="p-16 text-center bg-slate-50 rounded-3xl border border-slate-200 space-y-4">
-            <Stethoscope className="w-12 h-12 text-slate-400 mx-auto" />
-            <h3 className="text-lg font-bold text-slate-800">No specialists found</h3>
-            <p className="text-xs sm:text-sm text-slate-500 max-w-md mx-auto">
-              We couldn&apos;t find any doctor matching your current filter criteria. Try adjusting the search term or view all departments.
+          <div className="p-12 text-center bg-[#F7FAF9] rounded-xl border border-[#E5EBEF] space-y-3">
+            <Stethoscope className="w-10 h-10 text-slate-400 mx-auto" />
+            <h3 className="text-base font-bold text-[#103653]">No doctors found</h3>
+            <p className="text-xs text-[#526273] max-w-sm mx-auto">
+              No consultant matching your current filter criteria. Try adjusting the search term or resetting the department filter.
             </p>
             <button
               onClick={() => {
                 setSearch('');
                 setSelectedDept('');
               }}
-              className="px-5 py-2.5 bg-[#15965C] text-white text-xs font-bold rounded-xl shadow-sm"
+              className="px-4 py-2 bg-[#15965C] text-white text-xs font-bold rounded-lg shadow-sm"
             >
-              Reset Filters
+              Show All Doctors
             </button>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {filteredDoctors.map(doc => {
               const portraitUrl =
                 doc.profile_image_url || DOCTOR_PORTRAITS[doc.full_name] || '/images/doc-sourav-mukherjee.jpg';
@@ -151,79 +146,63 @@ export function DoctorsDirectoryClient({
               return (
                 <div
                   key={doc.id}
-                  className="rounded-3xl bg-white border border-slate-200 hover:border-[#15965C] shadow-sm hover:shadow-lg transition-all duration-200 overflow-hidden flex flex-col justify-between"
+                  className="rounded-xl border border-[#E5EBEF] bg-white hover:border-[#15965C] transition p-4 sm:p-5 flex flex-col justify-between space-y-4 shadow-sm"
                 >
-                  <div className="p-6 space-y-4">
-                    {/* Doctor Portrait & Title */}
-                    <div className="flex items-start gap-4">
-                      <div className="w-20 h-20 rounded-2xl overflow-hidden bg-slate-100 border border-slate-200 shrink-0 shadow-sm">
+                  <div className="space-y-3.5">
+                    {/* Doctor Header & Portrait */}
+                    <div className="flex items-start gap-3.5">
+                      <div className="w-20 h-24 rounded-lg overflow-hidden bg-slate-100 border border-[#E5EBEF] shrink-0">
                         <img
                           src={portraitUrl}
                           alt={doc.full_name}
-                          className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-300"
+                          className="w-full h-full object-cover object-top"
                         />
                       </div>
-                      <div className="space-y-1 min-w-0">
-                        <span className="inline-block px-2 py-0.5 rounded text-[10px] font-extrabold uppercase tracking-wide bg-emerald-50 text-[#15965C] border border-emerald-200">
-                          {doc.department_name || 'Specialist'}
+
+                      <div className="space-y-1 min-w-0 flex-1">
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-[#15965C] block">
+                          {doc.department_name || doc.speciality}
                         </span>
-                        <h3 className="text-lg font-bold text-slate-900 leading-snug truncate">
+                        <h3 className="text-base font-bold text-[#103653] leading-snug truncate">
                           {doc.full_name}
                         </h3>
-                        <p className="text-xs font-semibold text-[#0B72A2] truncate">
+                        <p className="text-xs font-medium text-[#159FDB] truncate">
                           {doc.speciality}
                         </p>
-                        <p className="text-xs text-slate-500 truncate">
+                        <p className="text-[11px] text-[#526273] truncate">
                           {doc.qualification}
+                        </p>
+                        <p className="text-[11px] text-[#526273]">
+                          {doc.experience_years ? `${doc.experience_years}+ Years Experience` : 'Senior Consultant'}
                         </p>
                       </div>
                     </div>
 
-                    {/* Chamber & Fee Schedule */}
-                    <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-100 text-xs space-y-2">
-                      <div className="flex items-center justify-between">
-                        <span className="text-slate-500 flex items-center gap-1.5">
-                          <Building2 className="w-3.5 h-3.5 text-slate-400" />
-                          <span>Chamber:</span>
-                        </span>
-                        <span className="font-bold text-slate-800">
-                          {doc.room_number || 'OPD-101'}
-                        </span>
-                      </div>
-
-                      <div className="flex items-center justify-between">
-                        <span className="text-slate-500 flex items-center gap-1.5">
-                          <Clock className="w-3.5 h-3.5 text-slate-400" />
-                          <span>{t.consultation_fee}:</span>
-                        </span>
-                        <span className="font-extrabold text-[#15965C] text-sm">
-                          ₹{doc.consultation_fee}
-                        </span>
-                      </div>
-
-                      {doc.follow_up_fee && (
-                        <div className="flex items-center justify-between text-[11px] text-slate-400">
-                          <span>Follow-up (within 7 days):</span>
-                          <span>₹{doc.follow_up_fee}</span>
-                        </div>
-                      )}
+                    {/* Chamber & Consultation Fee */}
+                    <div className="pt-2 border-t border-[#E5EBEF] flex items-center justify-between text-xs">
+                      <span className="text-[#526273]">
+                        Chamber: <strong className="text-[#182B3D]">{doc.room_number || 'OPD-101'}</strong>
+                      </span>
+                      <span className="text-[#526273]">
+                        OPD Fee: <strong className="text-[#15965C] font-bold">₹{doc.consultation_fee}</strong>
+                      </span>
                     </div>
                   </div>
 
-                  {/* Actions */}
-                  <div className="p-4 bg-slate-50/50 border-t border-slate-100 grid grid-cols-2 gap-2">
+                  {/* Clean Action Buttons */}
+                  <div className="pt-3 border-t border-[#E5EBEF] flex flex-col xs:flex-row xs:items-center justify-between gap-2">
                     <Link
                       href={`/doctors/${doc.id}`}
-                      className="py-2.5 px-3 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-100 text-xs font-bold text-center transition"
+                      className="text-xs font-semibold text-[#526273] hover:text-[#15965C] transition py-1 text-center xs:text-left"
                     >
-                      {t.view_profile}
+                      View Profile & Schedule
                     </Link>
-
                     <Link
-                      href={`/book?doctor=${doc.id}`}
-                      className="py-2.5 px-3 rounded-xl bg-[#15965C] hover:bg-[#0E7444] text-white text-xs font-bold text-center transition shadow-sm"
+                      href={`/book?doctor_id=${doc.id}`}
+                      className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-bold text-white bg-[#15965C] hover:bg-[#117A4A] transition shadow-sm"
                     >
-                      {t.book_slot}
+                      <CalendarCheck className="w-3.5 h-3.5" />
+                      <span>Book Slot</span>
                     </Link>
                   </div>
                 </div>
