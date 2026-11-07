@@ -1,5 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
+import Link from 'next/link';
 import {
   MapPin,
   PhoneCall,
@@ -10,6 +11,8 @@ import {
   Building2,
   Navigation,
   Compass,
+  ChevronRight,
+  MessageCircle,
 } from 'lucide-react';
 import { ContactForm } from '@/components/contact/ContactForm';
 
@@ -22,17 +25,26 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="space-y-10 pb-20 bg-white text-[#182B3D]">
-      {/* 1. Header Banner */}
-      <section className="pt-8 sm:pt-12 pb-10 sm:pb-12 bg-[#F7FAF9] border-b border-[#E5EBEF]">
+      {/* 1. Warm Header Banner & Breadcrumb */}
+      <section className="pt-6 sm:pt-10 pb-10 sm:pb-12 bg-gradient-to-b from-[#F4F8F5] via-[#F7FAF9] to-white border-b border-[#E5EBEF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3">
-          <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#15965C] uppercase tracking-wider">
-            <span>Hospital Contact & Access • Krishnanagar</span>
+          <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-xs text-[#526273]">
+            <Link href="/" className="hover:text-[#15965C] transition">Home</Link>
+            <ChevronRight className="w-3 h-3 text-slate-400" />
+            <span className="text-[#103653] font-semibold">Contact & Hospital Location</span>
+          </nav>
+
+          <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#15965C] pt-1">
+            <span className="w-2 h-2 rounded-full bg-[#15965C] inline-block" />
+            <span>যোগাযোগ ও হাসপাতালের অবস্থান • 24x7 Ready to Assist You</span>
           </div>
-          <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-[#103653] tracking-tight break-words">
-            Contact & Hospital Location
+
+          <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-[#103653] tracking-tight">
+            Contact Us & Hospital Location
           </h1>
+
           <p className="text-sm sm:text-base text-[#526273] max-w-3xl leading-relaxed">
-            Reach our reception helpdesk, 24x7 emergency casualty, or patient admission office in Nediarpara, Krishnanagar. Conveniently accessible from Krishnanagar City Junction railway station and NH-12.
+            Need urgent medical help, doctor chamber information, or directions to our Nediarpara campus? Speak directly with our reception team or visit our 24-hour casualty emergency desk.
           </p>
         </div>
       </section>
@@ -49,7 +61,7 @@ export default function ContactPage() {
           <div className="lg:col-span-5 space-y-6">
             {/* Phone & Helpline Directory */}
             <div className="rounded-xl border border-[#E5EBEF] bg-[#F7FAF9] p-5 sm:p-6 space-y-4">
-              <h3 className="text-sm font-bold text-[#103653] uppercase tracking-wider border-b border-[#E5EBEF] pb-2">
+              <h3 className="text-sm font-bold text-[#103653] border-b border-[#E5EBEF] pb-2">
                 Emergency & Helpdesk Directory
               </h3>
 
@@ -60,7 +72,7 @@ export default function ContactPage() {
                     <PhoneCall className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-[10px] font-bold text-[#DC2626] uppercase tracking-wider block">
+                    <span className="text-xs font-semibold text-[#DC2626] block">
                       24x7 Emergency Casualty
                     </span>
                     <a href="tel:+917501074392" className="text-sm font-bold text-[#182B3D] hover:underline">
@@ -76,7 +88,7 @@ export default function ContactPage() {
                     <PhoneCall className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-[10px] font-bold text-[#526273] uppercase tracking-wider block">
+                    <span className="text-xs font-semibold text-[#526273] block">
                       Reception & OPD Bookings
                     </span>
                     <a href="tel:+917872957300" className="text-sm font-bold text-[#182B3D] hover:underline">
@@ -92,7 +104,7 @@ export default function ContactPage() {
                     <Building2 className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-[10px] font-bold text-[#526273] uppercase tracking-wider block">
+                    <span className="text-xs font-semibold text-[#526273] block">
                       Ambulance & Emergency Dispatch
                     </span>
                     <a href="tel:+916294545225" className="text-sm font-bold text-[#182B3D] hover:underline">
@@ -108,7 +120,7 @@ export default function ContactPage() {
                     <Mail className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-[10px] font-bold text-[#526273] uppercase tracking-wider block">
+                    <span className="text-xs font-semibold text-[#526273] block">
                       Administrative Email
                     </span>
                     <a href="mailto:info@hiramani.co.in" className="text-xs font-semibold text-[#182B3D] hover:underline">
@@ -122,8 +134,8 @@ export default function ContactPage() {
             {/* Address & Google Maps Navigation */}
             <div className="rounded-xl border border-[#E5EBEF] bg-white p-5 sm:p-6 space-y-4 shadow-sm">
               <div className="space-y-1">
-                <span className="text-xs font-bold uppercase tracking-wider text-[#15965C]">
-                  Hospital Address
+                <span className="text-xs font-semibold text-[#15965C]">
+                  হাসপাতালের ঠিকানা / Location
                 </span>
                 <h3 className="text-base font-bold text-[#103653]">
                   Hiramani Memorial Hospital

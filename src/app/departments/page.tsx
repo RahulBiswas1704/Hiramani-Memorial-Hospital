@@ -49,16 +49,25 @@ export default async function DepartmentsPage() {
   return (
     <div className="space-y-10 pb-20 bg-white text-[#182B3D]">
       {/* 1. Page Header */}
-      <section className="pt-8 sm:pt-12 pb-10 sm:pb-12 bg-[#F7FAF9] border-b border-[#E5EBEF]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-          <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#15965C] uppercase tracking-wider">
-            <span>Clinical Specialities • Krishnanagar Campus</span>
+      <section className="pt-6 sm:pt-10 pb-10 sm:pb-12 bg-gradient-to-b from-[#F4F8F5] via-[#F7FAF9] to-white border-b border-[#E5EBEF]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3">
+          <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-xs text-[#526273]">
+            <Link href="/" className="hover:text-[#15965C] transition">Home</Link>
+            <ChevronRight className="w-3 h-3 text-slate-400" />
+            <span className="text-[#103653] font-semibold">Specialities & Clinical Departments</span>
+          </nav>
+
+          <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#15965C] pt-1">
+            <span className="w-2 h-2 rounded-full bg-[#15965C] inline-block" />
+            <span>আমাদের বিশেষায়িত চিকিৎসা বিভাগসমূহ • Krishnanagar Campus</span>
           </div>
-          <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-[#103653] tracking-tight break-words">
-            Medical Departments & Specialities
+
+          <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-[#103653] tracking-tight">
+            Medical Departments & Clinical Specialities
           </h1>
+
           <p className="text-sm sm:text-base text-[#526273] max-w-3xl leading-relaxed">
-            Our multi-speciality departments are staffed by experienced visiting and resident clinicians, backed by continuous diagnostic imaging, computerized pathology, and 24x7 emergency backup in Nediarpara, Krishnanagar.
+            From emergency heart care and high-risk pregnancy deliveries to children&apos;s healthcare, joint pain management, and laparoscopic surgeries—our experienced clinicians deliver compassionate inpatient care and outpatient chamber consultations in Krishnanagar.
           </p>
         </div>
       </section>
@@ -117,7 +126,7 @@ export default async function DepartmentsPage() {
 
                 {/* Key Capabilities */}
                 <div className="lg:col-span-4 space-y-2">
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#526273] block">
+                  <span className="text-xs font-semibold text-[#526273] block">
                     Key Clinical Capabilities:
                   </span>
                   <ul className="space-y-1.5 text-xs text-[#182B3D]">
@@ -132,7 +141,7 @@ export default async function DepartmentsPage() {
 
                 {/* Attending Doctors Roster */}
                 <div className="lg:col-span-4 space-y-2">
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#526273] block">
+                  <span className="text-xs font-semibold text-[#526273] block">
                     Consultants in this Speciality:
                   </span>
                   {deptDoctors.length === 0 ? (

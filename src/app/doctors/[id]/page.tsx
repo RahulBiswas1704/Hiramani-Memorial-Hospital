@@ -117,13 +117,28 @@ export default async function DoctorProfilePage({ params }: DoctorProfilePagePro
               </div>
             </div>
 
-            <div className="w-full pt-2">
+            <div className="w-full space-y-2 pt-2">
               <Link
                 href={`/book?doctor_id=${doctor.id}`}
-                className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg text-xs font-bold text-white bg-[#15965C] hover:bg-[#117A4A] transition shadow-sm"
+                className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs sm:text-sm font-bold text-white bg-[#15965C] hover:bg-[#117A4A] transition shadow-md"
               >
                 <CalendarCheck className="w-4 h-4" />
-                <span>Book OPD Slot</span>
+                <span>Book Consultation Slot</span>
+              </Link>
+
+              <a
+                href="tel:+917872957300"
+                className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-bold text-[#103653] bg-white hover:bg-slate-50 transition border border-[#E5EBEF]"
+              >
+                <PhoneCall className="w-3.5 h-3.5 text-[#15965C]" />
+                <span>Call Desk: +91 78729 57300</span>
+              </a>
+
+              <Link
+                href="/chat"
+                className="w-full inline-flex items-center justify-center gap-2 py-2 px-4 rounded-xl text-xs font-semibold text-[#15965C] hover:underline"
+              >
+                <span>Or message us on WhatsApp ›</span>
               </Link>
             </div>
           </div>
@@ -131,7 +146,7 @@ export default async function DoctorProfilePage({ params }: DoctorProfilePagePro
           {/* Doctor Detailed Info Column */}
           <div className="md:col-span-8 space-y-6">
             <div className="space-y-1.5 border-b border-[#E5EBEF] pb-4">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#15965C]">
+              <span className="text-xs font-semibold text-[#15965C]">
                 {department?.name || doctor.department_name || 'Clinical Speciality'}
               </span>
               <h1 className="text-2xl sm:text-3xl font-bold text-[#103653] tracking-tight">
@@ -147,7 +162,7 @@ export default async function DoctorProfilePage({ params }: DoctorProfilePagePro
 
             {/* Biography */}
             <div className="space-y-1.5">
-              <h3 className="text-xs font-bold uppercase tracking-wider text-[#526273]">
+              <h3 className="text-xs font-semibold text-[#526273]">
                 Clinical Overview
               </h3>
               <p className="text-xs sm:text-sm text-[#526273] leading-relaxed">

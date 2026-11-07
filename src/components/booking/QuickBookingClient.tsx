@@ -160,14 +160,14 @@ export function QuickBookingClient({
         </div>
 
         <div className="space-y-1.5">
-          <span className="text-[11px] font-bold uppercase tracking-wider text-[#15965C] bg-[#F4F8F5] px-2.5 py-1 rounded-full border border-[#15965C]/20">
-            Confirmed Outpatient Appointment
+          <span className="text-xs font-semibold text-[#15965C] bg-[#F4F8F5] px-3 py-1 rounded-full border border-[#15965C]/20 inline-block">
+            অ্যাপয়েন্টমেন্ট সফলভাবে নিশ্চিত হয়েছে / Confirmed Appointment
           </span>
           <h2 className="text-xl sm:text-2xl font-bold text-[#103653]">
             Booking Reserved Successfully
           </h2>
           <p className="text-xs text-[#526273]">
-            Your appointment has been registered in the hospital OPD master ledger.
+            Your appointment has been registered in the hospital OPD schedule.
           </p>
         </div>
 
@@ -245,14 +245,14 @@ export function QuickBookingClient({
       {/* Left Booking Form */}
       <div className="lg:col-span-8 bg-white p-6 sm:p-8 rounded-xl border border-[#E5EBEF] shadow-sm space-y-6">
         <div className="space-y-1 border-b border-[#E5EBEF] pb-4">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#15965C]">
-            Direct OPD Booking • Krishnanagar Campus
-          </span>
+          <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#15965C] bg-[#15965C]/10 px-2.5 py-0.5 rounded-full w-fit">
+            <span>সহজে ডাক্তার অ্যাপয়েন্টমেন্ট বুকিং • OPD Appointment</span>
+          </div>
           <h2 className="text-xl sm:text-2xl font-bold text-[#103653]">
             Schedule an Outpatient Consultation
           </h2>
           <p className="text-xs text-[#526273]">
-            Real-time doctor calendar reservation with zero booking fee. Pay consultation fee directly at hospital reception.
+            Reserve your consultation slot in seconds. No advance online payment required; pay the consultation fee at the hospital reception desk on the day of your visit.
           </p>
         </div>
 
@@ -415,8 +415,8 @@ export function QuickBookingClient({
         {/* WhatsApp Alternative Card */}
         <div className="p-5 sm:p-6 rounded-xl bg-[#103653] text-white space-y-3.5 border border-[#103653]">
           <div className="flex items-center justify-between">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#15965C]">
-              WhatsApp Booking
+            <span className="text-xs font-semibold text-[#159FDB]">
+              WhatsApp-এ সরাসরি বুকিং
             </span>
             <MessageCircle className="w-4 h-4 text-[#15965C]" />
           </div>
@@ -426,16 +426,27 @@ export function QuickBookingClient({
           </h3>
 
           <p className="text-xs text-slate-300 leading-relaxed">
-            Our automated WhatsApp system checks doctor rosters, reserves confirmed slots, and delivers appointment passes directly to your phone.
+            Message our hospital WhatsApp desk anytime to check doctor chamber times, confirm slots, and receive appointment slips directly on your mobile.
           </p>
 
-          <Link
-            href="/chat"
-            className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-3 rounded-lg text-xs font-bold text-[#103653] bg-white hover:bg-slate-100 transition shadow-sm"
-          >
-            <span>Launch WhatsApp Assistant</span>
-            <ArrowRight className="w-3.5 h-3.5 text-[#15965C]" />
-          </Link>
+          <div className="flex flex-col gap-2 pt-1">
+            <a
+              href="https://wa.me/917872957300?text=Hello%20Hiramani%20Hospital,%20I%20would%20like%20to%20book%20a%20doctor%20appointment."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-3 rounded-lg text-xs font-bold text-white bg-[#15965C] hover:bg-[#117A4A] transition shadow-sm"
+            >
+              <PhoneCall className="w-3.5 h-3.5" />
+              <span>Book via WhatsApp (+91 78729 57300)</span>
+            </a>
+            <Link
+              href="/chat"
+              className="w-full inline-flex items-center justify-center gap-2 py-2 px-3 rounded-lg text-xs font-semibold text-white/90 bg-white/10 hover:bg-white/20 transition"
+            >
+              <span>Use Web AI Assistant</span>
+              <ArrowRight className="w-3.5 h-3.5 text-[#159FDB]" />
+            </Link>
+          </div>
         </div>
 
         {/* Booking Rules & Assistance */}

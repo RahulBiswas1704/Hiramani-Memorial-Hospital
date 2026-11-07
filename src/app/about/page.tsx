@@ -27,10 +27,11 @@ export default function AboutPage() {
   return (
     <div className="space-y-16 sm:space-y-20 pb-20 bg-white text-[#182B3D]">
       {/* 1. EDITORIAL HEADER & INSTITUTIONAL PROFILE */}
-      <section className="pt-8 sm:pt-12 pb-10 sm:pb-14 bg-[#F7FAF9] border-b border-[#E5EBEF]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-          <div className="inline-flex items-center gap-2 text-xs font-bold text-[#15965C] uppercase tracking-wider">
-            <span>Institutional Profile • Krishnanagar, Nadia</span>
+      <section className="pt-8 sm:pt-12 pb-8 sm:pb-12 bg-[#F7FAF9] border-b border-[#E5EBEF]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3">
+          <div className="inline-flex items-center gap-2 text-xs font-semibold text-[#15965C] bg-[#15965C]/10 px-3 py-1 rounded-full w-fit">
+            <Building2 className="w-3.5 h-3.5 text-[#15965C]" />
+            <span>আমাদের পরিচয় ও অঙ্গীকার • About Hiramani Memorial Hospital</span>
           </div>
 
           <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-[#103653] tracking-tight max-w-4xl leading-[1.18] break-words">
@@ -38,7 +39,7 @@ export default function AboutPage() {
           </h1>
 
           <p className="text-base sm:text-lg text-[#526273] max-w-3xl leading-relaxed">
-            Hiramani Memorial Hospital was established with an uncompromising mandate: to provide the people of Krishnanagar, Nadia, and surrounding regions with high-standard multi-speciality clinical care, advanced diagnostic laboratories, and round-the-clock emergency support without requiring patients to travel to Kolkata.
+            Hiramani Memorial Hospital was established with a singular mission: to provide the families of Krishnanagar, Nadia, and surrounding regions with high-standard multi-speciality clinical care, advanced diagnostic laboratories, and round-the-clock emergency support without requiring patients to travel to Kolkata.
           </p>
         </div>
       </section>
@@ -47,18 +48,18 @@ export default function AboutPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           <div className="lg:col-span-7 space-y-5">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#15965C]">
-              Our Foundation & Heritage
+            <span className="text-xs font-semibold text-[#15965C]">
+              আমাদের শিকড় ও পথচলা / Our Heritage in Krishnanagar
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-[#103653]">
               A Dedicated Healthcare Centre in the Heart of Krishnanagar
             </h2>
             <div className="space-y-3 text-sm text-[#526273] leading-relaxed">
               <p>
-                Located centrally on Ananta Hari Mitra Road in Nediarpara (adjacent to the Income Tax Office), Hiramani Memorial Hospital serves as a reliable healthcare sanctuary for families across Krishnanagar, Nabadwip, Shantipur, Chapra, and the wider Nadia district.
+                Located centrally on Ananta Hari Mitra Road in Nediarpara (near the Income Tax Office), Hiramani Memorial Hospital serves as a dependable healthcare sanctuary for families across Krishnanagar, Nabadwip, Shantipur, Chapra, and the wider Nadia district.
               </p>
               <p>
-                Our multi-speciality hospital unites experienced visiting and resident medical specialists across Cardiology, General Medicine, Orthopaedics, Gynaecology, Paediatrics, ENT, General Surgery, and Dermatology under one coordinated umbrella.
+                Our multi-speciality hospital unites experienced visiting and resident medical specialists across Cardiology, General Medicine, Orthopaedics, Gynaecology, Paediatrics, ENT, General Surgery, and Dermatology under one caring roof.
               </p>
               <p>
                 With continuous 24x7 emergency casualty response, fully monitored intensive care units, modern laminar flow operating theatres, and in-house automated pathology, we bridge the gap between quality medical infrastructure and compassionate patient care.
@@ -68,7 +69,7 @@ export default function AboutPage() {
             <div className="flex flex-wrap items-center gap-3 pt-2">
               <Link
                 href="/book"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-xs font-bold text-white bg-[#15965C] hover:bg-[#117A4A] transition"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-xs font-bold text-white bg-[#15965C] hover:bg-[#117A4A] transition shadow-sm"
               >
                 <CalendarCheck className="w-4 h-4" />
                 <span>Book Outpatient Consultation</span>
@@ -108,9 +109,9 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           {/* Mission */}
           <div className="space-y-3">
-            <div className="flex items-center gap-2 text-[#15965C] text-xs font-bold uppercase tracking-wider">
+            <div className="flex items-center gap-2 text-[#15965C] text-xs font-semibold">
               <span className="w-2 h-2 rounded-full bg-[#15965C]" />
-              <span>Our Clinical Mission</span>
+              <span>আমাদের লক্ষ্য / Our Clinical Mission</span>
             </div>
             <h3 className="text-xl sm:text-2xl font-bold text-[#103653]">
               Dignified, Transparent & Evidence-Based Healing
@@ -122,15 +123,15 @@ export default function AboutPage() {
 
           {/* Vision */}
           <div className="space-y-3">
-            <div className="flex items-center gap-2 text-[#159FDB] text-xs font-bold uppercase tracking-wider">
+            <div className="flex items-center gap-2 text-[#159FDB] text-xs font-semibold">
               <span className="w-2 h-2 rounded-full bg-[#159FDB]" />
-              <span>Our Institutional Vision</span>
+              <span>আমাদের দূরদৃষ্টি / Our Institutional Vision</span>
             </div>
             <h3 className="text-xl sm:text-2xl font-bold text-[#103653]">
               The Trusted Healthcare Center for Nadia District
             </h3>
             <p className="text-sm text-[#526273] leading-relaxed">
-              To be the foremost healthcare destination in Krishnanagar, recognized for excellence in early disease detection, maternal and child wellness, emergency resuscitation, and modern surgical precision, empowered by experienced clinicians and patient-friendly digital workflows.
+              To be the foremost healthcare destination in Krishnanagar, recognized for excellence in early disease detection, maternal and child wellness, emergency resuscitation, and modern surgical precision, empowered by experienced clinicians and patient-friendly care.
             </p>
           </div>
         </div>
@@ -139,8 +140,8 @@ export default function AboutPage() {
       {/* 4. CORE VALUES: CLEAN NUMBERED EDITORIAL LIST (NO ICON BOXES OR CARDS) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         <div className="space-y-1">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#15965C]">
-            Our Operating Principles
+          <span className="text-xs font-semibold text-[#15965C]">
+            আমাদের মূল ভিত্তি / Core Principles of Patient Care
           </span>
           <h2 className="text-xl sm:text-2xl font-bold text-[#103653]">
             The Pillars of Our Patient Care
@@ -160,7 +161,7 @@ export default function AboutPage() {
             <span className="text-xs font-mono font-bold text-[#159FDB]">02</span>
             <h3 className="text-sm font-bold text-[#182B3D]">Compassion & Empathy</h3>
             <p className="text-xs text-[#526273] leading-relaxed">
-              We listen with patience and explain medical findings in clear Bengali, Hindi, or English so families feel respected and informed.
+              We listen with patience and explain medical findings in clear Bengali or English so families feel respected and informed.
             </p>
           </div>
 
@@ -185,8 +186,8 @@ export default function AboutPage() {
       {/* 5. HOSPITAL INFRASTRUCTURE SHOWCASE WITH ACTUAL PHOTOGRAPHS */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         <div className="space-y-1 border-b border-[#E5EBEF] pb-4">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#15965C]">
-            Modern Facilities
+          <span className="text-xs font-semibold text-[#15965C]">
+            হাসপাতাল পরিকাঠামো / Hospital Infrastructure
           </span>
           <h2 className="text-xl sm:text-2xl font-bold text-[#103653]">
             Clinical Infrastructure & Diagnostic Equipment
@@ -264,8 +265,8 @@ export default function AboutPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="border border-[#E5EBEF] rounded-2xl p-6 sm:p-10 bg-[#F7FAF9] space-y-6">
           <div className="space-y-1">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#15965C]">
-              Regulatory Compliance & Quality
+            <span className="text-xs font-semibold text-[#15965C]">
+              রোগীর সুরক্ষা ও অধিকার / Quality & Patient Rights
             </span>
             <h2 className="text-xl sm:text-2xl font-bold text-[#103653]">
               Patient Rights & Safety Assurance

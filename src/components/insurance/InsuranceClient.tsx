@@ -210,7 +210,7 @@ export function InsuranceClient() {
   return (
     <div className="space-y-12 pb-20 bg-white text-[#182B3D]">
       {/* 1. Page Header & Breadcrumb Trail */}
-      <section className="pt-6 sm:pt-10 pb-10 sm:pb-12 bg-[#F7FAF9] border-b border-[#E5EBEF]">
+      <section className="pt-6 sm:pt-10 pb-8 sm:pb-10 bg-[#F7FAF9] border-b border-[#E5EBEF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3">
           {/* Breadcrumb Trail */}
           <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-xs text-[#526273]">
@@ -218,20 +218,20 @@ export function InsuranceClient() {
             <ChevronRight className="w-3 h-3 text-slate-400" />
             <Link href="/patient-info" className="hover:text-[#15965C] transition">Patient Services</Link>
             <ChevronRight className="w-3 h-3 text-slate-400" />
-            <span className="text-[#103653] font-semibold">Cashless Insurance & TPA</span>
+            <span className="text-[#103653] font-medium">Cashless Insurance & Swasthya Sathi</span>
           </nav>
 
-          <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#15965C] uppercase tracking-wider pt-1">
+          <div className="inline-flex items-center gap-2 text-xs font-semibold text-[#15965C] bg-[#15965C]/10 px-3 py-1 rounded-full w-fit">
             <CreditCard className="w-3.5 h-3.5 text-[#15965C]" />
-            <span>Dedicated TPA & Mediclaim Desk • Krishnanagar Campus</span>
+            <span>ভর্তি ও ক্যাশলেস স্বাস্থ্যবিমা সহায়তা কেন্দ্র • Ground Floor Counter 3</span>
           </div>
 
           <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-[#103653] tracking-tight break-words">
-            Cashless Hospitalization & Mediclaim TPA Desk
+            Cashless Hospitalization & Mediclaim Desk
           </h1>
 
           <p className="text-sm sm:text-base text-[#526273] max-w-3xl leading-relaxed">
-            Hiramani Memorial Hospital facilitates transparent, cashless hospitalization across major Third Party Administrators (TPAs), private health insurers, and state welfare schemes. Our on-campus claims coordinators assist patients and families throughout pre-authorization, stay enhancements, and final settlement.
+            Hiramani Memorial Hospital provides smooth, hassle-free cashless hospitalization for families across Krishnanagar and Nadia district. Our dedicated desk at Counter 3 assists you with Swasthya Sathi, private health insurance, and TPAs from admission to final discharge so you can focus entirely on recovery.
           </p>
         </div>
       </section>
@@ -241,63 +241,63 @@ export function InsuranceClient() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {/* Planned Hospitalization */}
           <div className="p-5 rounded-xl border border-[#E5EBEF] bg-white space-y-3 shadow-sm hover:border-[#15965C]/40 transition">
-            <div className="w-9 h-9 rounded-lg bg-[#F4F8F5] text-[#15965C] flex items-center justify-center font-bold text-sm">
-              <Calendar className="w-4 h-4" />
+            <div className="w-10 h-10 rounded-lg bg-[#F4F8F5] text-[#15965C] flex items-center justify-center font-bold text-sm">
+              <Calendar className="w-5 h-5" />
             </div>
             <div className="space-y-1">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-[#15965C]">
-                48 – 72 Hours Prior
+              <span className="text-xs font-semibold text-[#15965C]">
+                Planned Surgery / Admission
               </span>
               <h3 className="text-base font-bold text-[#103653]">
-                Planned Surgery / Admission
+                Bring papers 2–3 days ahead
               </h3>
             </div>
             <p className="text-xs text-[#526273] leading-relaxed">
-              Submit your doctor prescription, diagnostic test records, TPA card, and Aadhaar to the cashless desk 2–3 days ahead to secure pre-authorization sanction before arriving for admission.
+              If your doctor has scheduled an operation or hospital stay, bring your doctor’s slip, test reports, and insurance card to Counter 3 at least 48 to 72 hours early so cashless approval is ready when you arrive.
             </p>
           </div>
 
           {/* Emergency Hospitalization */}
           <div className="p-5 rounded-xl border border-[#E5EBEF] bg-white space-y-3 shadow-sm hover:border-[#159FDB]/40 transition">
-            <div className="w-9 h-9 rounded-lg bg-[#F0F8FC] text-[#159FDB] flex items-center justify-center font-bold text-sm">
-              <Clock className="w-4 h-4" />
+            <div className="w-10 h-10 rounded-lg bg-[#F0F8FC] text-[#159FDB] flex items-center justify-center font-bold text-sm">
+              <Clock className="w-5 h-5" />
             </div>
             <div className="space-y-1">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-[#159FDB]">
-                Within 4–6 Hours
+              <span className="text-xs font-semibold text-[#159FDB]">
+                Emergency Casualty Care
               </span>
               <h3 className="text-base font-bold text-[#103653]">
-                Emergency Casualty Care
+                Submit papers within 4–6 hours
               </h3>
             </div>
             <p className="text-xs text-[#526273] leading-relaxed">
-              For sudden acute admissions, our emergency casualty staff stabilizes the patient immediately. Family members can submit insurance documents within 4 to 6 hours to initiate pre-auth clearance.
+              In an emergency, treatment begins immediately without waiting for paperwork. Family members can submit the patient’s insurance card and Aadhaar to our desk within 4 to 6 hours after admission.
             </p>
           </div>
 
           {/* Dedicated Desk Location & Support */}
-          <div className="p-5 rounded-xl border border-[#103653]/15 bg-[#103653] text-white space-y-3 shadow-sm">
-            <div className="w-9 h-9 rounded-lg bg-white/10 text-white flex items-center justify-center font-bold text-sm">
-              <Building2 className="w-4 h-4 text-[#159FDB]" />
+          <div className="p-5 rounded-xl border border-[#103653] bg-[#103653] text-white space-y-3 shadow-sm">
+            <div className="w-10 h-10 rounded-lg bg-white/10 text-white flex items-center justify-center font-bold text-sm">
+              <Building2 className="w-5 h-5 text-[#159FDB]" />
             </div>
             <div className="space-y-1">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-[#159FDB]">
-                On-Campus Assistance
+              <span className="text-xs font-semibold text-[#159FDB]">
+                In-Person Assistance
               </span>
               <h3 className="text-base font-bold text-white">
-                TPA Helpdesk Counter 3
+                TPA Helpdesk — Counter 3
               </h3>
             </div>
             <p className="text-xs text-slate-300 leading-relaxed">
-              Ground Floor, Main Hospital Building (Adjacent to Emergency Registration), Nediarpara, Krishnanagar. Operating Mon–Sat: 8:00 AM – 8:00 PM with 24/7 emergency admission coordination.
+              Ground Floor, Main Hospital Building (Next to Emergency Registration), Nediarpara, Krishnanagar. Open Mon–Sat 8:00 AM – 8:00 PM with 24/7 coordination for emergency cases.
             </p>
             <div className="pt-1">
               <a
                 href="tel:+917872957300"
-                className="inline-flex items-center gap-1.5 text-xs font-bold text-[#159FDB] hover:text-white transition"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-white bg-[#15965C] hover:bg-[#117A4A] px-3 py-1.5 rounded-lg transition shadow-sm"
               >
                 <PhoneCall className="w-3.5 h-3.5" />
-                <span>Call Desk: +91 78729 57300</span>
+                <span>Call Helpdesk: +91 78729 57300</span>
               </a>
             </div>
           </div>
@@ -308,15 +308,15 @@ export function InsuranceClient() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-[#E5EBEF] pb-4">
           <div className="space-y-1">
-            <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#15965C]">
-              <ShieldCheck className="w-3.5 h-3.5 text-[#15965C]" />
-              <span>Network Partners & Third Party Administrators</span>
+            <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#15965C]">
+              <ShieldCheck className="w-4 h-4 text-[#15965C]" />
+              <span>সহযোগী স্বাস্থ্যবিমা ও টিপিএ তালিকা / Network Partners & TPAs</span>
             </div>
             <h2 className="text-xl sm:text-2xl font-bold text-[#103653]">
               Health Insurance & TPA Directory
             </h2>
             <p className="text-xs text-[#526273]">
-              Search by insurer name or filter by provider category. If your insurer is not listed below, consult our desk for reimbursement assistance.
+              Search by insurer name or filter by category. If your insurer is not listed below, consult Counter 3 for fast reimbursement support.
             </p>
           </div>
 
@@ -459,57 +459,57 @@ export function InsuranceClient() {
         <div className="rounded-xl border border-[#15965C]/30 bg-gradient-to-br from-[#F4F8F5] via-white to-[#F0F8FC] p-6 sm:p-8 space-y-6 shadow-sm">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#E5EBEF] pb-4">
             <div className="space-y-1.5">
-              <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#15965C] uppercase tracking-wider">
+              <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#15965C] bg-[#15965C]/10 px-3 py-1 rounded-full w-fit">
                 <Hospital className="w-4 h-4 text-[#15965C]" />
-                <span>Government of West Bengal Health Scheme Desk</span>
+                <span>পশ্চিমবঙ্গ সরকারের স্বাস্থ্য সাথী সহায়তা কেন্দ্র (কাউন্টার ৩)</span>
               </div>
               <h2 className="text-xl sm:text-2xl font-bold text-[#103653]">
-                Swasthya Sathi Scheme Guidance for Nadia Patients
+                Swasthya Sathi Scheme Guidance for Nadia Families
               </h2>
-              <p className="text-xs text-[#526273] max-w-2xl leading-relaxed">
-                Hiramani Memorial Hospital maintains a dedicated Swasthya Sathi help counter at our Krishnanagar campus to facilitate secondary care admissions and authorized clinical packages under state government guidelines.
+              <p className="text-xs sm:text-sm text-[#526273] max-w-2xl leading-relaxed">
+                Hiramani Memorial Hospital runs a dedicated Swasthya Sathi help counter at our Krishnanagar campus to facilitate hospitalization and authorized packages under West Bengal state government norms.
               </p>
             </div>
 
             <div className="shrink-0 flex items-center gap-2">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#15965C] text-white text-xs font-bold shadow-sm">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#15965C] text-white text-xs font-semibold shadow-sm">
                 <CheckCircle2 className="w-3.5 h-3.5" />
-                <span>Help Desk Open</span>
+                <span>Counter 3 Open Daily</span>
               </span>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             <div className="p-4 rounded-xl bg-white border border-[#E5EBEF] space-y-2">
-              <div className="text-xs font-bold text-[#15965C] uppercase tracking-wider flex items-center gap-1.5">
-                <ShieldCheck className="w-3.5 h-3.5" />
-                <span>Eligibility & Smart Card</span>
+              <div className="text-xs font-semibold text-[#15965C] flex items-center gap-1.5">
+                <ShieldCheck className="w-4 h-4" />
+                <span>আসল স্মার্ট কার্ড (Original Smart Card)</span>
               </div>
-              <h4 className="text-sm font-bold text-[#103653]">Valid Swasthya Sathi Smart Card</h4>
+              <h4 className="text-sm font-bold text-[#103653]">Valid Swasthya Sathi Card</h4>
               <p className="text-xs text-[#526273] leading-relaxed">
-                The smart card issued by the Department of Health & Family Welfare (Govt. of WB) in the name of the female head of the family must be presented in original along with patient biometric verification.
+                The smart card issued by the Dept. of Health & Family Welfare (Govt. of WB) in the name of the female head of the family must be presented in original along with biometric verification.
               </p>
             </div>
 
             <div className="p-4 rounded-xl bg-white border border-[#E5EBEF] space-y-2">
-              <div className="text-xs font-bold text-[#159FDB] uppercase tracking-wider flex items-center gap-1.5">
-                <FileCheck className="w-3.5 h-3.5" />
-                <span>Government Package Booking</span>
+              <div className="text-xs font-semibold text-[#159FDB] flex items-center gap-1.5">
+                <FileCheck className="w-4 h-4" />
+                <span>প্যাকেজ ও বেড বুকিং (Package & Ward)</span>
               </div>
               <h4 className="text-sm font-bold text-[#103653]">Pre-Authorization & Ward Allocation</h4>
               <p className="text-xs text-[#526273] leading-relaxed">
-                Treatments are administered strictly under approved state scheme clinical packages and ward categories. Package pre-authorization is blocked on the state portal by the hospital nodal officer upon admission.
+                Treatments are provided under approved state scheme clinical packages and ward categories. Package pre-authorization is blocked on the state portal by the hospital nodal officer upon admission.
               </p>
             </div>
 
             <div className="p-4 rounded-xl bg-white border border-[#E5EBEF] space-y-2">
-              <div className="text-xs font-bold text-[#103653] uppercase tracking-wider flex items-center gap-1.5">
-                <FileText className="w-3.5 h-3.5" />
-                <span>Mandatory Documentation</span>
+              <div className="text-xs font-semibold text-[#103653] flex items-center gap-1.5">
+                <FileText className="w-4 h-4" />
+                <span>নথিপত্র (Required Documents)</span>
               </div>
               <h4 className="text-sm font-bold text-[#103653]">Aadhaar & Doctor Referral</h4>
               <p className="text-xs text-[#526273] leading-relaxed">
-                Please bring original Smart Card, Aadhaar Card of patient & cardholder, Khadya Sathi (Ration Card), and original doctor consultation slip with clinical diagnosis and treatment requisition.
+                Please bring original Smart Card, Aadhaar Card of patient & cardholder, Khadya Sathi (Ration Card), and doctor consultation slip with diagnosis and admission advice.
               </p>
             </div>
           </div>
@@ -521,10 +521,10 @@ export function InsuranceClient() {
             <div className="flex items-center gap-3 shrink-0 font-medium">
               <a
                 href="tel:+917872957300"
-                className="text-[#15965C] hover:text-[#117A4A] font-bold inline-flex items-center gap-1"
+                className="text-[#15965C] hover:text-[#117A4A] font-bold inline-flex items-center gap-1.5"
               >
                 <PhoneCall className="w-3.5 h-3.5" />
-                <span>Govt. Desk: +91 78729 57300</span>
+                <span>Swasthya Sathi Helpdesk: +91 78729 57300</span>
               </a>
             </div>
           </div>
@@ -534,14 +534,14 @@ export function InsuranceClient() {
       {/* 5. 4-Stage Step-by-Step Cashless Hospitalization Workflow */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         <div className="space-y-1 border-b border-[#E5EBEF] pb-3">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#15965C]">
-            Step-by-Step Process
+          <span className="text-xs font-semibold text-[#15965C]">
+            ক্যাশলেস ভর্তি প্রক্রিয়া / 4 Simple Steps
           </span>
           <h2 className="text-xl sm:text-2xl font-bold text-[#103653]">
-            How the Cashless Hospitalization Journey Works
+            How Cashless Hospitalization Works for Patients
           </h2>
           <p className="text-xs text-[#526273]">
-            A transparent four-stage process designed to eliminate out-of-pocket financial strain during medical recovery.
+            A clear step-by-step path designed so families don't face financial strain or confusion during emergency or planned treatments.
           </p>
         </div>
 
@@ -550,12 +550,12 @@ export function InsuranceClient() {
           <div className="p-5 rounded-xl border border-[#E5EBEF] bg-[#F7FAF9] space-y-3 flex flex-col justify-between">
             <div className="space-y-2">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-bold text-[#15965C] tracking-wider">STAGE 01</span>
-                <span className="text-[10px] text-slate-400 font-mono">Admission Desk</span>
+                <span className="text-xs font-bold text-[#15965C]">ধাপ ১ • Step 1</span>
+                <span className="text-xs text-slate-500 font-medium">Ground Floor</span>
               </div>
-              <h3 className="text-sm font-bold text-[#103653]">Document Submission & KYC</h3>
+              <h3 className="text-sm font-bold text-[#103653]">Document Check at Counter 3</h3>
               <p className="text-xs text-[#526273] leading-relaxed">
-                Patient or attendant visits the TPA Desk (Counter 3) with insurance policy copy, TPA health card, doctor admission advice, diagnostic reports, and patient Aadhaar.
+                Visit the TPA Desk (Counter 3) with insurance card or Swasthya Sathi card, doctor's admission slip, test reports, and patient Aadhaar.
               </p>
             </div>
             <div className="pt-3 border-t border-[#E5EBEF] text-[11px] font-semibold text-[#15965C] flex items-center gap-1">
@@ -568,17 +568,17 @@ export function InsuranceClient() {
           <div className="p-5 rounded-xl border border-[#E5EBEF] bg-[#F7FAF9] space-y-3 flex flex-col justify-between">
             <div className="space-y-2">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-bold text-[#159FDB] tracking-wider">STAGE 02</span>
-                <span className="text-[10px] text-slate-400 font-mono">Insurer Portal</span>
+                <span className="text-xs font-bold text-[#159FDB]">ধাপ ২ • Step 2</span>
+                <span className="text-xs text-slate-500 font-medium">Fast-Track</span>
               </div>
-              <h3 className="text-sm font-bold text-[#103653]">Initial Sanction Issued</h3>
+              <h3 className="text-sm font-bold text-[#103653]">Initial Approval Letter</h3>
               <p className="text-xs text-[#526273] leading-relaxed">
-                Our TPA desk sends the clinical docket electronically to the insurance company or TPA medical adjudicator. The insurer issues an initial pre-authorization letter approving treatment.
+                Our TPA desk sends the papers electronically to the insurance company. The insurer issues an initial approval sanctioning the admission.
               </p>
             </div>
             <div className="pt-3 border-t border-[#E5EBEF] text-[11px] font-semibold text-[#159FDB] flex items-center gap-1">
               <CheckCircle2 className="w-3.5 h-3.5" />
-              <span>Zero Deposit Admission</span>
+              <span>Zero Medical Deposit</span>
             </div>
           </div>
 
@@ -586,17 +586,17 @@ export function InsuranceClient() {
           <div className="p-5 rounded-xl border border-[#E5EBEF] bg-[#F7FAF9] space-y-3 flex flex-col justify-between">
             <div className="space-y-2">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-bold text-[#15965C] tracking-wider">STAGE 03</span>
-                <span className="text-[10px] text-slate-400 font-mono">In-Patient Care</span>
+                <span className="text-xs font-bold text-[#15965C]">ধাপ ৩ • Step 3</span>
+                <span className="text-xs text-slate-500 font-medium">In-Ward Care</span>
               </div>
-              <h3 className="text-sm font-bold text-[#103653]">Treatment & Enhancements</h3>
+              <h3 className="text-sm font-bold text-[#103653]">Treatment & Cost Updates</h3>
               <p className="text-xs text-[#526273] leading-relaxed">
-                The patient receives full clinical treatment, surgical procedures, nursing, and medications. If estimated costs rise, our TPA desk files interim enhancement requests with medical updates.
+                Patient receives clinical care, nursing, and medicines. If medical requirements expand, our desk files intermediate enhancement requests directly.
               </p>
             </div>
             <div className="pt-3 border-t border-[#E5EBEF] text-[11px] font-semibold text-[#15965C] flex items-center gap-1">
               <CheckCircle2 className="w-3.5 h-3.5" />
-              <span>Real-Time Adjudication</span>
+              <span>Coordinated By Desk</span>
             </div>
           </div>
 
@@ -604,17 +604,17 @@ export function InsuranceClient() {
           <div className="p-5 rounded-xl border border-[#E5EBEF] bg-[#F7FAF9] space-y-3 flex flex-col justify-between">
             <div className="space-y-2">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-bold text-[#159FDB] tracking-wider">STAGE 04</span>
-                <span className="text-[10px] text-slate-400 font-mono">Discharge</span>
+                <span className="text-xs font-bold text-[#159FDB]">ধাপ ৪ • Step 4</span>
+                <span className="text-xs text-slate-500 font-medium">Discharge</span>
               </div>
               <h3 className="text-sm font-bold text-[#103653]">Final Discharge & Settlement</h3>
               <p className="text-xs text-[#526273] leading-relaxed">
-                Treating doctor issues discharge summary. Hospital billing uploads final itemized bills to TPA for final sanction. Patient pays only non-medical exclusions or co-pay, then is discharged.
+                Doctor issues the discharge summary. Billing submits final bills to the TPA. Patient only pays for small non-medical consumables, then heads home.
               </p>
             </div>
             <div className="pt-3 border-t border-[#E5EBEF] text-[11px] font-semibold text-[#159FDB] flex items-center gap-1">
               <CheckCircle2 className="w-3.5 h-3.5" />
-              <span>Direct TPA Settlement</span>
+              <span>Direct Insurer Settlement</span>
             </div>
           </div>
         </div>
@@ -623,14 +623,14 @@ export function InsuranceClient() {
       {/* 6. Document Checklist: Planned vs. Emergency Admission */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         <div className="space-y-1 border-b border-[#E5EBEF] pb-3">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#15965C]">
-            Documentation Requirements
+          <span className="text-xs font-semibold text-[#15965C]">
+            প্রয়োজনীয় কাগজপত্র / Documentation Checklist
           </span>
           <h2 className="text-xl sm:text-2xl font-bold text-[#103653]">
             Mandatory Documents Checklist for Cashless Clearance
           </h2>
           <p className="text-xs text-[#526273]">
-            Ensure clear photocopies and original government documents are presented at Counter 3 to avoid query delays from insurance medical adjudicators.
+            Keep clear photocopies and original government documents ready at Counter 3 to ensure instant pre-authorization without delay.
           </p>
         </div>
 
@@ -642,7 +642,7 @@ export function InsuranceClient() {
                 <Calendar className="w-4 h-4 text-[#15965C]" />
                 <h3 className="text-sm font-bold text-[#103653]">Planned Hospitalization Checklist</h3>
               </div>
-              <span className="text-[10px] font-bold text-[#15965C] bg-[#F4F8F5] px-2 py-0.5 rounded border border-[#15965C]/20">
+              <span className="text-[11px] font-semibold text-[#15965C] bg-[#F4F8F5] px-2 py-0.5 rounded border border-[#15965C]/20">
                 48h Prior to Admission
               </span>
             </div>
@@ -650,23 +650,23 @@ export function InsuranceClient() {
             <ul className="space-y-2.5 text-xs text-[#526273]">
               <li className="flex items-start gap-2.5">
                 <CheckCircle2 className="w-4 h-4 text-[#15965C] shrink-0 mt-0.5" />
-                <span><strong>Original Health Insurance Card / Policy Schedule:</strong> Valid policy copy displaying policy number, member ID, sum insured, and policy validity period.</span>
+                <span><strong>Original Health Insurance Card / Policy Schedule:</strong> Valid policy copy displaying policy number, member ID, sum insured, and validity.</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <CheckCircle2 className="w-4 h-4 text-[#15965C] shrink-0 mt-0.5" />
-                <span><strong>Government Photo Identity Proof:</strong> Aadhaar Card, Voter ID, or PAN Card of the patient and primary policyholder (2 photocopies each).</span>
+                <span><strong>Government Photo Identity Proof:</strong> Aadhaar Card, Voter ID, or PAN Card of patient and policyholder (2 photocopies each).</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <CheckCircle2 className="w-4 h-4 text-[#15965C] shrink-0 mt-0.5" />
-                <span><strong>Doctor’s Consultation Prescription:</strong> Formal admission requisition slip specifying clinical provisional diagnosis and planned treatment/surgery.</span>
+                <span><strong>Doctor’s Consultation Slip:</strong> Requisition slip specifying provisional diagnosis and recommended surgery or admission.</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <CheckCircle2 className="w-4 h-4 text-[#15965C] shrink-0 mt-0.5" />
-                <span><strong>Diagnostic Investigation Reports:</strong> Pathology reports, USG, X-ray, CT scan, or ECG records supporting the diagnosis (past 3 months).</span>
+                <span><strong>Diagnostic Investigation Reports:</strong> Pathology, USG, X-ray, CT scan, or ECG records supporting the diagnosis.</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <CheckCircle2 className="w-4 h-4 text-[#15965C] shrink-0 mt-0.5" />
-                <span><strong>Cancelled Bank Cheque / Passbook Copy:</strong> Primary insured party account details for direct electronic claims transfer or deposit reconciliation.</span>
+                <span><strong>Bank Cheque / Passbook Copy:</strong> Primary insured account details for direct electronic claims settlement.</span>
               </li>
             </ul>
           </div>
@@ -678,7 +678,7 @@ export function InsuranceClient() {
                 <Clock className="w-4 h-4 text-[#159FDB]" />
                 <h3 className="text-sm font-bold text-[#103653]">Emergency Casualty Checklist</h3>
               </div>
-              <span className="text-[10px] font-bold text-[#159FDB] bg-[#F0F8FC] px-2 py-0.5 rounded border border-[#159FDB]/20">
+              <span className="text-[11px] font-semibold text-[#159FDB] bg-[#F0F8FC] px-2 py-0.5 rounded border border-[#159FDB]/20">
                 Within 4–6h of Admission
               </span>
             </div>
@@ -686,7 +686,7 @@ export function InsuranceClient() {
             <ul className="space-y-2.5 text-xs text-[#526273]">
               <li className="flex items-start gap-2.5">
                 <CheckCircle2 className="w-4 h-4 text-[#159FDB] shrink-0 mt-0.5" />
-                <span><strong>Emergency Health Card / Mobile Policy E-Card:</strong> TPA Member ID or insurance policy number stored on WhatsApp or insurance app.</span>
+                <span><strong>Health Card / Mobile Policy E-Card:</strong> TPA Member ID or policy number stored on WhatsApp or insurance app.</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <CheckCircle2 className="w-4 h-4 text-[#159FDB] shrink-0 mt-0.5" />
@@ -698,11 +698,11 @@ export function InsuranceClient() {
               </li>
               <li className="flex items-start gap-2.5">
                 <CheckCircle2 className="w-4 h-4 text-[#159FDB] shrink-0 mt-0.5" />
-                <span><strong>First Information Report (FIR) / Medico-Legal Case (MLC) Copy:</strong> Required strictly in accidental or trauma casualty cases.</span>
+                <span><strong>First Information Report (FIR) / MLC Copy:</strong> Required strictly in accidental or trauma casualty cases.</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <CheckCircle2 className="w-4 h-4 text-[#159FDB] shrink-0 mt-0.5" />
-                <span><strong>Initial Deposit Security (Refundable):</strong> Modest provisional deposit adjusted or refunded immediately upon receipt of insurer cashless sanction.</span>
+                <span><strong>Modest Provisional Deposit:</strong> Adjusted or refunded immediately upon insurer cashless pre-auth sanction.</span>
               </li>
             </ul>
           </div>
@@ -712,14 +712,14 @@ export function InsuranceClient() {
       {/* 7. IRDAI Transparency: Covered Medical Expenses vs. Non-Medical Exclusions */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         <div className="space-y-1 border-b border-[#E5EBEF] pb-3">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#15965C]">
-            Billing Transparency
+          <span className="text-xs font-semibold text-[#15965C]">
+            বিলিং স্বচ্ছতা / Transparent Hospital Charges
           </span>
           <h2 className="text-xl sm:text-2xl font-bold text-[#103653]">
             Understanding Covered Items vs. Non-Medical Exclusions
           </h2>
           <p className="text-xs text-[#526273]">
-            As per Insurance Regulatory and Development Authority of India (IRDAI) guidelines, certain non-medical expenses are excluded from insurance reimbursement and are payable directly by the patient.
+            As per Insurance Regulatory and Development Authority of India (IRDAI) guidelines, medical treatments are cashless, while personal non-medical items are billed separately.
           </p>
         </div>
 
@@ -728,7 +728,7 @@ export function InsuranceClient() {
           <div className="p-5 rounded-xl border border-emerald-200 bg-[#F4F8F5]/60 space-y-3">
             <div className="flex items-center gap-2 text-[#15965C]">
               <ShieldCheck className="w-4 h-4" />
-              <h3 className="text-sm font-bold text-[#103653]">Covered by Health Insurance (Subject to Sum Insured)</h3>
+              <h3 className="text-sm font-bold text-[#103653]">Covered by Health Insurance (Subject to Policy Sum)</h3>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#182B3D]">
@@ -763,7 +763,7 @@ export function InsuranceClient() {
           <div className="p-5 rounded-xl border border-slate-200 bg-slate-50 space-y-3">
             <div className="flex items-center gap-2 text-slate-700">
               <BadgeAlert className="w-4 h-4 text-slate-500" />
-              <h3 className="text-sm font-bold text-[#103653]">Non-Medical Expenses (Payable by Patient)</h3>
+              <h3 className="text-sm font-bold text-[#103653]">Non-Medical Consumables (Payable by Family)</h3>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#526273]">
@@ -837,14 +837,14 @@ export function InsuranceClient() {
       {/* 9. Frequently Asked Questions (FAQ Accordion) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         <div className="space-y-1 border-b border-[#E5EBEF] pb-3">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#15965C]">
-            Clarifications & Rules
+          <span className="text-xs font-semibold text-[#15965C]">
+            সাধারণ প্রশ্নোত্তর / FAQs
           </span>
           <h2 className="text-xl sm:text-2xl font-bold text-[#103653]">
             Frequently Asked Questions on Cashless Mediclaim
           </h2>
           <p className="text-xs text-[#526273]">
-            Clear institutional answers to help patients and families navigate insurance approvals with ease.
+            Clear, honest answers to help patients and families navigate insurance approvals with ease.
           </p>
         </div>
 
@@ -883,9 +883,9 @@ export function InsuranceClient() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="p-6 sm:p-8 rounded-xl bg-[#103653] text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
           <div className="space-y-2 text-center md:text-left">
-            <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#159FDB] uppercase tracking-wider">
+            <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#159FDB]">
               <PhoneCall className="w-3.5 h-3.5" />
-              <span>Dedicated TPA & Mediclaim Coordinator</span>
+              <span>সহায়তার জন্য কল করুন / Dedicated Insurance Coordinator</span>
             </div>
             <h3 className="text-xl sm:text-2xl font-bold text-white">
               Need Instant Pre-Authorization Guidance?

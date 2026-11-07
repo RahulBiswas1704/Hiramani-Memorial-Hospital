@@ -45,17 +45,42 @@ export function DiagnosticsClient({ categories, tests }: DiagnosticsClientProps)
   return (
     <div className="space-y-10 pb-20 bg-white text-[#182B3D]">
       {/* 1. Header Banner */}
-      <section className="pt-8 sm:pt-12 pb-10 sm:pb-12 bg-[#F7FAF9] border-b border-[#E5EBEF]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-          <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#15965C] uppercase tracking-wider">
-            <span>In-House Laboratory & Imaging • Krishnanagar</span>
+      <section className="pt-6 sm:pt-10 pb-8 sm:pb-10 bg-[#F7FAF9] border-b border-[#E5EBEF]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3">
+          <div className="inline-flex items-center gap-2 text-xs font-semibold text-[#15965C] bg-[#15965C]/10 px-3 py-1 rounded-full w-fit">
+            <Microscope className="w-3.5 h-3.5 text-[#15965C]" />
+            <span>প্যাথলজি ল্যাব ও ডায়াগনস্টিক পরিষেবা • In-House Diagnostic Centre</span>
           </div>
           <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-[#103653] tracking-tight break-words">
             Diagnostic Services & Tariff Schedule
           </h1>
           <p className="text-sm sm:text-base text-[#526273] max-w-3xl leading-relaxed">
-            Hiramani Memorial Hospital features in-house diagnostic instrumentation for clinical pathology, automated biochemistry, digital radiology, and 2D Echocardiography with rapid same-day turnaround times.
+            Hiramani Memorial Hospital features modern in-house diagnostic pathology, automated biochemistry analyzers, digital X-Ray, and 2D Echocardiography with fast same-day reports for patients across Krishnanagar and Nadia.
           </p>
+        </div>
+      </section>
+
+      {/* 2. Fasting & Collection Notice */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="p-4 sm:p-5 rounded-xl bg-[#103653] text-white flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-sm">
+          <div className="space-y-1">
+            <div className="flex items-center gap-2 text-xs font-semibold text-[#159FDB]">
+              <Clock className="w-4 h-4 text-[#159FDB]" />
+              <span>নমুনা সংগ্রহের সময়: প্রতিদিন সকাল ৭:৩০ – বেলা ১১:৩০ (Daily 07:30 AM – 11:30 AM)</span>
+            </div>
+            <p className="text-xs text-slate-300">
+              ফাস্টিং সুগার ও লিপিড প্রোফাইলের জন্য ১০–১২ ঘণ্টা খালি পেটে আসুন। টেস্ট রিপোর্ট ২৪ ঘণ্টার মধ্যে সরাসরি আপনার WhatsApp-এ পৌঁছে যাবে।
+            </p>
+          </div>
+          <a
+            href="https://wa.me/917872957300?text=Hello%20Hiramani%20Hospital,%20I%20would%20like%20to%20enquire%20about%20a%20diagnostic%20test."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#15965C] hover:bg-[#117A4A] text-white text-xs font-bold transition shrink-0 shadow-sm"
+          >
+            <PhoneCall className="w-3.5 h-3.5" />
+            <span>WhatsApp Enquiry: +91 78729 57300</span>
+          </a>
         </div>
       </section>
 

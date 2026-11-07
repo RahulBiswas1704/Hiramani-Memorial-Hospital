@@ -68,7 +68,7 @@ export default function ChatPage() {
           </p>
 
           <div className="bg-white rounded-xl p-5 border border-slate-200 shadow-sm space-y-3">
-            <h4 className="font-bold text-xs uppercase tracking-wider text-slate-500">
+            <h4 className="font-bold text-xs text-[#103653]">
               Things you can try right now:
             </h4>
             <ul className="text-xs space-y-2 text-slate-700">

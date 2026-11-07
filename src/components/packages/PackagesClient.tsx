@@ -67,18 +67,18 @@ export function PackagesClient({ initialPackages }: PackagesClientProps) {
   return (
     <div className="space-y-12 pb-20 bg-white text-[#182B3D]">
       {/* 1. Institutional Editorial Header & Breadcrumb */}
-      <section className="pt-6 sm:pt-10 pb-10 sm:pb-12 bg-[#F7FAF9] border-b border-[#E5EBEF]">
+      <section className="pt-6 sm:pt-10 pb-8 sm:pb-10 bg-[#F7FAF9] border-b border-[#E5EBEF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3">
           {/* Breadcrumb Trail */}
           <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-xs text-[#526273]">
             <Link href="/" className="hover:text-[#15965C] transition">Home</Link>
             <ChevronRight className="w-3 h-3 text-slate-400" />
-            <span className="text-[#103653] font-semibold">Health Packages</span>
+            <span className="text-[#103653] font-medium">Health Packages</span>
           </nav>
 
-          <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#15965C] uppercase tracking-wider pt-1">
+          <div className="inline-flex items-center gap-2 text-xs font-semibold text-[#15965C] bg-[#15965C]/10 px-3 py-1 rounded-full w-fit">
             <HeartPulse className="w-3.5 h-3.5 text-[#15965C]" />
-            <span>Preventive Healthcare & Early Diagnostics • Krishnanagar Campus</span>
+            <span>নিয়মিত স্বাস্থ্য পরীক্ষা ও প্যাকেজ • Preventive Health Checkups</span>
           </div>
 
           <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-[#103653] tracking-tight break-words">
@@ -86,7 +86,7 @@ export function PackagesClient({ initialPackages }: PackagesClientProps) {
           </h1>
 
           <p className="text-sm sm:text-base text-[#526273] max-w-3xl leading-relaxed">
-            Early detection of silent clinical conditions such as diabetes, hypertension, cardiac risk factors, and hepatic impairment ensures timely clinical intervention. Standardized tariffs with in-house diagnostic pathology, radiology, and post-investigation physician review.
+            Protect your health and your family's future with complete health evaluations. Clear package pricing, accurate lab tests, and a dedicated consultation with our Senior Consultant Physician to discuss your results.
           </p>
         </div>
       </section>
@@ -97,8 +97,8 @@ export function PackagesClient({ initialPackages }: PackagesClientProps) {
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/10 pb-3">
             <div className="flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-[#159FDB]" />
-              <span className="text-xs font-bold uppercase tracking-wider text-[#159FDB]">
-                Checkup Day Protocol & Guidelines
+              <span className="text-xs font-semibold text-[#159FDB]">
+                চেকআপের দিন করণীয় নিয়মাবলী / How Your Checkup Day Works
               </span>
             </div>
             <span className="text-xs text-slate-300">
@@ -109,41 +109,41 @@ export function PackagesClient({ initialPackages }: PackagesClientProps) {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
             <div className="p-3.5 rounded-lg bg-white/5 border border-white/10 space-y-1.5">
               <div className="flex items-center gap-2">
-                <span className="w-5 h-5 rounded bg-[#15965C] text-white font-bold flex items-center justify-center text-[10px]">1</span>
-                <span className="font-bold text-white text-sm">Overnight Fasting</span>
+                <span className="w-5 h-5 rounded bg-[#15965C] text-white font-bold flex items-center justify-center text-[10px]">১</span>
+                <span className="font-bold text-white text-sm">১০-১২ ঘণ্টা খালি পেট</span>
               </div>
               <p className="text-slate-300 leading-relaxed">
-                Fast for 10–12 hours prior to arrival. Plain water is permitted. Avoid morning tea or snacks.
+                Fast for 10–12 hours overnight. Drink plain water if thirsty, but avoid morning tea, milk, or biscuits.
               </p>
             </div>
 
             <div className="p-3.5 rounded-lg bg-white/5 border border-white/10 space-y-1.5">
               <div className="flex items-center gap-2">
-                <span className="w-5 h-5 rounded bg-[#159FDB] text-white font-bold flex items-center justify-center text-[10px]">2</span>
-                <span className="font-bold text-white text-sm">Sample Collection</span>
+                <span className="w-5 h-5 rounded bg-[#159FDB] text-white font-bold flex items-center justify-center text-[10px]">২</span>
+                <span className="font-bold text-white text-sm">রক্ত ও প্রস্রাব সংগ্রহ</span>
               </div>
               <p className="text-slate-300 leading-relaxed">
-                Report to Ground Floor Diagnostics Desk in Nediarpara with your booking reference or token.
+                Report to Ground Floor Diagnostics Desk in Nediarpara between 07:30 AM and 11:30 AM for gentle blood collection.
               </p>
             </div>
 
             <div className="p-3.5 rounded-lg bg-white/5 border border-white/10 space-y-1.5">
               <div className="flex items-center gap-2">
-                <span className="w-5 h-5 rounded bg-[#15965C] text-white font-bold flex items-center justify-center text-[10px]">3</span>
-                <span className="font-bold text-white text-sm">Digital Delivery</span>
+                <span className="w-5 h-5 rounded bg-[#15965C] text-white font-bold flex items-center justify-center text-[10px]">৩</span>
+                <span className="font-bold text-white text-sm">ডিজিটাল ও প্রিন্ট রিপোর্ট</span>
               </div>
               <p className="text-slate-300 leading-relaxed">
-                Complete diagnostic reports dispatched within 24 hours via WhatsApp & Patient Portal.
+                Complete verified reports delivered within 24 hours directly on WhatsApp. Printed copies available at reception.
               </p>
             </div>
 
             <div className="p-3.5 rounded-lg bg-white/5 border border-white/10 space-y-1.5">
               <div className="flex items-center gap-2">
-                <span className="w-5 h-5 rounded bg-[#159FDB] text-white font-bold flex items-center justify-center text-[10px]">4</span>
-                <span className="font-bold text-white text-sm">Doctor Consultation</span>
+                <span className="w-5 h-5 rounded bg-[#159FDB] text-white font-bold flex items-center justify-center text-[10px]">৪</span>
+                <span className="font-bold text-white text-sm">ডাক্তারের পরামর্শ</span>
               </div>
               <p className="text-slate-300 leading-relaxed">
-                Complimentary post-test clinical review with Senior Consultant Physician included in all packages.
+                Every package includes a free post-checkup review with our Senior Consultant Physician to guide your lifestyle and diet.
               </p>
             </div>
           </div>
@@ -349,28 +349,37 @@ export function PackagesClient({ initialPackages }: PackagesClientProps) {
                         <Activity className="w-3.5 h-3.5 text-[#159FDB]" />
                         <span>Fasting Protocol:</span>
                       </span>
-                      <span className={`font-semibold ${pkg.fasting_required ? 'text-amber-700' : 'text-[#182B3D]'}`}>
-                        {pkg.fasting_required ? 'Overnight Required' : 'Not Required'}
+                      <span className={`font-semibold ${pkg.fasting_required ? 'text-amber-800 bg-amber-50 px-2 py-0.5 rounded border border-amber-200' : 'text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200'}`}>
+                        {pkg.fasting_required ? '১০-১২ ঘণ্টা খালি পেট' : 'খালি পেটের প্রয়োজন নেই'}
                       </span>
                     </div>
                   </div>
 
                   {/* Preparation Instruction Note */}
                   {pkg.preparation_instructions && (
-                    <div className="p-2.5 rounded-lg bg-amber-50 border border-amber-200 text-[11px] text-amber-900 leading-relaxed">
-                      <strong>Preparation:</strong> {pkg.preparation_instructions}
+                    <div className="p-2.5 rounded-lg bg-amber-50 border border-amber-200 text-xs text-amber-900 leading-relaxed">
+                      <strong>প্রস্তুতি / Preparation:</strong> {pkg.preparation_instructions}
                     </div>
                   )}
                 </div>
 
-                <div className="pt-3 border-t border-[#E5EBEF]">
+                <div className="pt-3 border-t border-[#E5EBEF] flex items-center gap-2">
                   <Link
                     href={`/book?package_id=${pkg.id}`}
-                    className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg text-xs font-bold text-white bg-[#15965C] hover:bg-[#117A4A] transition shadow-sm"
+                    className="flex-1 inline-flex items-center justify-center gap-2 py-2.5 px-3 rounded-lg text-xs font-bold text-white bg-[#15965C] hover:bg-[#117A4A] transition shadow-sm"
                   >
                     <CalendarCheck className="w-4 h-4" />
-                    <span>Reserve Package Slot</span>
+                    <span>Book Package</span>
                   </Link>
+                  <a
+                    href={`https://wa.me/917872957300?text=Hello%20Hiramani%20Hospital,%20I%20would%20like%20to%20book%20the%20${encodeURIComponent(pkg.name)}%20checkup%20package.`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2.5 rounded-lg border border-[#E5EBEF] bg-white hover:bg-slate-50 text-[#15965C] transition shrink-0"
+                    title="Book via WhatsApp"
+                  >
+                    <PhoneCall className="w-4 h-4" />
+                  </a>
                 </div>
               </div>
             ))}
@@ -382,15 +391,15 @@ export function PackagesClient({ initialPackages }: PackagesClientProps) {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="p-5 sm:p-7 rounded-xl bg-[#F4F8F5] border border-[#15965C]/30 flex flex-col md:flex-row items-start md:items-center justify-between gap-5 shadow-sm">
           <div className="space-y-1.5 max-w-2xl">
-            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#15965C]">
+            <div className="flex items-center gap-2 text-xs font-semibold text-[#15965C]">
               <ShieldCheck className="w-4 h-4 text-[#15965C]" />
-              <span>Corporate & Community Screening Programs</span>
+              <span>প্রতিষ্ঠান ও পরিবারের জন্য বিশেষ স্বাস্থ্য পরীক্ষা / Group Screening</span>
             </div>
             <h3 className="text-base font-bold text-[#103653]">
               Organize On-Site Employee or Community Health Camps in Nadia
             </h3>
             <p className="text-xs text-[#526273] leading-relaxed">
-              We offer customized annual executive health evaluations for schools, banks, industrial units, and community clubs in Krishnanagar, Ranaghat, and Nabadwip. Includes phlebotomy team dispatch, digitized health dossiers, and physician consults.
+              We offer customized annual health checkups for schools, banks, clubs, and offices across Krishnanagar, Ranaghat, and Nabadwip. Includes sample collection team, digital health reports, and doctor consultations.
             </p>
           </div>
 
@@ -399,7 +408,7 @@ export function PackagesClient({ initialPackages }: PackagesClientProps) {
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-xs font-bold bg-[#15965C] hover:bg-[#117A4A] text-white transition shadow-sm shrink-0"
           >
             <PhoneCall className="w-3.5 h-3.5" />
-            <span>Corporate Desk: +91 78729 57300</span>
+            <span>Call Desk: +91 78729 57300</span>
           </a>
         </div>
       </section>
@@ -407,8 +416,8 @@ export function PackagesClient({ initialPackages }: PackagesClientProps) {
       {/* 7. Frequently Asked Questions (FAQ) Accordion */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
         <div className="space-y-1 border-b border-[#E5EBEF] pb-3">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#15965C]">
-            Patient Guidance
+          <span className="text-xs font-semibold text-[#15965C]">
+            সাধারণ প্রশ্ন ও উত্তর / Patient FAQs
           </span>
           <h2 className="text-xl sm:text-2xl font-bold text-[#103653]">
             Frequently Asked Questions on Health Checkups
