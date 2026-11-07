@@ -44,12 +44,12 @@ export function Sidebar() {
   };
 
   return (
-    <aside className="w-64 bg-[#0e4a7b] text-white flex flex-col justify-between shadow-xl flex-shrink-0 min-h-screen">
+    <aside className="w-64 bg-[#103653] text-white flex flex-col justify-between shadow-xl flex-shrink-0 min-h-screen">
       {/* Hospital Brand & Info */}
       <div>
-        <div className="p-5 border-b border-[#135d96]">
+        <div className="p-5 border-b border-white/10">
           <Link href="/" className="flex items-center gap-2.5">
-            <div className="w-10 h-10 rounded-full bg-white p-0.5 flex items-center justify-center font-bold shadow-sm shrink-0 border border-teal-400">
+            <div className="w-10 h-10 rounded-full bg-white p-0.5 flex items-center justify-center font-bold shadow-sm shrink-0 border border-[#159FDB]">
               <img
                 src="/logo.png"
                 alt="Hiramani Memorial Hospital"
@@ -58,12 +58,12 @@ export function Sidebar() {
             </div>
             <div>
               <div className="font-extrabold text-sm tracking-tight leading-tight">Hiramani Memorial</div>
-              <div className="text-[10px] text-sky-200">Krishnanagar, Nadia (741101)</div>
+              <div className="text-[10px] text-slate-300">Krishnanagar, Nadia (741101)</div>
             </div>
           </Link>
 
-          <div className="mt-3 flex items-center justify-between text-[11px] bg-[#0b3b63] px-2.5 py-1.5 rounded-lg border border-[#17629b]">
-            <span className="text-sky-200">WhatsApp Mode</span>
+          <div className="mt-3 flex items-center justify-between text-[11px] bg-[#0c2940] px-2.5 py-1.5 rounded-lg border border-white/10">
+            <span className="text-slate-300">WhatsApp Mode</span>
             <span className="bg-amber-400/20 text-amber-300 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1">
               <Sparkles className="w-3 h-3" /> Sandbox
             </span>
@@ -81,11 +81,11 @@ export function Sidebar() {
                 href={item.href}
                 className={`flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs font-semibold transition ${
                   isActive
-                    ? 'bg-white text-[#0e4a7b] shadow-sm'
-                    : 'text-sky-100 hover:bg-[#135d96] hover:text-white'
+                    ? 'bg-white text-[#103653] shadow-sm font-bold'
+                    : 'text-slate-200 hover:bg-white/10 hover:text-white'
                 }`}
               >
-                <Icon className={`w-4 h-4 ${isActive ? 'text-[#0e4a7b]' : 'text-sky-300'}`} />
+                <Icon className={`w-4 h-4 ${isActive ? 'text-[#15965C]' : 'text-[#159FDB]'}`} />
                 <span>{item.name}</span>
               </Link>
             );
@@ -94,11 +94,11 @@ export function Sidebar() {
       </div>
 
       {/* Footer / User & Simulator Link */}
-      <div className="p-4 border-t border-[#135d96] space-y-3">
+      <div className="p-4 border-t border-white/10 space-y-3">
         <Link
           href="/chat"
           target="_blank"
-          className="flex items-center justify-between p-2.5 bg-emerald-700/50 hover:bg-emerald-700 border border-emerald-500/50 rounded-xl text-xs font-semibold text-emerald-100 transition shadow-sm"
+          className="flex items-center justify-between p-2.5 bg-[#15965C]/20 hover:bg-[#15965C]/30 border border-[#15965C]/40 rounded-xl text-xs font-semibold text-emerald-200 transition shadow-sm"
         >
           <span className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
@@ -109,19 +109,19 @@ export function Sidebar() {
 
         <div className="flex items-center justify-between pt-1">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-full bg-sky-200 text-[#0e4a7b] flex items-center justify-center font-bold text-xs">
+            <div className="w-8 h-8 rounded-full bg-white/15 text-[#159FDB] border border-white/10 flex items-center justify-center font-bold text-xs">
               DR
             </div>
             <div className="overflow-hidden">
               <div className="text-xs font-bold truncate text-white leading-tight">Dr. Debabrata Roy</div>
-              <div className="text-[10px] text-sky-200 truncate">Hospital Admin</div>
+              <div className="text-[10px] text-slate-300 truncate">Hospital Admin</div>
             </div>
           </div>
 
           <button
             onClick={handleSignOut}
             title="Sign Out"
-            className="p-1.5 hover:bg-[#135d96] text-sky-200 hover:text-white rounded-lg transition"
+            className="p-1.5 hover:bg-white/10 text-slate-300 hover:text-white rounded-lg transition"
           >
             <LogOut className="w-4 h-4" />
           </button>
