@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
 import {
   LayoutDashboard,
@@ -49,10 +50,12 @@ export function Sidebar() {
       <div>
         <div className="p-5 border-b border-white/10">
           <Link href="/" className="flex items-center gap-2.5">
-            <div className="w-10 h-10 rounded-full bg-white p-0.5 flex items-center justify-center font-bold shadow-sm shrink-0 border border-[#159FDB]">
-              <img
+            <div className="w-10 h-10 rounded-full bg-white p-0.5 flex items-center justify-center font-bold shadow-sm shrink-0 border border-[#159FDB] relative overflow-hidden">
+              <Image
                 src="/logo.png"
                 alt="Hiramani Memorial Hospital"
+                width={40}
+                height={40}
                 className="w-full h-full object-contain rounded-full"
               />
             </div>

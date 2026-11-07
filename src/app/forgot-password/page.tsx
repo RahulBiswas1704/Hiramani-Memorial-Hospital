@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Stethoscope, Mail, ArrowLeft, CheckCircle2 } from 'lucide-react';
 
 export default function ForgotPasswordPage() {
@@ -17,10 +18,13 @@ export default function ForgotPasswordPage() {
     <div className="min-h-screen bg-slate-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md text-center">
         <Link href="/" className="inline-flex flex-col items-center gap-2 group">
-          <div className="w-14 h-14 rounded-full bg-white p-1 border-2 border-[#159FDB] shadow-md group-hover:scale-105 transition">
-            <img
+          <div className="w-14 h-14 rounded-full bg-white p-1 border-2 border-[#159FDB] shadow-md group-hover:scale-105 transition relative">
+            <Image
               src="/logo.png"
               alt="Hiramani Memorial Hospital Logo"
+              width={56}
+              height={56}
+              priority
               className="w-full h-full object-contain rounded-full"
             />
           </div>

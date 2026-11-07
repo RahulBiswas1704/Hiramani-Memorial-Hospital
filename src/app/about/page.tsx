@@ -85,13 +85,16 @@ export default function AboutPage() {
 
           <div className="lg:col-span-5 relative">
             <div className="relative rounded-xl overflow-hidden border border-[#E5EBEF] aspect-[4/3] bg-slate-100 shadow-md">
-              <img
+              <Image
                 src="/images/hospital-reception.jpg"
                 alt="Hiramani Memorial Hospital Reception & Patient Services Lounge"
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 40vw"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#103653]/80 via-transparent to-transparent" />
-              <div className="absolute bottom-3 left-3 right-3 text-white text-xs">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#103653]/80 via-transparent to-transparent z-10" />
+              <div className="absolute bottom-3 left-3 right-3 text-white text-xs z-20">
                 <div className="font-bold">Main Reception & Admission Helpdesk</div>
                 <div className="text-slate-300 text-[11px]">40, Ananta Hari Mitra Road, Nediarpara, Krishnanagar</div>
               </div>
@@ -192,10 +195,12 @@ export default function AboutPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <div className="space-y-2.5">
-            <div className="rounded-xl overflow-hidden border border-[#E5EBEF] aspect-[4/3] bg-slate-100">
-              <img
+            <div className="relative rounded-xl overflow-hidden border border-[#E5EBEF] aspect-[4/3] bg-slate-100">
+              <Image
                 src="/images/ot-surgery.jpg"
                 alt="Modular Operation Theatre"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -206,10 +211,12 @@ export default function AboutPage() {
           </div>
 
           <div className="space-y-2.5">
-            <div className="rounded-xl overflow-hidden border border-[#E5EBEF] aspect-[4/3] bg-slate-100">
-              <img
+            <div className="relative rounded-xl overflow-hidden border border-[#E5EBEF] aspect-[4/3] bg-slate-100">
+              <Image
                 src="/images/icu-care.jpg"
                 alt="Critical Care Unit"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -220,10 +227,12 @@ export default function AboutPage() {
           </div>
 
           <div className="space-y-2.5">
-            <div className="rounded-xl overflow-hidden border border-[#E5EBEF] aspect-[4/3] bg-slate-100">
-              <img
+            <div className="relative rounded-xl overflow-hidden border border-[#E5EBEF] aspect-[4/3] bg-slate-100">
+              <Image
                 src="/images/lab-diagnostics.jpg"
                 alt="Automated Pathology Lab"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -234,10 +243,12 @@ export default function AboutPage() {
           </div>
 
           <div className="space-y-2.5">
-            <div className="rounded-xl overflow-hidden border border-[#E5EBEF] aspect-[4/3] bg-slate-100">
-              <img
+            <div className="relative rounded-xl overflow-hidden border border-[#E5EBEF] aspect-[4/3] bg-slate-100">
+              <Image
                 src="/images/radiology-imaging.jpg"
                 alt="Digital Radiography & Ultrasonography"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 className="w-full h-full object-cover"
               />
             </div>

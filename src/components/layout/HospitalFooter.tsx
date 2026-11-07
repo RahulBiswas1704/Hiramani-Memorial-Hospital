@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   PhoneCall,
   Mail,
@@ -53,10 +54,12 @@ export function HospitalFooter() {
           {/* Column 1: Hospital Identity & Accreditation */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-full overflow-hidden bg-white p-0.5 border border-[#159FDB] shrink-0">
-                <img
+              <div className="w-12 h-12 rounded-full overflow-hidden bg-white p-0.5 border border-[#159FDB] shrink-0 relative">
+                <Image
                   src="/logo.png"
                   alt="Hiramani Memorial Hospital"
+                  width={48}
+                  height={48}
                   className="w-full h-full object-contain rounded-full"
                 />
               </div>

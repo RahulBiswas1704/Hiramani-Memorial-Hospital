@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowLeft, Stethoscope, ShieldCheck, Info } from 'lucide-react';
 import { WhatsAppSimulator } from '@/components/chat/WhatsAppSimulator';
 
@@ -20,10 +21,13 @@ export default function ChatPage() {
             </Link>
             <div className="h-5 w-[1px] bg-slate-300"></div>
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-full overflow-hidden bg-white border border-[#159FDB] shadow-sm shrink-0 p-0.5">
-                <img
+              <div className="w-8 h-8 rounded-full overflow-hidden bg-white border border-[#159FDB] shadow-sm shrink-0 p-0.5 relative">
+                <Image
                   src="/logo.png"
                   alt="Hiramani Memorial Hospital Logo"
+                  width={32}
+                  height={32}
+                  priority
                   className="w-full h-full object-contain rounded-full"
                 />
               </div>

@@ -261,10 +261,12 @@ export default async function DepartmentDetailPage({ params }: DepartmentDetailP
                   key={doc.id}
                   className="p-4 rounded-lg border border-[#E5EBEF] bg-white hover:border-[#15965C] transition flex gap-3.5 items-center"
                 >
-                  <div className="w-16 h-20 rounded-md overflow-hidden bg-slate-100 shrink-0 border border-[#E5EBEF]">
-                    <img
+                  <div className="relative w-16 h-20 rounded-md overflow-hidden bg-slate-100 shrink-0 border border-[#E5EBEF]">
+                    <Image
                       src={doc.profile_image_url || '/images/hero-consultation.jpg'}
                       alt={doc.full_name}
+                      fill
+                      sizes="64px"
                       className="w-full h-full object-cover object-top"
                     />
                   </div>

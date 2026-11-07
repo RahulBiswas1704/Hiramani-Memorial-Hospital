@@ -2,6 +2,7 @@
 
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   Stethoscope,
   CalendarCheck,
@@ -188,15 +189,18 @@ export function HomeClient({
             {/* Right Column: Authentic Clinical Photography Feature */}
             <div className="lg:col-span-5 relative">
               <div className="relative rounded-2xl overflow-hidden shadow-lg border border-[#E5EBEF] aspect-[4/3] bg-slate-100">
-                <img
+                <Image
                   src="/images/hero-consultation.jpg"
                   alt="Doctor consultation at Hiramani Memorial Hospital Krishnanagar"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 40vw"
                   className="w-full h-full object-cover object-top"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#103653]/80 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#103653]/80 via-transparent to-transparent z-10" />
 
                 {/* Anchored Institutional Badge */}
-                <div className="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-sm p-3 rounded-xl border border-white/60 flex items-center gap-2.5">
+                <div className="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-sm p-3 rounded-xl border border-white/60 flex items-center gap-2.5 z-20">
                   <div className="w-8 h-8 rounded-lg bg-[#F4F8F5] text-[#15965C] flex items-center justify-center shrink-0 border border-[#15965C]/20">
                     <ShieldCheck className="w-4 h-4" />
                   </div>
@@ -233,12 +237,14 @@ export function HomeClient({
             </p>
 
             <div className="relative rounded-xl overflow-hidden border border-[#E5EBEF] aspect-[16/9] mt-3">
-              <img
+              <Image
                 src="/images/hospital-reception.jpg"
                 alt="Hiramani Memorial Hospital Reception & Patient Services Lounge"
+                fill
+                sizes="(max-width: 1024px) 100vw, 60vw"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute bottom-2 left-2 bg-[#103653]/90 text-white text-[11px] font-medium px-2.5 py-1 rounded">
+              <div className="absolute bottom-2 left-2 bg-[#103653]/90 text-white text-[11px] font-medium px-2.5 py-1 rounded z-10">
                 Central Patient Reception & Admission Helpdesk
               </div>
             </div>
@@ -416,9 +422,11 @@ export function HomeClient({
                 className="p-4 rounded-xl border border-[#E5EBEF] bg-white hover:border-[#15965C] transition flex gap-3.5 items-center"
               >
                 <div className="relative w-16 h-20 sm:w-20 sm:h-24 rounded-lg overflow-hidden bg-slate-100 shrink-0 border border-[#E5EBEF]">
-                  <img
+                  <Image
                     src={portraitUrl}
                     alt={doc.full_name}
+                    fill
+                    sizes="(max-width: 640px) 64px, 80px"
                     className="w-full h-full object-cover object-top"
                   />
                 </div>
@@ -572,7 +580,13 @@ export function HomeClient({
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <div className="rounded-xl border border-[#E5EBEF] overflow-hidden bg-white">
             <div className="h-40 bg-slate-100 relative">
-              <img src="/images/ot-surgery.jpg" alt="Modular OT" className="w-full h-full object-cover" />
+              <Image
+                src="/images/ot-surgery.jpg"
+                alt="Modular Operation Theatre"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="p-3.5 space-y-1">
               <h3 className="text-xs font-bold text-[#182B3D]">Modular Operation Theatre</h3>
@@ -584,7 +598,13 @@ export function HomeClient({
 
           <div className="rounded-xl border border-[#E5EBEF] overflow-hidden bg-white">
             <div className="h-40 bg-slate-100 relative">
-              <img src="/images/icu-care.jpg" alt="Critical Care ICU" className="w-full h-full object-cover" />
+              <Image
+                src="/images/icu-care.jpg"
+                alt="Critical Care ICU"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="p-3.5 space-y-1">
               <h3 className="text-xs font-bold text-[#182B3D]">Critical Care ICU</h3>
@@ -596,7 +616,13 @@ export function HomeClient({
 
           <div className="rounded-xl border border-[#E5EBEF] overflow-hidden bg-white">
             <div className="h-40 bg-slate-100 relative">
-              <img src="/images/lab-diagnostics.jpg" alt="Automated Pathology Lab" className="w-full h-full object-cover" />
+              <Image
+                src="/images/lab-diagnostics.jpg"
+                alt="Automated Pathology Lab"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="p-3.5 space-y-1">
               <h3 className="text-xs font-bold text-[#182B3D]">Automated Pathology Lab</h3>
@@ -608,7 +634,13 @@ export function HomeClient({
 
           <div className="rounded-xl border border-[#E5EBEF] overflow-hidden bg-white">
             <div className="h-40 bg-slate-100 relative">
-              <img src="/images/radiology-imaging.jpg" alt="Radiology & Ultrasound" className="w-full h-full object-cover" />
+              <Image
+                src="/images/radiology-imaging.jpg"
+                alt="Digital X-Ray & Ultrasound"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="p-3.5 space-y-1">
               <h3 className="text-xs font-bold text-[#182B3D]">Digital X-Ray & Ultrasound</h3>

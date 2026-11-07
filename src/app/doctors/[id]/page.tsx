@@ -1,6 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   Stethoscope,
   Building2,
@@ -95,10 +96,13 @@ export default async function DoctorProfilePage({ params }: DoctorProfilePagePro
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
           {/* Doctor Portrait Column */}
           <div className="md:col-span-4 flex flex-col items-center text-center p-6 bg-[#F7FAF9] rounded-xl border border-[#E5EBEF] space-y-4">
-            <div className="w-32 h-36 rounded-lg overflow-hidden bg-slate-100 border border-[#E5EBEF] shadow-sm shrink-0">
-              <img
+            <div className="relative w-32 h-36 rounded-lg overflow-hidden bg-slate-100 border border-[#E5EBEF] shadow-sm shrink-0">
+              <Image
                 src={portraitUrl}
                 alt={doctor.full_name}
+                fill
+                priority
+                sizes="128px"
                 className="w-full h-full object-cover object-top"
               />
             </div>

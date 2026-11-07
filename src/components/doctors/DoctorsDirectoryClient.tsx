@@ -2,6 +2,7 @@
 
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   Stethoscope,
   Search,
@@ -151,10 +152,12 @@ export function DoctorsDirectoryClient({
                   <div className="space-y-3.5">
                     {/* Doctor Header & Portrait */}
                     <div className="flex items-start gap-3.5">
-                      <div className="w-20 h-24 rounded-lg overflow-hidden bg-slate-100 border border-[#E5EBEF] shrink-0">
-                        <img
+                      <div className="relative w-20 h-24 rounded-lg overflow-hidden bg-slate-100 border border-[#E5EBEF] shrink-0">
+                        <Image
                           src={portraitUrl}
                           alt={doc.full_name}
+                          fill
+                          sizes="80px"
                           className="w-full h-full object-cover object-top"
                         />
                       </div>

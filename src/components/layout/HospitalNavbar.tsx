@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import {
   PhoneCall,
@@ -199,10 +200,13 @@ export function HospitalNavbar() {
         <div className="flex items-center justify-between h-16 sm:h-20 min-w-0 gap-2">
           {/* Official Hospital Logo & Typography */}
           <Link href="/" className="flex items-center gap-2 sm:gap-3 group shrink-0">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-white border border-[#159FDB] shadow-sm shrink-0 p-0.5">
-              <img
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-white border border-[#159FDB] shadow-sm shrink-0 p-0.5 relative">
+              <Image
                 src="/logo.png"
                 alt="Hiramani Memorial Hospital Logo"
+                width={48}
+                height={48}
+                priority
                 className="w-full h-full object-contain rounded-full"
               />
             </div>

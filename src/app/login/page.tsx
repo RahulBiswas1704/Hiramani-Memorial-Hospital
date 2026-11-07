@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { Stethoscope, Lock, Mail, ArrowRight, ShieldCheck, AlertCircle } from 'lucide-react';
 
@@ -49,10 +50,13 @@ export default function LoginPage() {
     <div className="min-h-screen bg-slate-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md text-center">
         <Link href="/" className="inline-flex flex-col items-center gap-2 group">
-          <div className="w-16 h-16 rounded-full bg-white p-1 border-2 border-[#159FDB] shadow-md group-hover:scale-105 transition">
-            <img
+          <div className="w-16 h-16 rounded-full bg-white p-1 border-2 border-[#159FDB] shadow-md group-hover:scale-105 transition relative">
+            <Image
               src="/logo.png"
               alt="Hiramani Memorial Hospital Logo"
+              width={64}
+              height={64}
+              priority
               className="w-full h-full object-contain rounded-full"
             />
           </div>
