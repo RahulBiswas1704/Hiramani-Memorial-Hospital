@@ -31,7 +31,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3">
           <div className="inline-flex items-center gap-2 text-xs font-semibold text-[#15965C] bg-[#15965C]/10 px-3 py-1 rounded-full w-fit">
             <Building2 className="w-3.5 h-3.5 text-[#15965C]" />
-            <span>আমাদের পরিচয় ও অঙ্গীকার • About Hiramani Memorial Hospital</span>
+            <span>About Hiramani Memorial Hospital • Institutional Profile</span>
           </div>
 
           <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-[#103653] tracking-tight max-w-4xl leading-[1.18] break-words">
@@ -49,7 +49,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           <div className="lg:col-span-7 space-y-5">
             <span className="text-xs font-semibold text-[#15965C]">
-              আমাদের শিকড় ও পথচলা / Our Heritage in Krishnanagar
+              Our Heritage in Krishnanagar
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-[#103653]">
               A Dedicated Healthcare Centre in the Heart of Krishnanagar
@@ -111,7 +111,7 @@ export default function AboutPage() {
           <div className="space-y-3">
             <div className="flex items-center gap-2 text-[#15965C] text-xs font-semibold">
               <span className="w-2 h-2 rounded-full bg-[#15965C]" />
-              <span>আমাদের লক্ষ্য / Our Clinical Mission</span>
+              <span>Our Clinical Mission</span>
             </div>
             <h3 className="text-xl sm:text-2xl font-bold text-[#103653]">
               Dignified, Transparent & Evidence-Based Healing
@@ -125,7 +125,7 @@ export default function AboutPage() {
           <div className="space-y-3">
             <div className="flex items-center gap-2 text-[#159FDB] text-xs font-semibold">
               <span className="w-2 h-2 rounded-full bg-[#159FDB]" />
-              <span>আমাদের দূরদৃষ্টি / Our Institutional Vision</span>
+              <span>Our Institutional Vision</span>
             </div>
             <h3 className="text-xl sm:text-2xl font-bold text-[#103653]">
               The Trusted Healthcare Center for Nadia District
@@ -141,7 +141,7 @@ export default function AboutPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         <div className="space-y-1">
           <span className="text-xs font-semibold text-[#15965C]">
-            আমাদের মূল ভিত্তি / Core Principles of Patient Care
+            Core Principles of Patient Care
           </span>
           <h2 className="text-xl sm:text-2xl font-bold text-[#103653]">
             The Pillars of Our Patient Care
@@ -187,7 +187,7 @@ export default function AboutPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         <div className="space-y-1 border-b border-[#E5EBEF] pb-4">
           <span className="text-xs font-semibold text-[#15965C]">
-            হাসপাতাল পরিকাঠামো / Hospital Infrastructure
+            Hospital Infrastructure & Technology
           </span>
           <h2 className="text-xl sm:text-2xl font-bold text-[#103653]">
             Clinical Infrastructure & Diagnostic Equipment
@@ -266,7 +266,7 @@ export default function AboutPage() {
         <div className="border border-[#E5EBEF] rounded-2xl p-6 sm:p-10 bg-[#F7FAF9] space-y-6">
           <div className="space-y-1">
             <span className="text-xs font-semibold text-[#15965C]">
-              রোগীর সুরক্ষা ও অধিকার / Quality & Patient Rights
+              Quality & Patient Rights
             </span>
             <h2 className="text-xl sm:text-2xl font-bold text-[#103653]">
               Patient Rights & Safety Assurance

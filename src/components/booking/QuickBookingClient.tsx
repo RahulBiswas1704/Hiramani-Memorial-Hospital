@@ -161,7 +161,7 @@ export function QuickBookingClient({
 
         <div className="space-y-1.5">
           <span className="text-xs font-semibold text-[#15965C] bg-[#F4F8F5] px-3 py-1 rounded-full border border-[#15965C]/20 inline-block">
-            অ্যাপয়েন্টমেন্ট সফলভাবে নিশ্চিত হয়েছে / Confirmed Appointment
+            Confirmed Outpatient Appointment
           </span>
           <h2 className="text-xl sm:text-2xl font-bold text-[#103653]">
             Booking Reserved Successfully
@@ -246,7 +246,7 @@ export function QuickBookingClient({
       <div className="lg:col-span-8 bg-white p-6 sm:p-8 rounded-xl border border-[#E5EBEF] shadow-sm space-y-6">
         <div className="space-y-1 border-b border-[#E5EBEF] pb-4">
           <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#15965C] bg-[#15965C]/10 px-2.5 py-0.5 rounded-full w-fit">
-            <span>সহজে ডাক্তার অ্যাপয়েন্টমেন্ট বুকিং • OPD Appointment</span>
+            <span>Outpatient Appointment Booking • Krishnanagar Campus</span>
           </div>
           <h2 className="text-xl sm:text-2xl font-bold text-[#103653]">
             Schedule an Outpatient Consultation
@@ -416,7 +416,7 @@ export function QuickBookingClient({
         <div className="p-5 sm:p-6 rounded-xl bg-[#103653] text-white space-y-3.5 border border-[#103653]">
           <div className="flex items-center justify-between">
             <span className="text-xs font-semibold text-[#159FDB]">
-              WhatsApp-এ সরাসরি বুকিং
+              Direct WhatsApp Booking
             </span>
             <MessageCircle className="w-4 h-4 text-[#15965C]" />
           </div>

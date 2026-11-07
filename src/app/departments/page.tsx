@@ -59,7 +59,7 @@ export default async function DepartmentsPage() {
 
           <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#15965C] pt-1">
             <span className="w-2 h-2 rounded-full bg-[#15965C] inline-block" />
-            <span>আমাদের বিশেষায়িত চিকিৎসা বিভাগসমূহ • Krishnanagar Campus</span>
+            <span>Clinical Specialities & Medical Departments • Krishnanagar Campus</span>
           </div>
 
           <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-[#103653] tracking-tight">

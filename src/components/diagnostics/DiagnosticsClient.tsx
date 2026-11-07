@@ -49,7 +49,7 @@ export function DiagnosticsClient({ categories, tests }: DiagnosticsClientProps)
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3">
           <div className="inline-flex items-center gap-2 text-xs font-semibold text-[#15965C] bg-[#15965C]/10 px-3 py-1 rounded-full w-fit">
             <Microscope className="w-3.5 h-3.5 text-[#15965C]" />
-            <span>প্যাথলজি ল্যাব ও ডায়াগনস্টিক পরিষেবা • In-House Diagnostic Centre</span>
+            <span>In-House Diagnostic Pathology & Imaging • Krishnanagar Campus</span>
           </div>
           <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-[#103653] tracking-tight break-words">
             Diagnostic Services & Tariff Schedule
@@ -66,10 +66,10 @@ export function DiagnosticsClient({ categories, tests }: DiagnosticsClientProps)
           <div className="space-y-1">
             <div className="flex items-center gap-2 text-xs font-semibold text-[#159FDB]">
               <Clock className="w-4 h-4 text-[#159FDB]" />
-              <span>নমুনা সংগ্রহের সময়: প্রতিদিন সকাল ৭:৩০ – বেলা ১১:৩০ (Daily 07:30 AM – 11:30 AM)</span>
+              <span>Sample Collection Hours: Daily 07:30 AM – 11:30 AM</span>
             </div>
             <p className="text-xs text-slate-300">
-              ফাস্টিং সুগার ও লিপিড প্রোফাইলের জন্য ১০–১২ ঘণ্টা খালি পেটে আসুন। টেস্ট রিপোর্ট ২৪ ঘণ্টার মধ্যে সরাসরি আপনার WhatsApp-এ পৌঁছে যাবে।
+              For Fasting Blood Sugar and Lipid Profiles, please arrive with 10–12 hours overnight fasting. Reports delivered via WhatsApp within 24 hours.
             </p>
           </div>
           <a

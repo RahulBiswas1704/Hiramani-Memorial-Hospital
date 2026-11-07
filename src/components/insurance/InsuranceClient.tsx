@@ -223,7 +223,7 @@ export function InsuranceClient() {
 
           <div className="inline-flex items-center gap-2 text-xs font-semibold text-[#15965C] bg-[#15965C]/10 px-3 py-1 rounded-full w-fit">
             <CreditCard className="w-3.5 h-3.5 text-[#15965C]" />
-            <span>ভর্তি ও ক্যাশলেস স্বাস্থ্যবিমা সহায়তা কেন্দ্র • Ground Floor Counter 3</span>
+            <span>Dedicated TPA & Mediclaim Desk • Ground Floor Counter 3</span>
           </div>
 
           <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-[#103653] tracking-tight break-words">
@@ -310,7 +310,7 @@ export function InsuranceClient() {
           <div className="space-y-1">
             <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#15965C]">
               <ShieldCheck className="w-4 h-4 text-[#15965C]" />
-              <span>সহযোগী স্বাস্থ্যবিমা ও টিপিএ তালিকা / Network Partners & TPAs</span>
+              <span>Network Partners & Third Party Administrators (TPAs)</span>
             </div>
             <h2 className="text-xl sm:text-2xl font-bold text-[#103653]">
               Health Insurance & TPA Directory
@@ -461,7 +461,7 @@ export function InsuranceClient() {
             <div className="space-y-1.5">
               <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#15965C] bg-[#15965C]/10 px-3 py-1 rounded-full w-fit">
                 <Hospital className="w-4 h-4 text-[#15965C]" />
-                <span>পশ্চিমবঙ্গ সরকারের স্বাস্থ্য সাথী সহায়তা কেন্দ্র (কাউন্টার ৩)</span>
+                <span>West Bengal Swasthya Sathi Help Desk (Counter 3)</span>
               </div>
               <h2 className="text-xl sm:text-2xl font-bold text-[#103653]">
                 Swasthya Sathi Scheme Guidance for Nadia Families
@@ -483,7 +483,7 @@ export function InsuranceClient() {
             <div className="p-4 rounded-xl bg-white border border-[#E5EBEF] space-y-2">
               <div className="text-xs font-semibold text-[#15965C] flex items-center gap-1.5">
                 <ShieldCheck className="w-4 h-4" />
-                <span>আসল স্মার্ট কার্ড (Original Smart Card)</span>
+                <span>Original Smart Card</span>
               </div>
               <h4 className="text-sm font-bold text-[#103653]">Valid Swasthya Sathi Card</h4>
               <p className="text-xs text-[#526273] leading-relaxed">
@@ -494,7 +494,7 @@ export function InsuranceClient() {
             <div className="p-4 rounded-xl bg-white border border-[#E5EBEF] space-y-2">
               <div className="text-xs font-semibold text-[#159FDB] flex items-center gap-1.5">
                 <FileCheck className="w-4 h-4" />
-                <span>প্যাকেজ ও বেড বুকিং (Package & Ward)</span>
+                <span>Package & Ward Booking</span>
               </div>
               <h4 className="text-sm font-bold text-[#103653]">Pre-Authorization & Ward Allocation</h4>
               <p className="text-xs text-[#526273] leading-relaxed">
@@ -505,7 +505,7 @@ export function InsuranceClient() {
             <div className="p-4 rounded-xl bg-white border border-[#E5EBEF] space-y-2">
               <div className="text-xs font-semibold text-[#103653] flex items-center gap-1.5">
                 <FileText className="w-4 h-4" />
-                <span>নথিপত্র (Required Documents)</span>
+                <span>Required Documentation</span>
               </div>
               <h4 className="text-sm font-bold text-[#103653]">Aadhaar & Doctor Referral</h4>
               <p className="text-xs text-[#526273] leading-relaxed">
@@ -535,7 +535,7 @@ export function InsuranceClient() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         <div className="space-y-1 border-b border-[#E5EBEF] pb-3">
           <span className="text-xs font-semibold text-[#15965C]">
-            ক্যাশলেস ভর্তি প্রক্রিয়া / 4 Simple Steps
+            4 Simple Cashless Steps
           </span>
           <h2 className="text-xl sm:text-2xl font-bold text-[#103653]">
             How Cashless Hospitalization Works for Patients
@@ -550,7 +550,7 @@ export function InsuranceClient() {
           <div className="p-5 rounded-xl border border-[#E5EBEF] bg-[#F7FAF9] space-y-3 flex flex-col justify-between">
             <div className="space-y-2">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-bold text-[#15965C]">ধাপ ১ • Step 1</span>
+                <span className="text-xs font-bold text-[#15965C]">Step 1</span>
                 <span className="text-xs text-slate-500 font-medium">Ground Floor</span>
               </div>
               <h3 className="text-sm font-bold text-[#103653]">Document Check at Counter 3</h3>
@@ -568,7 +568,7 @@ export function InsuranceClient() {
           <div className="p-5 rounded-xl border border-[#E5EBEF] bg-[#F7FAF9] space-y-3 flex flex-col justify-between">
             <div className="space-y-2">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-bold text-[#159FDB]">ধাপ ২ • Step 2</span>
+                <span className="text-xs font-bold text-[#159FDB]">Step 2</span>
                 <span className="text-xs text-slate-500 font-medium">Fast-Track</span>
               </div>
               <h3 className="text-sm font-bold text-[#103653]">Initial Approval Letter</h3>
@@ -586,7 +586,7 @@ export function InsuranceClient() {
           <div className="p-5 rounded-xl border border-[#E5EBEF] bg-[#F7FAF9] space-y-3 flex flex-col justify-between">
             <div className="space-y-2">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-bold text-[#15965C]">ধাপ ৩ • Step 3</span>
+                <span className="text-xs font-bold text-[#15965C]">Step 3</span>
                 <span className="text-xs text-slate-500 font-medium">In-Ward Care</span>
               </div>
               <h3 className="text-sm font-bold text-[#103653]">Treatment & Cost Updates</h3>
@@ -604,7 +604,7 @@ export function InsuranceClient() {
           <div className="p-5 rounded-xl border border-[#E5EBEF] bg-[#F7FAF9] space-y-3 flex flex-col justify-between">
             <div className="space-y-2">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-bold text-[#159FDB]">ধাপ ৪ • Step 4</span>
+                <span className="text-xs font-bold text-[#159FDB]">Step 4</span>
                 <span className="text-xs text-slate-500 font-medium">Discharge</span>
               </div>
               <h3 className="text-sm font-bold text-[#103653]">Final Discharge & Settlement</h3>
@@ -624,7 +624,7 @@ export function InsuranceClient() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         <div className="space-y-1 border-b border-[#E5EBEF] pb-3">
           <span className="text-xs font-semibold text-[#15965C]">
-            প্রয়োজনীয় কাগজপত্র / Documentation Checklist
+            Documentation Checklist
           </span>
           <h2 className="text-xl sm:text-2xl font-bold text-[#103653]">
             Mandatory Documents Checklist for Cashless Clearance
@@ -713,7 +713,7 @@ export function InsuranceClient() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         <div className="space-y-1 border-b border-[#E5EBEF] pb-3">
           <span className="text-xs font-semibold text-[#15965C]">
-            বিলিং স্বচ্ছতা / Transparent Hospital Charges
+            Billing Transparency & Included Costs
           </span>
           <h2 className="text-xl sm:text-2xl font-bold text-[#103653]">
             Understanding Covered Items vs. Non-Medical Exclusions
@@ -838,7 +838,7 @@ export function InsuranceClient() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         <div className="space-y-1 border-b border-[#E5EBEF] pb-3">
           <span className="text-xs font-semibold text-[#15965C]">
-            সাধারণ প্রশ্নোত্তর / FAQs
+            Frequently Asked Questions
           </span>
           <h2 className="text-xl sm:text-2xl font-bold text-[#103653]">
             Frequently Asked Questions on Cashless Mediclaim
@@ -885,7 +885,7 @@ export function InsuranceClient() {
           <div className="space-y-2 text-center md:text-left">
             <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#159FDB]">
               <PhoneCall className="w-3.5 h-3.5" />
-              <span>সহায়তার জন্য কল করুন / Dedicated Insurance Coordinator</span>
+              <span>Dedicated Insurance Coordinator</span>
             </div>
             <h3 className="text-xl sm:text-2xl font-bold text-white">
               Need Instant Pre-Authorization Guidance?

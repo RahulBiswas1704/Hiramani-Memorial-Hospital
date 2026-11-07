@@ -296,10 +296,10 @@ export function WhatsAppSimulator({ onClose, isStandalone = false }: WhatsAppSim
           7️⃣ Speak to Staff
         </button>
         <button
-          onClick={() => handleSendMessage('জরুরি')}
+          onClick={() => handleSendMessage('emergency')}
           className="bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 px-2.5 py-1 rounded-md text-[11px] font-medium"
         >
-          🚨 জরুরি (Emergency)
+          🚨 Emergency Care
         </button>
         <button
           onClick={() => handleSendMessage('menu')}

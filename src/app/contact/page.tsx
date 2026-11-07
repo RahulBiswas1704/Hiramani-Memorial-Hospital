@@ -36,7 +36,7 @@ export default function ContactPage() {
 
           <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#15965C] pt-1">
             <span className="w-2 h-2 rounded-full bg-[#15965C] inline-block" />
-            <span>যোগাযোগ ও হাসপাতালের অবস্থান • 24x7 Ready to Assist You</span>
+            <span>Contact & Hospital Location • 24x7 Ready to Assist You</span>
           </div>
 
           <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-[#103653] tracking-tight">
@@ -135,7 +135,7 @@ export default function ContactPage() {
             <div className="rounded-xl border border-[#E5EBEF] bg-white p-5 sm:p-6 space-y-4 shadow-sm">
               <div className="space-y-1">
                 <span className="text-xs font-semibold text-[#15965C]">
-                  হাসপাতালের ঠিকানা / Location
+                  Hospital Location & Address
                 </span>
                 <h3 className="text-base font-bold text-[#103653]">
                   Hiramani Memorial Hospital

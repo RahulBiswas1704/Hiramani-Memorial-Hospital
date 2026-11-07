@@ -166,7 +166,7 @@ export default async function DepartmentDetailPage({ params }: DepartmentDetailP
           <div className="space-y-1">
             <span className="text-xs font-semibold text-[#15965C] flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-[#15965C] inline-block" />
-              <span>চিকিৎসা বিভাগ • Krishnanagar Campus</span>
+              <span>Clinical Department • Krishnanagar Campus</span>
             </span>
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#103653] tracking-tight">
               Department of {dept.name}

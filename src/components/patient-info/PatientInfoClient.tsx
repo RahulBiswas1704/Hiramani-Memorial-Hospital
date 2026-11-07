@@ -118,7 +118,7 @@ export function PatientInfoClient() {
 
           <div className="inline-flex items-center gap-2 text-xs font-semibold text-[#15965C] bg-[#15965C]/10 px-3 py-1 rounded-full w-fit">
             <Building2 className="w-3.5 h-3.5 text-[#15965C]" />
-            <span>রোগী ও পরিবারের সহায়তা নির্দেশিকা • Patient & Family Guide</span>
+            <span>Patient & Family Guide • Krishnanagar Campus</span>
           </div>
 
           <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-[#103653] tracking-tight break-words">
@@ -137,15 +137,15 @@ export function PatientInfoClient() {
           <div className="p-5 rounded-xl border border-[#E5EBEF] bg-white space-y-3 shadow-sm">
             <div className="flex items-center gap-2 text-xs font-semibold text-[#103653]">
               <Clock className="w-4 h-4 text-[#15965C]" />
-              <span>রোগী দেখার সময় / Visiting Hours</span>
+              <span>Visiting Hours & Sessions</span>
             </div>
             <div className="space-y-2 text-xs text-[#526273]">
               <div className="flex items-center justify-between border-b border-[#E5EBEF] pb-1.5">
-                <span className="font-semibold text-[#182B3D]">সকাল / Morning:</span>
+                <span className="font-semibold text-[#182B3D]">Morning Session:</span>
                 <span className="font-bold text-[#15965C]">11:00 AM – 01:00 PM</span>
               </div>
               <div className="flex items-center justify-between border-b border-[#E5EBEF] pb-1.5">
-                <span className="font-semibold text-[#182B3D]">সন্ধ্যা / Evening:</span>
+                <span className="font-semibold text-[#182B3D]">Evening Session:</span>
                 <span className="font-bold text-[#15965C]">05:00 PM – 07:00 PM</span>
               </div>
               <p className="text-xs text-[#526273] pt-1">
@@ -157,7 +157,7 @@ export function PatientInfoClient() {
           <div className="p-5 rounded-xl border border-[#E5EBEF] bg-white space-y-3 shadow-sm">
             <div className="flex items-center gap-2 text-xs font-semibold text-[#103653]">
               <Users className="w-4 h-4 text-[#159FDB]" />
-              <span>পরিবার অ্যাটেন্ডেন্ট পাস / Attendant Passes</span>
+              <span>Attendant Passes</span>
             </div>
             <p className="text-xs text-[#526273] leading-relaxed">
               One 24-hour attendant pass is issued per inpatient bed during admission. The family member must keep the pass handy when inside hospital corridors.
@@ -170,7 +170,7 @@ export function PatientInfoClient() {
           <div className="p-5 rounded-xl border border-[#E5EBEF] bg-white space-y-3 shadow-sm">
             <div className="flex items-center gap-2 text-xs font-semibold text-[#103653]">
               <CreditCard className="w-4 h-4 text-[#15965C]" />
-              <span>স্বচ্ছ বিলিং ব্যবস্থা / Transparent Billing</span>
+              <span>Transparent Billing</span>
             </div>
             <p className="text-xs text-[#526273] leading-relaxed">
               Daily itemized billing updates are available at the billing counter. We provide clear receipts for every medicine and test, complying with state healthcare norms.
@@ -186,7 +186,7 @@ export function PatientInfoClient() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         <div className="space-y-1 border-b border-[#E5EBEF] pb-3">
           <span className="text-xs font-semibold text-[#15965C]">
-            ভর্তি প্রক্রিয়া / Hospital Admission Guide
+            Hospital Admission Guide
           </span>
           <h2 className="text-xl sm:text-2xl font-bold text-[#103653]">
             Step-by-Step Inpatient Journey
@@ -195,7 +195,7 @@ export function PatientInfoClient() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           <div className="p-4 rounded-xl border border-[#E5EBEF] bg-[#F7FAF9] space-y-2">
-            <span className="text-xs font-bold text-[#15965C]">ধাপ ১ • Step 1</span>
+            <span className="text-xs font-bold text-[#15965C]">Step 1</span>
             <h3 className="text-sm font-bold text-[#103653]">Doctor's Advice</h3>
             <p className="text-xs text-[#526273] leading-relaxed">
               Consultant doctor examines the patient in OPD or 24x7 Emergency and issues an admission slip.
@@ -203,7 +203,7 @@ export function PatientInfoClient() {
           </div>
 
           <div className="p-4 rounded-xl border border-[#E5EBEF] bg-[#F7FAF9] space-y-2">
-            <span className="text-xs font-bold text-[#159FDB]">ধাপ ২ • Step 2</span>
+            <span className="text-xs font-bold text-[#159FDB]">Step 2</span>
             <h3 className="text-sm font-bold text-[#103653]">Admission Desk</h3>
             <p className="text-xs text-[#526273] leading-relaxed">
               Family presents doctor slip, Aadhaar card, and insurance/Swasthya Sathi card at Counter 1 or Counter 3.
@@ -211,7 +211,7 @@ export function PatientInfoClient() {
           </div>
 
           <div className="p-4 rounded-xl border border-[#E5EBEF] bg-[#F7FAF9] space-y-2">
-            <span className="text-xs font-bold text-[#15965C]">ধাপ ৩ • Step 3</span>
+            <span className="text-xs font-bold text-[#15965C]">Step 3</span>
             <h3 className="text-sm font-bold text-[#103653]">Ward Allocation</h3>
             <p className="text-xs text-[#526273] leading-relaxed">
               Patient is settled into the chosen ward/cabin with friendly nursing care, vitals check, and doctor briefing.
@@ -219,7 +219,7 @@ export function PatientInfoClient() {
           </div>
 
           <div className="p-4 rounded-xl border border-[#E5EBEF] bg-[#F7FAF9] space-y-2">
-            <span className="text-xs font-bold text-[#159FDB]">ধাপ ৪ • Step 4</span>
+            <span className="text-xs font-bold text-[#159FDB]">Step 4</span>
             <h3 className="text-sm font-bold text-[#103653]">Inpatient Care</h3>
             <p className="text-xs text-[#526273] leading-relaxed">
               24/7 dedicated nursing, daily consultant rounds, therapeutic meals, and necessary medications.
@@ -227,7 +227,7 @@ export function PatientInfoClient() {
           </div>
 
           <div className="p-4 rounded-xl border border-[#E5EBEF] bg-[#F7FAF9] space-y-2">
-            <span className="text-xs font-bold text-[#15965C]">ধাপ ৫ • Step 5</span>
+            <span className="text-xs font-bold text-[#15965C]">Step 5</span>
             <h3 className="text-sm font-bold text-[#103653]">Discharge & Home Care</h3>
             <p className="text-xs text-[#526273] leading-relaxed">
               Detailed discharge certificate, clear medicine instructions, diet plan, and follow-up consultation date.
@@ -240,7 +240,7 @@ export function PatientInfoClient() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         <div className="space-y-1 border-b border-[#E5EBEF] pb-3">
           <span className="text-xs font-semibold text-[#15965C]">
-            ওয়ার্ড ও কেবিন সুবিধা / Ward Categories
+            Ward Categories & Accommodation
           </span>
           <h2 className="text-xl sm:text-2xl font-bold text-[#103653]">
             Ward Categories & Clinical Facilities
@@ -285,7 +285,7 @@ export function PatientInfoClient() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         <div className="space-y-1 border-b border-[#E5EBEF] pb-3">
           <span className="text-xs font-semibold text-[#15965C]">
-            হাসপাতাল পরিষেবা / Campus Amenities
+            Campus Amenities & Support
           </span>
           <h2 className="text-xl sm:text-2xl font-bold text-[#103653]">
             Patient Services & Support Facilities
@@ -313,7 +313,7 @@ export function PatientInfoClient() {
         <div className="p-6 sm:p-8 rounded-xl bg-[#F7FAF9] border border-[#E5EBEF] space-y-6">
           <div className="space-y-1 border-b border-[#E5EBEF] pb-3">
             <span className="text-xs font-semibold text-[#15965C]">
-              আমাদের অঙ্গীকার ও রোগীর অধিকার / Care Commitment & Rights
+              Our Care Commitment & Patient Rights
             </span>
             <h2 className="text-xl sm:text-2xl font-bold text-[#103653]">
               Patient Rights & Family Responsibilities
@@ -325,7 +325,7 @@ export function PatientInfoClient() {
             <div className="space-y-3">
               <h3 className="text-sm font-bold text-[#103653] flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-[#15965C]" />
-                <span>আপনার অধিকার / Your Rights as a Patient:</span>
+                <span>Your Rights as a Patient:</span>
               </h3>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
@@ -351,7 +351,7 @@ export function PatientInfoClient() {
             <div className="space-y-3">
               <h3 className="text-sm font-bold text-[#103653] flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-[#159FDB]" />
-                <span>পরিবারের সহযোগিতা / How You Can Help Us:</span>
+                <span>How You Can Help Us:</span>
               </h3>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
@@ -380,7 +380,7 @@ export function PatientInfoClient() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
         <div className="space-y-1 border-b border-[#E5EBEF] pb-3">
           <span className="text-xs font-semibold text-[#15965C]">
-            সাধারণ প্রশ্ন ও উত্তর / Frequently Asked Questions
+            Frequently Asked Questions
           </span>
           <h2 className="text-xl sm:text-2xl font-bold text-[#103653]">
             Frequently Asked Questions on Hospital Admission
@@ -420,7 +420,7 @@ export function PatientInfoClient() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="p-6 sm:p-8 rounded-xl bg-[#103653] text-white flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
           <div className="space-y-1 text-center sm:text-left">
-            <h3 className="text-lg sm:text-xl font-bold text-white">ভর্তি সংক্রান্ত যেকোনো তথ্যের জন্য কল করুন</h3>
+            <h3 className="text-lg sm:text-xl font-bold text-white">Need Inpatient Admission Guidance?</h3>
             <p className="text-xs sm:text-sm text-slate-300">
               Need urgent admission or bed availability details? Our Nediarpara helpdesk is here to assist 24/7.
             </p>

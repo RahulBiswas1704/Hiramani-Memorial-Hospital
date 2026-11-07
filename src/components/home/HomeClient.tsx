@@ -132,7 +132,7 @@ export function HomeClient({
               {/* Warm Local Reassurance Line */}
               <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm font-semibold text-[#15965C]">
                 <span className="w-2.5 h-2.5 rounded-full bg-[#15965C] animate-pulse shrink-0" />
-                <span>কৃষ্ণনগর ও সমগ্র নদিয়ার জন্য বিশ্বস্ত চিকিৎসা প্রতিষ্ঠান</span>
+                <span>Trusted Healthcare Centre for Krishnanagar & Nadia District</span>
                 <span className="text-slate-300 hidden sm:inline">•</span>
                 <span className="text-[#526273] font-medium hidden sm:inline">Nediarpara, Krishnanagar</span>
               </div>
@@ -143,9 +143,9 @@ export function HomeClient({
                 <span className="text-[#15965C]">and Your Family.</span>
               </h1>
 
-              {/* Bengali & English Patient Subtitle */}
+              {/* Patient Subtitle */}
               <p className="text-sm sm:text-base text-[#526273] leading-relaxed max-w-2xl">
-                হীরামনি মেমোরিয়াল হাসপাতাল কৃষ্ণনগরে ২৪ ঘণ্টা জরুরি বিভাগ, অভিজ্ঞ বিশেষজ্ঞ ডাক্তারদের ওপিডি চেম্বার, মডার্ন আইসিইউ এবং সাশ্রয়ী প্যাথলজি ল্যাব নিয়ে সর্বদা আপনার সেবায় প্রস্তুত। কলকাতা যাওয়ার প্রয়োজন ছাড়াই বিশ্বস্ত স্বাস্থ্যসেবা এখন ঘরের কাছেই।
+                Hiramani Memorial Hospital provides 24x7 emergency response, experienced visiting specialists across major medical disciplines, modern intensive care units, and affordable diagnostic pathology. Quality, trustworthy healthcare right here in Krishnanagar without travelling to Kolkata.
               </p>
 
               {/* Primary Call / WhatsApp Actions - Large, High-Contrast Tap Targets */}
@@ -256,7 +256,7 @@ export function HomeClient({
                 Emergency & Casualty
               </h3>
               <p className="text-xs text-[#526273] leading-relaxed">
-                জরুরি চিকিৎসার জন্য এখনই ফোন করুন। Immediate doctor response for chest pain, accidents, or acute distress.
+                Immediate doctor response for trauma, chest pain, accidents, or acute distress. Open 24 hours.
               </p>
             </div>
             <div className="pt-2 border-t border-red-100 flex items-center justify-between text-xs font-bold text-[#DC2626]">
@@ -283,7 +283,7 @@ export function HomeClient({
                 Book on WhatsApp
               </h3>
               <p className="text-xs text-[#526273] leading-relaxed">
-                হোয়াটসঅ্যাপে ডাক্তার বুকিং করুন। Check doctor timings, fees, and reserve your consultation pass on WhatsApp.
+                Check doctor chamber schedules, consultation fees, and reserve your consultation slot easily on WhatsApp.
               </p>
             </div>
             <div className="pt-2 border-t border-emerald-100 flex items-center justify-between text-xs font-bold text-[#15965C]">
@@ -310,7 +310,7 @@ export function HomeClient({
                 Reception Helpdesk
               </h3>
               <p className="text-xs text-[#526273] leading-relaxed">
-                হাসপাতাল রিসেপশনে কথা বলুন। Speak directly with our reception staff for general enquiries, doctor availability, and reports.
+                Speak directly with our front desk staff for general enquiries, doctor availability, and diagnostic reports.
               </p>
             </div>
             <div className="pt-2 border-t border-sky-100 flex items-center justify-between text-xs font-bold text-[#103653]">
@@ -339,7 +339,7 @@ export function HomeClient({
                 How to Reach Us
               </h3>
               <p className="text-xs text-[#526273] leading-relaxed">
-                ইনকাম ট্যাক্স অফিসের কাছে। 5 minutes from Krishnanagar City Junction Railway Station. Easy rickshaw/toto access.
+                Located on Ananta Hari Mitra Road near the Income Tax Office. 5 minutes from Krishnanagar City Junction Railway Station.
               </p>
             </div>
             <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#103653]">
@@ -355,8 +355,8 @@ export function HomeClient({
       {/* ------------------------------------------------------------------ */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         <div className="border-b border-[#E5EBEF] pb-4 space-y-1">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#15965C]">
-            রোগীদের জন্য সহজ সেবা নির্দেশিকা
+          <span className="text-xs font-semibold text-[#15965C]">
+            Quick Patient Navigator
           </span>
           <h2 className="text-2xl sm:text-3xl font-bold text-[#103653]">
             How Can We Help You Today?
@@ -380,7 +380,7 @@ export function HomeClient({
                 1. I want to see a Doctor
               </h3>
               <p className="text-xs text-[#526273] leading-relaxed">
-                ডাক্তার দেখাতে চাই। Consult senior specialists in Cardiology, Medicine, Orthopaedics, Surgery, Paediatrics, and Gynaecology.
+                Consult senior specialists in Cardiology, General Medicine, Orthopaedics, Surgery, Paediatrics, and Gynaecology.
               </p>
             </div>
             <div className="pt-2 border-t border-[#E5EBEF] text-xs font-bold text-[#15965C] flex items-center gap-1">
@@ -402,7 +402,7 @@ export function HomeClient({
                 2. I need a Blood Test or Scan
               </h3>
               <p className="text-xs text-[#526273] leading-relaxed">
-                রক্ত পরীক্ষা ও এক্স-রে। Automated pathology, digital X-Ray, 2D Echo Doppler & ultrasound with same-day reports.
+                Automated pathology, digital X-Ray, 2D Echo Doppler & ultrasound with rapid same-day verified reports.
               </p>
             </div>
             <div className="pt-2 border-t border-[#E5EBEF] text-xs font-bold text-[#159FDB] flex items-center gap-1">
@@ -424,7 +424,7 @@ export function HomeClient({
                 3. Admission & Swasthya Sathi
               </h3>
               <p className="text-xs text-[#526273] leading-relaxed">
-                ভর্তি ও স্বাস্থ্যসাথী কার্ড। Cashless hospitalization across major TPAs and guidance for Swasthya Sathi at Counter 3.
+                Cashless hospitalization across major health insurers and complete Swasthya Sathi assistance at Counter 3.
               </p>
             </div>
             <div className="pt-2 border-t border-[#E5EBEF] text-xs font-bold text-amber-800 flex items-center gap-1">
@@ -446,7 +446,7 @@ export function HomeClient({
                 4. Health Checkup Packages
               </h3>
               <p className="text-xs text-[#526273] leading-relaxed">
-                স্বাস্থ্য পরীক্ষা প্যাকেজ। Preventive full-body checkup packages for parents, women, and families starting at ₹1,499.
+                Preventive full-body checkup packages for parents, women, and families with free physician review.
               </p>
             </div>
             <div className="pt-2 border-t border-[#E5EBEF] text-xs font-bold text-[#15965C] flex items-center gap-1">
@@ -463,8 +463,8 @@ export function HomeClient({
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 border-b border-[#E5EBEF] pb-4">
           <div className="space-y-1">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#15965C]">
-              আমাদের অভিজ্ঞ চিকিৎসকগণ
+            <span className="text-xs font-semibold text-[#15965C]">
+              Experienced Specialist Physicians
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-[#103653]">
               Visiting Specialist Doctors & OPD Chamber Timings
@@ -604,8 +604,8 @@ export function HomeClient({
         <div className="rounded-2xl border-2 border-[#15965C]/30 bg-gradient-to-br from-[#F4F8F5] via-white to-[#F0F8FC] p-6 sm:p-8 space-y-5 shadow-sm">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#E5EBEF] pb-4">
             <div className="space-y-1">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#15965C]">
-                হাসপাতাল ভর্তি ও স্বাস্থ্যসাথী সেবা
+              <span className="text-xs font-semibold text-[#15965C]">
+                Hospital Admission & Cashless Support
               </span>
               <h2 className="text-xl sm:text-2xl font-bold text-[#103653]">
                 Swasthya Sathi & Cashless Mediclaim Desk
@@ -664,8 +664,8 @@ export function HomeClient({
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 border-b border-[#E5EBEF] pb-4">
           <div className="space-y-1">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#15965C]">
-              প্যাথলজি ও রেডিওলজি রেট চার্ট
+            <span className="text-xs font-semibold text-[#15965C]">
+              Pathology & Radiology Price Schedule
             </span>
             <h2 className="text-xl sm:text-2xl font-bold text-[#103653]">
               Popular Diagnostic Tests & Transparent Rates
@@ -738,8 +738,8 @@ export function HomeClient({
       {/* ------------------------------------------------------------------ */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         <div className="space-y-1 border-b border-[#E5EBEF] pb-4">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#15965C]">
-            হাসপাতালের আধুনিক পরিকাঠামো
+          <span className="text-xs font-semibold text-[#15965C]">
+            Hospital Infrastructure & Technology
           </span>
           <h2 className="text-xl sm:text-2xl font-bold text-[#103653]">
             Modern Clinical Facilities & Critical Care
@@ -834,7 +834,7 @@ export function HomeClient({
             <div className="space-y-3">
               <div className="flex items-center gap-2 text-[#15965C]">
                 <Clock className="w-5 h-5" />
-                <span className="text-xs font-bold uppercase tracking-wider">হাসপাতালে রোগী দেখার সময়</span>
+                <span className="text-xs font-semibold text-[#15965C]">Inpatient Visiting Hours</span>
               </div>
               <h3 className="text-lg font-bold text-[#103653]">
                 Visiting Hours & Family Guidelines
@@ -866,7 +866,7 @@ export function HomeClient({
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2 text-[#159FDB]">
                   <Compass className="w-5 h-5" />
-                  <span className="text-xs font-bold uppercase tracking-wider">কৃষ্ণনগর ক্যাম্পাস ও যাতায়াত</span>
+                  <span className="text-xs font-semibold text-[#159FDB]">Campus Location & Transit Guide</span>
                 </div>
                 <span className="text-xs bg-white/10 px-2.5 py-0.5 rounded font-mono text-slate-200">
                   PIN-741101

@@ -78,7 +78,7 @@ export function PackagesClient({ initialPackages }: PackagesClientProps) {
 
           <div className="inline-flex items-center gap-2 text-xs font-semibold text-[#15965C] bg-[#15965C]/10 px-3 py-1 rounded-full w-fit">
             <HeartPulse className="w-3.5 h-3.5 text-[#15965C]" />
-            <span>নিয়মিত স্বাস্থ্য পরীক্ষা ও প্যাকেজ • Preventive Health Checkups</span>
+            <span>Preventive Healthcare & Checkup Packages • Krishnanagar Campus</span>
           </div>
 
           <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-[#103653] tracking-tight break-words">
@@ -98,7 +98,7 @@ export function PackagesClient({ initialPackages }: PackagesClientProps) {
             <div className="flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-[#159FDB]" />
               <span className="text-xs font-semibold text-[#159FDB]">
-                চেকআপের দিন করণীয় নিয়মাবলী / How Your Checkup Day Works
+                Checkup Day Protocol & Guidelines
               </span>
             </div>
             <span className="text-xs text-slate-300">
@@ -109,8 +109,8 @@ export function PackagesClient({ initialPackages }: PackagesClientProps) {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
             <div className="p-3.5 rounded-lg bg-white/5 border border-white/10 space-y-1.5">
               <div className="flex items-center gap-2">
-                <span className="w-5 h-5 rounded bg-[#15965C] text-white font-bold flex items-center justify-center text-[10px]">১</span>
-                <span className="font-bold text-white text-sm">১০-১২ ঘণ্টা খালি পেট</span>
+                <span className="w-5 h-5 rounded bg-[#15965C] text-white font-bold flex items-center justify-center text-[10px]">1</span>
+                <span className="font-bold text-white text-sm">Overnight Fasting</span>
               </div>
               <p className="text-slate-300 leading-relaxed">
                 Fast for 10–12 hours overnight. Drink plain water if thirsty, but avoid morning tea, milk, or biscuits.
@@ -119,8 +119,8 @@ export function PackagesClient({ initialPackages }: PackagesClientProps) {
 
             <div className="p-3.5 rounded-lg bg-white/5 border border-white/10 space-y-1.5">
               <div className="flex items-center gap-2">
-                <span className="w-5 h-5 rounded bg-[#159FDB] text-white font-bold flex items-center justify-center text-[10px]">২</span>
-                <span className="font-bold text-white text-sm">রক্ত ও প্রস্রাব সংগ্রহ</span>
+                <span className="w-5 h-5 rounded bg-[#159FDB] text-white font-bold flex items-center justify-center text-[10px]">2</span>
+                <span className="font-bold text-white text-sm">Sample Collection</span>
               </div>
               <p className="text-slate-300 leading-relaxed">
                 Report to Ground Floor Diagnostics Desk in Nediarpara between 07:30 AM and 11:30 AM for gentle blood collection.
@@ -129,8 +129,8 @@ export function PackagesClient({ initialPackages }: PackagesClientProps) {
 
             <div className="p-3.5 rounded-lg bg-white/5 border border-white/10 space-y-1.5">
               <div className="flex items-center gap-2">
-                <span className="w-5 h-5 rounded bg-[#15965C] text-white font-bold flex items-center justify-center text-[10px]">৩</span>
-                <span className="font-bold text-white text-sm">ডিজিটাল ও প্রিন্ট রিপোর্ট</span>
+                <span className="w-5 h-5 rounded bg-[#15965C] text-white font-bold flex items-center justify-center text-[10px]">3</span>
+                <span className="font-bold text-white text-sm">Digital & Print Reports</span>
               </div>
               <p className="text-slate-300 leading-relaxed">
                 Complete verified reports delivered within 24 hours directly on WhatsApp. Printed copies available at reception.
@@ -139,8 +139,8 @@ export function PackagesClient({ initialPackages }: PackagesClientProps) {
 
             <div className="p-3.5 rounded-lg bg-white/5 border border-white/10 space-y-1.5">
               <div className="flex items-center gap-2">
-                <span className="w-5 h-5 rounded bg-[#159FDB] text-white font-bold flex items-center justify-center text-[10px]">৪</span>
-                <span className="font-bold text-white text-sm">ডাক্তারের পরামর্শ</span>
+                <span className="w-5 h-5 rounded bg-[#159FDB] text-white font-bold flex items-center justify-center text-[10px]">4</span>
+                <span className="font-bold text-white text-sm">Doctor Consultation</span>
               </div>
               <p className="text-slate-300 leading-relaxed">
                 Every package includes a free post-checkup review with our Senior Consultant Physician to guide your lifestyle and diet.
@@ -350,7 +350,7 @@ export function PackagesClient({ initialPackages }: PackagesClientProps) {
                         <span>Fasting Protocol:</span>
                       </span>
                       <span className={`font-semibold ${pkg.fasting_required ? 'text-amber-800 bg-amber-50 px-2 py-0.5 rounded border border-amber-200' : 'text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200'}`}>
-                        {pkg.fasting_required ? '১০-১২ ঘণ্টা খালি পেট' : 'খালি পেটের প্রয়োজন নেই'}
+                        {pkg.fasting_required ? '10–12h Overnight Fasting' : 'No Fasting Needed'}
                       </span>
                     </div>
                   </div>
@@ -358,7 +358,7 @@ export function PackagesClient({ initialPackages }: PackagesClientProps) {
                   {/* Preparation Instruction Note */}
                   {pkg.preparation_instructions && (
                     <div className="p-2.5 rounded-lg bg-amber-50 border border-amber-200 text-xs text-amber-900 leading-relaxed">
-                      <strong>প্রস্তুতি / Preparation:</strong> {pkg.preparation_instructions}
+                      <strong>Preparation:</strong> {pkg.preparation_instructions}
                     </div>
                   )}
                 </div>
@@ -393,7 +393,7 @@ export function PackagesClient({ initialPackages }: PackagesClientProps) {
           <div className="space-y-1.5 max-w-2xl">
             <div className="flex items-center gap-2 text-xs font-semibold text-[#15965C]">
               <ShieldCheck className="w-4 h-4 text-[#15965C]" />
-              <span>প্রতিষ্ঠান ও পরিবারের জন্য বিশেষ স্বাস্থ্য পরীক্ষা / Group Screening</span>
+              <span>Group & Institutional Screening Programs</span>
             </div>
             <h3 className="text-base font-bold text-[#103653]">
               Organize On-Site Employee or Community Health Camps in Nadia
@@ -417,7 +417,7 @@ export function PackagesClient({ initialPackages }: PackagesClientProps) {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
         <div className="space-y-1 border-b border-[#E5EBEF] pb-3">
           <span className="text-xs font-semibold text-[#15965C]">
-            সাধারণ প্রশ্ন ও উত্তর / Patient FAQs
+            Frequently Asked Questions
           </span>
           <h2 className="text-xl sm:text-2xl font-bold text-[#103653]">
             Frequently Asked Questions on Health Checkups
