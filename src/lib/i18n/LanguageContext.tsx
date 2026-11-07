@@ -14,6 +14,7 @@ export interface Translations {
   nav_packages: string;
   nav_patient_info: string;
   nav_insurance: string;
+  nav_more: string;
   nav_news: string;
   nav_careers: string;
   nav_contact: string;
@@ -90,9 +91,10 @@ const TRANSLATIONS: Record<Language, Translations> = {
     nav_doctors: 'Doctors',
     nav_departments: 'Specialities',
     nav_diagnostics: 'Diagnostics & Labs',
-    nav_packages: 'Health Packages',
+    nav_packages: 'Packages',
     nav_patient_info: 'Patient Guide',
-    nav_insurance: 'Cashless & TPA',
+    nav_insurance: 'Cashless TPA',
+    nav_more: 'More',
     nav_news: 'Notices & News',
     nav_careers: 'Careers',
     nav_contact: 'Contact & Location',
@@ -162,9 +164,10 @@ const TRANSLATIONS: Record<Language, Translations> = {
     nav_doctors: 'ডাক্তারগণ',
     nav_departments: 'বিভাগসমূহ',
     nav_diagnostics: 'ডায়াগনস্টিক ও ল্যাব',
-    nav_packages: 'স্বাস্থ্য প্যাকেজ',
-    nav_patient_info: 'রোগীদের নির্দেশিকা',
-    nav_insurance: 'ক্যাশলেস ও বিমা',
+    nav_packages: 'প্যাকেজ',
+    nav_patient_info: 'পেশেন্ট গাইড',
+    nav_insurance: 'ক্যাশলেস টিপিএ',
+    nav_more: 'অন্যান্য সেবা',
     nav_news: 'বিজ্ঞপ্তি ও খবর',
     nav_careers: 'কর্মসংস্থান',
     nav_contact: 'যোগাযোগ ও অবস্থান',
@@ -234,9 +237,10 @@ const TRANSLATIONS: Record<Language, Translations> = {
     nav_doctors: 'चिकित्सक',
     nav_departments: 'विभाग',
     nav_diagnostics: 'डायग्नोस्टिक्स व लैब',
-    nav_packages: 'स्वास्थ्य पैकेज',
+    nav_packages: 'पैकेज',
     nav_patient_info: 'मरीज गाइड',
-    nav_insurance: 'कैशलेस व बीमा',
+    nav_insurance: 'कैशलेस टीपीए',
+    nav_more: 'अन्य सेवाएं',
     nav_news: 'सूचनाएं व समाचार',
     nav_careers: 'करियर',
     nav_contact: 'संपर्क व पता',

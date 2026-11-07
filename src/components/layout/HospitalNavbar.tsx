@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
@@ -14,8 +14,11 @@ import {
   ChevronDown,
   MessageCircle,
   User,
-  ShieldCheck,
+  Activity,
   HeartPulse,
+  FileText,
+  CreditCard,
+  CheckCircle2,
 } from 'lucide-react';
 import { useLanguage, Language } from '@/lib/i18n/LanguageContext';
 
@@ -24,18 +27,75 @@ export function HospitalNavbar() {
   const { language, setLanguage, t } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
+  const [moreDropdownOpen, setMoreDropdownOpen] = useState(false);
+  const moreDropdownRef = useRef<HTMLDivElement>(null);
 
-  const navLinks = [
+  // Close dropdowns on route change
+  useEffect(() => {
+    setMoreDropdownOpen(false);
+    setMobileMenuOpen(false);
+    setLangDropdownOpen(false);
+  }, [pathname]);
+
+  // Click outside listener for "More" dropdown
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (moreDropdownRef.current && !moreDropdownRef.current.contains(event.target as Node)) {
+        setMoreDropdownOpen(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  // 1. Primary Visible Links (Top 5)
+  const primaryNavLinks = [
     { href: '/', label: t.nav_home },
     { href: '/about', label: t.nav_about },
-    { href: '/doctors', label: t.nav_doctors },
-    { href: '/departments', label: 'Specialities' },
-    { href: '/diagnostics', label: t.nav_diagnostics },
-    { href: '/packages', label: 'Packages' },
-    { href: '/patient-info', label: t.nav_patient_info },
-    { href: '/insurance', label: 'Cashless TPA' },
     { href: '/contact', label: t.nav_contact },
+    { href: '/doctors', label: t.nav_doctors },
+    { href: '/departments', label: t.nav_departments },
   ];
+
+  // 2. Secondary Links grouped inside "More" Option (Other 4)
+  const moreNavLinks = [
+    {
+      href: '/diagnostics',
+      label: t.nav_diagnostics,
+      desc: 'Pathology, digital X-Ray & 2D Echo',
+      icon: Activity,
+      iconColor: 'text-[#159FDB]',
+      iconBg: 'bg-[#F0F8FC]',
+    },
+    {
+      href: '/packages',
+      label: t.nav_packages,
+      desc: 'Preventive health checkup packages',
+      icon: HeartPulse,
+      iconColor: 'text-[#15965C]',
+      iconBg: 'bg-[#F4F8F5]',
+    },
+    {
+      href: '/patient-info',
+      label: t.nav_patient_info,
+      desc: 'Visiting hours, admission & charter',
+      icon: FileText,
+      iconColor: 'text-[#103653]',
+      iconBg: 'bg-slate-100',
+    },
+    {
+      href: '/insurance',
+      label: t.nav_insurance,
+      desc: 'Mediclaim pre-auth & Swasthya Sathi',
+      icon: CreditCard,
+      iconColor: 'text-[#15965C]',
+      iconBg: 'bg-[#F4F8F5]',
+    },
+  ];
+
+  const isMoreActive = moreNavLinks.some(item => pathname === item.href);
 
   const languages: { code: Language; label: string; native: string }[] = [
     { code: 'en', label: 'English', native: 'English' },
@@ -159,15 +219,15 @@ export function HospitalNavbar() {
             </div>
           </Link>
 
-          {/* Desktop Navigation Links */}
-          <nav className="hidden xl:flex items-center gap-2 2xl:gap-4 text-xs 2xl:text-sm font-semibold text-[#182B3D]">
-            {navLinks.map(link => {
+          {/* Desktop Navigation: 5 Primary Links + 1 "More" Dropdown */}
+          <nav className="hidden lg:flex items-center gap-1 xl:gap-2.5 2xl:gap-4 text-xs xl:text-sm font-semibold text-[#182B3D]">
+            {primaryNavLinks.map(link => {
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`py-1.5 border-b-2 transition whitespace-nowrap ${
+                  className={`py-1.5 px-2 xl:px-2.5 border-b-2 transition whitespace-nowrap ${
                     isActive
                       ? 'border-[#15965C] text-[#15965C] font-bold'
                       : 'border-transparent text-[#526273] hover:text-[#15965C]'
@@ -177,6 +237,82 @@ export function HospitalNavbar() {
                 </Link>
               );
             })}
+
+            {/* "More" Dropdown Trigger */}
+            <div
+              ref={moreDropdownRef}
+              className="relative"
+              onMouseEnter={() => setMoreDropdownOpen(true)}
+              onMouseLeave={() => setMoreDropdownOpen(false)}
+            >
+              <button
+                type="button"
+                onClick={() => setMoreDropdownOpen(!moreDropdownOpen)}
+                className={`py-1.5 px-2 xl:px-2.5 border-b-2 transition whitespace-nowrap inline-flex items-center gap-1 font-semibold ${
+                  isMoreActive || moreDropdownOpen
+                    ? 'border-[#15965C] text-[#15965C] font-bold'
+                    : 'border-transparent text-[#526273] hover:text-[#15965C]'
+                }`}
+                aria-expanded={moreDropdownOpen}
+                aria-haspopup="true"
+              >
+                <span>{t.nav_more}</span>
+                <ChevronDown
+                  className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                    moreDropdownOpen ? 'rotate-180 text-[#15965C]' : 'text-slate-400'
+                  }`}
+                />
+              </button>
+
+              {/* Dropdown Menu Card */}
+              {moreDropdownOpen && (
+                <div
+                  className="absolute right-0 top-full mt-1.5 w-72 sm:w-80 bg-white rounded-xl shadow-2xl border border-[#E5EBEF] p-2 z-50 animate-in fade-in slide-in-from-top-1 duration-150"
+                  role="menu"
+                >
+                  <div className="px-3 py-1.5 mb-1 border-b border-[#E5EBEF]">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#15965C]">
+                      {t.nav_more} Services & Information
+                    </span>
+                  </div>
+
+                  <div className="space-y-1">
+                    {moreNavLinks.map(item => {
+                      const isActive = pathname === item.href;
+                      const IconComponent = item.icon;
+                      return (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          onClick={() => setMoreDropdownOpen(false)}
+                          className={`p-2.5 rounded-lg flex items-center justify-between gap-3 transition ${
+                            isActive
+                              ? 'bg-[#F4F8F5] text-[#15965C]'
+                              : 'hover:bg-[#F7FAF9] text-[#182B3D]'
+                          }`}
+                          role="menuitem"
+                        >
+                          <div className="flex items-center gap-3">
+                            <div className={`w-8 h-8 rounded-lg ${item.iconBg} ${item.iconColor} flex items-center justify-center shrink-0`}>
+                              <IconComponent className="w-4 h-4" />
+                            </div>
+                            <div className="space-y-0.5">
+                              <span className={`text-xs block leading-tight ${isActive ? 'font-bold text-[#15965C]' : 'font-semibold text-[#182B3D]'}`}>
+                                {item.label}
+                              </span>
+                              <span className="text-[10px] text-[#526273] block leading-tight">
+                                {item.desc}
+                              </span>
+                            </div>
+                          </div>
+                          {isActive && <CheckCircle2 className="w-4 h-4 text-[#15965C] shrink-0" />}
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+            </div>
           </nav>
 
           {/* Action CTAs: WhatsApp + Book Appointment */}
@@ -202,7 +338,7 @@ export function HospitalNavbar() {
           </div>
 
           {/* Mobile Menu Hamburger Button */}
-          <div className="flex items-center gap-1.5 xl:hidden shrink-0">
+          <div className="flex items-center gap-1.5 lg:hidden shrink-0">
             <Link
               href="/book"
               className="hidden xs:inline-flex items-center gap-1 bg-[#15965C] hover:bg-[#117A4A] text-white px-2.5 py-1.5 rounded-lg text-xs font-bold shadow-sm"
@@ -227,7 +363,7 @@ export function HospitalNavbar() {
       {/* 3. MOBILE SLIDE-DOWN NAVIGATION DRAWER                             */}
       {/* ------------------------------------------------------------------ */}
       {mobileMenuOpen && (
-        <div className="xl:hidden border-t border-[#E5EBEF] bg-white px-4 py-5 shadow-2xl space-y-4 max-h-[85vh] overflow-y-auto">
+        <div className="lg:hidden border-t border-[#E5EBEF] bg-white px-4 py-5 shadow-2xl space-y-4 max-h-[85vh] overflow-y-auto">
           {/* Quick Action Buttons in Mobile Drawer */}
           <div className="grid grid-cols-2 gap-2.5 pb-3 border-b border-[#E5EBEF]">
             <Link
@@ -249,9 +385,12 @@ export function HospitalNavbar() {
             </Link>
           </div>
 
-          {/* Navigation Links List */}
-          <nav className="flex flex-col space-y-1">
-            {navLinks.map(link => {
+          {/* Primary Navigation Links (5 Visible Links) */}
+          <div className="space-y-1">
+            <span className="px-3 text-[10px] font-bold uppercase tracking-wider text-[#526273] block mb-1">
+              Main Navigation
+            </span>
+            {primaryNavLinks.map(link => {
               const isActive = pathname === link.href;
               return (
                 <Link
@@ -269,7 +408,46 @@ export function HospitalNavbar() {
                 </Link>
               );
             })}
-          </nav>
+          </div>
+
+          {/* Secondary Links: "More" Services Section (4 Items) */}
+          <div className="pt-3 border-t border-[#E5EBEF] space-y-1">
+            <span className="px-3 text-[10px] font-bold uppercase tracking-wider text-[#15965C] block mb-1">
+              {t.nav_more} Services & Information
+            </span>
+
+            {moreNavLinks.map(item => {
+              const isActive = pathname === item.href;
+              const IconComponent = item.icon;
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`p-2.5 rounded-lg flex items-center justify-between gap-3 transition ${
+                    isActive
+                      ? 'bg-[#F4F8F5] text-[#15965C]'
+                      : 'hover:bg-slate-50 text-[#182B3D]'
+                  }`}
+                >
+                  <div className="flex items-center gap-3">
+                    <div className={`w-8 h-8 rounded-lg ${item.iconBg} ${item.iconColor} flex items-center justify-center shrink-0`}>
+                      <IconComponent className="w-4 h-4" />
+                    </div>
+                    <div className="space-y-0.5">
+                      <span className={`text-xs block ${isActive ? 'font-bold text-[#15965C]' : 'font-semibold text-[#182B3D]'}`}>
+                        {item.label}
+                      </span>
+                      <span className="text-[10px] text-[#526273] block">
+                        {item.desc}
+                      </span>
+                    </div>
+                  </div>
+                  {isActive && <span className="w-2 h-2 rounded-full bg-[#15965C]" />}
+                </Link>
+              );
+            })}
+          </div>
 
           {/* Mobile Footer Info & Emergency Calling */}
           <div className="pt-4 border-t border-[#E5EBEF] space-y-3">
